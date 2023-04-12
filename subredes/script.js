@@ -1,29 +1,16 @@
-function calc () {
-	let ip = document.getElementById("num").value.split(".");
-	let divisao = parseInt(document.getElementById("rede").value);
+function criarLinha (divisao, id, mascara, broadcast) {
+	let subredeQuantidade = 2 ** (divisao % 8);
+	let intervaloMascara = 256/subredeQuantidade;
 	
-	if (ip == "" || divisao == "") {
-		return 1;
+	while (id.length < 4) {
+		id.push(0);
+		mascara.push(0);
+		broadcast.push(255);
 	}
 
-	if (divisao % 8 == 0) {
-		let intervaloInicial, intervaloFinal, id, broadcast, linha, elemento, intervalo, resultado;
-		let rede = [ip[0]];
-		let mascara = [255];
-		
-		for (let i = 1; i < Math.floor(divisao/8); i++) {
-			rede.push(ip[i]);
-			mascara.push(255);
-		}
-	
-		id = rede.slice();
-		broadcast = rede.slice();
-
-	  	while (id.length < 4) {
-			id.push(0);
-			mascara.push(0);
-			broadcast.push(255);
-		}
+	for (let i = 0; i < subredeQuantidade; i++) {
+		id[Math.floor(divisao/8)] = i*intervaloMascara;
+		broadcast[Math.floor(divisao/8)]=(1+i)*intervaloMascara-1;
 
 		intervaloInicial = id.slice();
 		intervaloInicial[3] += 1;
@@ -32,22 +19,56 @@ function calc () {
 
 		intervalo = intervaloInicial.join(".") + " até " + intervaloFinal.join(".");
 
-		resultado = [id, mascara, broadcast, intervalo];
+		resultado = [i, id, mascara, broadcast, intervalo];
 		linha = document.createElement("tr");
 		for (let i = 0; i < resultado.length; i++) {
 			elemento = document.createElement("td");
-			if (i != 3) {
-				elemento.innerHTML = resultado[i].join(".");
-			} else {
+			if (i == 4 || i == 0) {
 				elemento.innerHTML = resultado[i];
+			} else {
+				elemento.innerHTML = resultado[i].join(".");
 			}
 			linha.appendChild(elemento);
-			
 		}
 		document.getElementById("resultado").appendChild(linha);
+	}
+}
+
+function calc () {
+	let ip = document.getElementById("num").value.split(".");
+	let divisao = parseInt(document.getElementById("rede").value);
+	
+	if (ip == "" || divisao == "") {
+		return 1;
+	}
+
+	let rede = [];
+	let mascara = [];
+
+	for (let i = 0; i < Math.floor(divisao/8); i++) {
+		rede.push(ip[i]);
+		mascara.push(255);
+	}
+	
+	let id = rede.slice();
+	let broadcast = rede.slice();
+
+	if (divisao % 8 == 0) {
+		criarLinha(divisao, id, mascara, broadcast);
 	} else if (divisao < 24) {
-		
+		let submascara = 0;
+
+		for (let i = 7; i > (7 - (divisao % 8)); i--) {
+			submascara += 2 ** i;
+		}
+
+		mascara.push(submascara);
+		id.push(0);
+		broadcast.push(255);
+
+		criarLinha(divisao, id, mascara, broadcast);
 	}
 
 	
 }
+

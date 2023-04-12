@@ -1,17 +1,26 @@
 body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+body > div {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+    text-align: center;
 }
 
 button {
     display: block;
-    margin-top: 3px;
+    margin: 5px auto;
+    padding: 3px 10px;
 }
 
-table {
-    margin-top: 20px;
+#resultado {
+    margin: 150px auto;
 }
 
 table, td, tr, th {
@@ -22,3 +31,4 @@ table, td, tr, th {
 td, th {
     padding: 2px 7px;
 }
+
