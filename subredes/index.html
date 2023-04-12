@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calcular redes</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+	<div>
+		<h3>Insira um IP e a máscara para mostrar as subredes:</h3>
+		
+		<div>
+			<label for="num">IP</label>
+			<input type="text" id="num" name="num"/>
+			<label for="rede">/</label>
+			<input type="text" id="rede" name="rede"/>
+			<button onclick="calc();">Enviar</button>
+		</div>
+		
+		<div>
+			<table id="resultado">
+				<tr>
+					<th>Rede</th>
+					<th>Máscara</th>
+					<th>Broadcast</th>
+					<th>Invervalo válido</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>
