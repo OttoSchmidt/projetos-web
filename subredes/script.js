@@ -40,15 +40,27 @@ function criarLinha (divisao, id, mascara, broadcast) {
 			}
 			linha.appendChild(elemento);
 		}
-		document.getElementById("resultado").appendChild(linha);
+		document.getElementById("tabelaConteudo").appendChild(linha);
 	}
 }
 
-function apagarLinhas () {
-	linhas = document.getElementsByClassName("linha")
-	while (linhas.length > 0) {
-		linhas[0].remove();
+function criarTabela () {
+	let headers = ["Num", "Id da rede", "Máscara", "Broadcast", "Intervalo válido"];
+	let tabela = document.createElement("table");
+	let tbody = document.createElement("tbody");
+	tabela.id = "tabela";
+	tbody.id = "tabelaConteudo";
+	
+	let tr = document.createElement("tr");
+	for (let i = 0; i < headers.length; i++){
+		let th = document.createElement("th");
+		th.innerHTML = headers[i];
+		tr.appendChild(th);
 	}
+
+	tbody.appendChild(tr);
+	tabela.appendChild(tbody);
+	document.getElementById("resultado").appendChild(tabela);
 }
 
 function calc () {
@@ -60,7 +72,11 @@ function calc () {
 		let mascara = [];
 		let submascara, id, broadcast;
 
-		apagarLinhas();
+		if (document.getElementById("tabela") != null) {
+			document.getElementById("tabela").remove();
+		}
+
+		criarTabela();
 
 		for (let i = 0; i < Math.floor(divisao/8); i++) {
 			rede.push(ip[i]);
@@ -82,8 +98,28 @@ function calc () {
 			mascara.push(submascara);
 
 			criarLinha(divisao, id, mascara, broadcast);
-
 		}
 	}
 }
 
+function adicionar () {
+	let tabela = document.getElementById("tabela");
+	document.getElementById("tabela").remove();
+	tabela.id = "";
+
+	let nome = document.createElement("input");
+	nome.type = "text";
+	nome.classList.add("nomeTabela");
+	nome.placeholder = "Insira o nome da tabela";
+
+	document.getElementById("imprimir").appendChild(nome);
+	document.getElementById("imprimir").appendChild(tabela);
+
+	if (document.getElementById("btnImprimir") == null) {
+		let botao = document.createElement("button");
+		botao.innerHTML = "Imprimir";
+		botao.setAttribute('onclick','window.print()');
+		botao.id = "btnImprimir";
+		document.body.appendChild(botao);
+	}
+}

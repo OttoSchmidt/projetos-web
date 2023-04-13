@@ -11,8 +11,6 @@
 
 <body>
 	<div>
-		<h3>Insira um IP e a máscara para mostrar as subredes:</h3>
-		
 		<div id="formulario">
 			<div id="inputs">
 				<label for="num">IP</label>
@@ -20,21 +18,15 @@
 				<label for="rede">/</label>
 				<input type="text" id="rede" name="rede"/>
 			</div>
-			<button onclick="calc();">Enviar</button>
+			<div id="botoes">
+				<button onclick="calc();">Enviar</button>
+				<button onclick="adicionar();">Adicionar</button>
+			</div>
 		</div>
 	</div>
 
-	<table>
-		<tbody id="resultado">
-			<tr class="header">
-				<th>Num</th>
-				<th>ID</th>
-				<th>Máscara</th>
-				<th>Broadcast</th>
-				<th>Invervalo válido</th>
-			</tr>
-		</tbody>
-	</table>
-</body>
+	<div id="resultado"></div>
 
+	<div id="imprimir"></div>
+</body>
 </html>
