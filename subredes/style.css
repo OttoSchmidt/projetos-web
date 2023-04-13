@@ -19,16 +19,17 @@ button {
     padding: 3px 10px;
 }
 
-#resultado {
+table {
     margin: 150px auto;
 }
 
 table, td, tr, th {
     border-collapse: collapse;
     border: 1px solid black;
+    text-align: center;
 }
 
 td, th {
-    padding: 2px 7px;
+    padding: 2px 15px;
 }
 
