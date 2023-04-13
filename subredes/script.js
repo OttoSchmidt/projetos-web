@@ -82,8 +82,6 @@ function calc () {
 			mascara.push(submascara);
 
 			criarLinha(divisao, id, mascara, broadcast);
-
 		}
 	}
 }
-
