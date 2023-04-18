@@ -45,7 +45,7 @@ function criarLinha (divisao, id, mascara, broadcast) {
 }
 
 function criarTabela () {
-	let headers = ["Num", "Id da rede", "Máscara", "Broadcast", "Intervalo válido"];
+	let headers = ["Sub-rede", "Endereço de rede", "Máscara", "Endereço de broadcast", "Intervalo de host"];
 	let tabela = document.createElement("table");
 	let tbody = document.createElement("tbody");
 	tabela.id = "tabela";
