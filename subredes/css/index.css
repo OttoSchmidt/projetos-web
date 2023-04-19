@@ -1,0 +1,10 @@
+div {
+    text-align: center;
+    margin: 30px auto;
+}
+
+div > a {
+    text-align: center;
+}
+
+

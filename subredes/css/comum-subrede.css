@@ -1,0 +1,47 @@
+#formulario {
+    margin-top: 30px;
+}
+
+#host, #rede {
+    width: 80px;
+}
+
+#inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin: 0 5px;
+}
+
+button {
+    display: block;
+    padding: 3px 10px;
+}
+
+#botoes {
+    width: fit-content;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+table {
+    margin: 15px auto;
+}
+
+table, td, tr, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td, th {
+    padding: 2px 15px;
+}

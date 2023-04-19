@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calcular sub-redes</title>
+  <link href="../css/subrede.css" rel="stylesheet" type="text/css" />
+  <link href="../css/comum-subrede.css" rel="stylesheet" type="text/css" />
+  <link href="../css/comum.css" rel="stylesheet" type="text/css" />
+  <script src="tool.js"></script>
+</head>
+
+<body>
+	<div class="link icone">
+		<a href="../index.html" style="width:32px;height: 32px;">
+			<img src="../icons/backarrow.svg"/>
+		</a>
+	</div>
+	<main>
+		<div>
+			<div id="formulario">
+				<div id="inputs">
+					<input type="text" id="num" name="num" placeholder="IP"/>
+					<select id="tipo" onchange="atualizar();">
+						<option>Máscara</option>
+						<option>Quant. de host</option>
+					</select>
+					<input placeholder="/" type="text" name="num" id="rede" class="input-mascara-hosts">
+				</div>
+				<div id="botoes">
+					<button onclick="calc();">Calcular</button>
+					<button onclick="adicionar();">Adicionar</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="resultado"></div>
+
+		<div id="imprimir"></div>
+	</main>
+</body>
+</html>

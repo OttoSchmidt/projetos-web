@@ -1,0 +1,43 @@
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #imprimir, #imprimir * {
+      visibility: visible !important;
+    }
+    #imprimir {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+}
+
+main {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+select {
+  width: fit-content;
+  margin: 0 5px 0 20px;
+  height: 26px;
+  border: 0;
+  text-align: right;
+}
+
+#imprimir {
+    width: fit-content;
+    margin-top: 30px;
+}
+
+#imprimir input {
+    border: 0;
+}
+
+#imprimir table {
+    width: 100%;
+}
+
+#btnImprimir {
+    margin: 20px auto;
+}
