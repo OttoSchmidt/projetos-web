@@ -25,6 +25,10 @@ select {
   text-align: right;
 }
 
+#resultado .destaque-verde {
+  background-color: rgba(144, 238, 144, 0.329);
+}
+
 #imprimir {
     width: fit-content;
     margin-top: 30px;

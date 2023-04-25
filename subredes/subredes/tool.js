@@ -31,7 +31,7 @@ function criarTabela () {
 	document.getElementById("resultado").appendChild(tabela);
 }
 
-function criarLinha (divisao, id, mascara, broadcast) {
+function criarLinha (divisao, id, mascara, broadcast, ip) {
 	let subredeQuantidade = 2 ** (divisao % 8);
 	let intervaloMascara = 256/subredeQuantidade;
 	let quantidadeHost = [2**(32 - divisao)-2];
@@ -54,9 +54,9 @@ function criarLinha (divisao, id, mascara, broadcast) {
 			broadcast[Math.floor(divisao/8)]=(1+i)*intervaloMascara-1;
 		}
 
-		intervaloInicial = id.slice();
+		let intervaloInicial = id.slice();
 		intervaloInicial[3] += 1;
-		intervaloFinal = broadcast.slice();
+		let intervaloFinal = broadcast.slice();
 		intervaloFinal[3] -= 1;
 		
 		if (divisao > 30) {
@@ -69,6 +69,17 @@ function criarLinha (divisao, id, mascara, broadcast) {
 
 		linha = document.createElement("tr");
 		linha.classList.add("linha");
+
+		for (let i = 0; i < 4; i++) {
+			if ((ip[i] >= intervaloInicial[i]) && (ip[i] <= intervaloFinal[i])) {
+				if (i == 3) {
+					linha.classList.add("destaque-verde");
+				}
+			} else {
+				break;
+			}
+		}
+
 		for (let i = 0; i < resultado.length; i++) {
 			elemento = document.createElement("td");
 			if (i >= 1 && i <= 3) {
@@ -118,7 +129,7 @@ function calc () {
 		broadcast = rede.slice();
 
 		if (divisao % 8 == 0) {
-			criarLinha(divisao, id, mascara, broadcast);
+			criarLinha(divisao, id, mascara, broadcast, ip);
 
 		} else {
 			submascara = 0;
@@ -128,7 +139,7 @@ function calc () {
 			}
 			mascara.push(submascara);
 
-			criarLinha(divisao, id, mascara, broadcast);
+			criarLinha(divisao, id, mascara, broadcast, ip);
 		}
 	}
 }
