@@ -1,21 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @media print {
+    body, html, main {
+      background: white !important;
+    }
     body * {
       visibility: hidden;
     }
     #imprimir, #imprimir * {
       visibility: visible !important;
+      font-family: Arial, Helvetica, sans-serif;
     }
     #imprimir {
       position: absolute;
       left: 0;
       top: 0;
     }
+    input {
+      border: none;
+    }
+}
+
+html {
+  background: #F2F2F2;
+  --cor-destaque: #0F62FE;
+  --cor-leve-destaque: #CFE0FF;
+  --cor-borda: #8E8E8E;
+  --fundo-botao-porcentagem: -53%;
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -23,32 +38,97 @@ main {
   margin: 0 auto;
 }
 
-button:hover {
+#formulario {
+  margin-top: 20px;
+}
+
+#tipo-div {
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid var(--cor-borda);
+  border-radius: 20px;
+  position: relative;
+}
+
+#tipo-div::before {
+  z-index: -10;
+  width: 95px;
+  height: 36px;
+  content: "";
+  background: var(--cor-leve-destaque);
+  position: absolute;
+  transition: 200ms;
+  transform: translateX(var(--fundo-botao-porcentagem));
+  border-radius: 17px;
+}
+
+#tipo-div:hover {
   cursor: pointer;
 }
 
-#formulario {
-  margin-top: 30px;
-}
-
-.inputs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-
-.selecionado {
-  display: flex;
+p {
+  margin: 0;
 }
 
 label {
   margin: 0 5px;
 }
 
+select {
+  padding: 0 5px;
+}
+
+.inputs, .tipo-div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  display: none;
+  margin: 0 auto;
+}
+
+.selecionado {
+  display: flex;
+}
+
+.inputs input {
+  margin: 0 5px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 9px;
+  height: 30px;
+  padding: 0 5px;
+}
+
+.inputs input:first-child {
+  width: 200px;
+}
+
+.inputs input:last-child {
+  width: 75px;
+}
+
 button {
   display: block;
   padding: 3px 10px;
+  border-radius: 13px;
+  background-color: var(--cor-destaque);
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #botoes {
@@ -77,7 +157,7 @@ td, th {
 }
 
 #resultado .destaque-verde {
-  background-color: rgba(144, 238, 144, 0.329);
+  background-color: var(--cor-leve-destaque);
 }
 
 #resultado .destaque-verde td:first-child::before {
@@ -87,25 +167,34 @@ td, th {
   text-align: center;
   transform: translateX(-75px);
   content: "?";
-  background-color: rgba(144, 238, 144, 0.329);
+  background-color: var(--cor-leve-destaque);
   border: 1px solid black;
   border-radius: 100%;
-  cursor: pointer;
+}
+
+#resultado .destaque-verde:hover td:first-child::before {
+  content: "Subrede do IP";
+  width: fit-content;
+  text-align: justify;
+  border-radius: 10px;
+  transform: translateX(-175px);
+  padding: 0 5px;
 }
 
 #imprimir {
-    width: fit-content;
-    margin-top: 30px;
+  width: fit-content;
+  margin-top: 15px;
 }
 
 #imprimir input {
-    border: 0;
+  margin-top: 15px;
+  width: 50%;
 }
 
 #imprimir table {
-    width: 100%;
+  width: 100%;
 }
 
 #btnImprimir {
-    margin: 20px auto;
+  margin: 20px auto;
 }

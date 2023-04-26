@@ -12,31 +12,24 @@
 <body>
 	<main>
 		<div id="formulario">
-			<div>
-				<label>Selecione o tipo</label>
-				<select id="tipo" onchange="atualizar();">
-					<option>Máscara</option>
-					<option>Hosts</option>
-					<option>Bits emprestados</option>
-				</select>
+			<div id="tipo-div" onclick="atualizar();" data-selecionado="0">
+				<p>Máscara</p>
+				<p>Hosts</p>
 			</div>
 			
 			<div class="inputs selecionado" id="mascara">
 				<input type="text" id="ip-mascara" name="num" placeholder="IP"/>
-				<label>Máscara</label>
-				<input placeholder="/" type="text" name="num" id="mascara-valor">
+				<input type="text" name="num" id="mascara-valor" placeholder="/">
 			</div>
 			
 			<div class="inputs" id="host">
 				<input type="text" id="ip-host" name="num" placeholder="IP"/>
-				<label>Quant. de host</label>
-				<input type="text" name="num" id="host-valor">
+				<input type="text" name="num" id="host-valor" placeholder="Hosts">
 			</div>
 			
 			<div class="inputs" id="bits">
 				<input type="text" id="ip-bits" name="num" placeholder="IP da rede"/>
-				<label>Bits emprestados</label>
-				<input type="text" name="num" id="bits-valor">
+				<input type="text" name="num" id="bits-valor" placeholder="Bits emprestados">
 			</div>
 			
 			<div id="botoes">

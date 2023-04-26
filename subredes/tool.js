@@ -1,12 +1,25 @@
 function atualizar () {
-	let tipo = document.getElementById("tipo");
 	document.getElementsByClassName("selecionado")[0].classList.remove("selecionado");
-	let input = document.getElementsByClassName("inputs")[tipo.selectedIndex];
+
+	let tipo = parseInt(document.getElementById("tipo-div").getAttribute("data-selecionado"));
+
+	document.documentElement.style.setProperty("--fundo-botao-porcentagem", (-1 * parseInt(getComputedStyle(document.documentElement).getPropertyValue("--fundo-botao-porcentagem"))) + "%");
+
+	if (tipo == 0) {
+		tipo = 1;
+		document.getElementById("tipo-div").setAttribute("data-selecionado", 1);
+	} else {
+		tipo = 0;
+		document.getElementById("tipo-div").setAttribute("data-selecionado", 0);
+	}
+
+	console.log(tipo == 0);
+
+	let input = document.getElementsByClassName("inputs")[tipo];
 	input.classList.add("selecionado");
 
 	let inputsLimpar = document.getElementById("formulario").getElementsByTagName("input");
 	for (let i = 0; i < inputsLimpar.length; i++) {
-		console.log(inputsLimpar[i]);
 		inputsLimpar[i].value = "";
 	}
 }
@@ -56,17 +69,6 @@ function criarLinha (divisao, id, mascara, broadcast, ip) {
 		let intervaloInicial = id.slice();
 		let intervaloFinal = broadcast.slice();
 
-		if (divisao > 30) {
-			intervalo = ["---"];
-		} else {
-			intervalo = intervaloInicial.join(".") + " até " + intervaloFinal.join(".");
-		}
-
-		intervaloFinal[3] -= 1;
-		intervaloInicial[3] += 1;
-
-		resultado = [i, id, mascara, broadcast, intervalo, quantidadeHost];
-
 		linha = document.createElement("tr");
 		linha.classList.add("linha");
 
@@ -79,6 +81,16 @@ function criarLinha (divisao, id, mascara, broadcast, ip) {
 				break;
 			}
 		}
+
+		if (divisao > 30) {
+			intervalo = ["---"];
+		} else {
+			intervaloFinal[3] -= 1;
+			intervaloInicial[3] += 1;
+			intervalo = intervaloInicial.join(".") + " até " + intervaloFinal.join(".");
+		}
+
+		resultado = [i, id, mascara, broadcast, intervalo, quantidadeHost];
 
 		for (let i = 0; i < resultado.length; i++) {
 			elemento = document.createElement("td");
@@ -97,7 +109,7 @@ function criarLinha (divisao, id, mascara, broadcast, ip) {
 }
 
 function calc () {
-	let tipo = document.getElementById("tipo").selectedIndex;
+	let tipo = parseInt(document.getElementById("tipo-div").getAttribute("data-selecionado"));
 	let ip;
 	let divisao;
 	let quantidadeHost;
@@ -113,7 +125,6 @@ function calc () {
 			divisao = Math.floor(32 - (Math.log(quantidadeHost+2)/Math.log(2)));
 			break;
 	}
-	console.log(divisao);
 
 	if (ip != "" && divisao >= 0 && divisao <= 31) {
 		let rede = [];
@@ -133,10 +144,7 @@ function calc () {
 		id = rede.slice();
 		broadcast = rede.slice();
 
-		if (divisao % 8 == 0) {
-			criarLinha(divisao, id, mascara, broadcast, ip);
-
-		} else {
+		if (divisao % 8 !== 0) {
 			submascara = 0;
 
 			for (let i = 7; i > (7 - (divisao % 8)); i--) {
@@ -144,8 +152,9 @@ function calc () {
 			}
 			mascara.push(submascara);
 
-			criarLinha(divisao, id, mascara, broadcast, ip);
 		}
+
+		criarLinha(divisao, id, mascara, broadcast, ip);
 	}
 }
 
