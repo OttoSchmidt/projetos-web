@@ -13,8 +13,6 @@ function atualizar () {
 		document.getElementById("tipo-div").setAttribute("data-selecionado", 0);
 	}
 
-	console.log(tipo == 0);
-
 	let input = document.getElementsByClassName("inputs")[tipo];
 	input.classList.add("selecionado");
 
