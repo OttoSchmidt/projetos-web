@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @media print {
     body * {
       visibility: hidden;
@@ -12,21 +14,83 @@
     }
 }
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 main {
   width: fit-content;
   margin: 0 auto;
 }
 
-select {
+button:hover {
+  cursor: pointer;
+}
+
+#formulario {
+  margin-top: 30px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.selecionado {
+  display: flex;
+}
+
+label {
+  margin: 0 5px;
+}
+
+button {
+  display: block;
+  padding: 3px 10px;
+}
+
+#botoes {
   width: fit-content;
-  margin: 0 5px 0 20px;
-  height: 26px;
-  border: 0;
-  text-align: right;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+table {
+  margin: 15px auto;
+}
+
+table, td, tr, th {
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+
+td, th {
+  padding: 2px 15px;
 }
 
 #resultado .destaque-verde {
   background-color: rgba(144, 238, 144, 0.329);
+}
+
+#resultado .destaque-verde td:first-child::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transform: translateX(-75px);
+  content: "?";
+  background-color: rgba(144, 238, 144, 0.329);
+  border: 1px solid black;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 #imprimir {

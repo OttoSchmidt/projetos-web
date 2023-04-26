@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/index.css" rel="stylesheet" type="text/css" />
-	<link href="css/comum.css" rel="stylesheet" type="text/css" />
-	<title>Ferramentas de rede</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Calcular sub-redes</title>
+	<link href="css/subrede.css" rel="stylesheet" type="text/css" />
+	<script src="tool.js"></script>
 </head>
+
 <body>
-	<div>
-		<div class="link">
-			<a href="subredes/tool.html">Calcular subredes</a>
+	<main>
+		<div id="formulario">
+			<div>
+				<label>Selecione o tipo</label>
+				<select id="tipo" onchange="atualizar();">
+					<option>Máscara</option>
+					<option>Hosts</option>
+					<option>Bits emprestados</option>
+				</select>
+			</div>
+			
+			<div class="inputs selecionado" id="mascara">
+				<input type="text" id="ip-mascara" name="num" placeholder="IP"/>
+				<label>Máscara</label>
+				<input placeholder="/" type="text" name="num" id="mascara-valor">
+			</div>
+			
+			<div class="inputs" id="host">
+				<input type="text" id="ip-host" name="num" placeholder="IP"/>
+				<label>Quant. de host</label>
+				<input type="text" name="num" id="host-valor">
+			</div>
+			
+			<div class="inputs" id="bits">
+				<input type="text" id="ip-bits" name="num" placeholder="IP da rede"/>
+				<label>Bits emprestados</label>
+				<input type="text" name="num" id="bits-valor">
+			</div>
+			
+			<div id="botoes">
+				<button onclick="calc();">Calcular</button>
+				<button onclick="adicionar();">Adicionar</button>
+			</div>
 		</div>
-		<div class="link">
-			<a href="subredes-fixas/tool.html">Calcular subredes fixas</a>
-		</div>
-	</div>
+
+		<div id="resultado"></div>
+
+		<div id="imprimir"></div>
+	</main>
 </body>
 </html>
