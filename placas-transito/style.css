@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+@media screen and (max-width: 900px) {
+    #frase p {
+        margin: 15px 0 !important;
+    }
+
+    #imagens {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 auto !important;
+    }
+
+    #imagens img {
+        margin: 20px 0 !important;
+    }
+}
+
 * {
-    margin: 0;
-    padding: 0;
     font-family: 'Poppins';
 }
 
 body {
-    display: grid;
-    align-items: center;
-    justify-items: center;
     transition: 200ms;
+    height: 100vh;
+    margin: 0;
 }
 
 #acerto {
@@ -23,6 +37,7 @@ body {
 
 main {
     margin: 0 auto;
+    height: 100%;
 }
 
 #frase p {
@@ -34,9 +49,12 @@ main {
 }
 
 #imagens {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 65%;
+    margin: 40px auto;
 }
 
 #imagens img {
@@ -45,14 +63,14 @@ main {
 }
 
 #status {
-    position: fixed;
-    bottom: 0px;
+    position: absolute;
+    bottom: 5px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
     font-weight: 600;
     font-size: large;
 }

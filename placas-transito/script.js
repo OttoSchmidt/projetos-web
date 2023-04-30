@@ -19,6 +19,10 @@ function carregar () {
         img = document.createElement("img");
         valor = Math.floor(Math.random() * (dados_img.length));
 
+        if (dados_img.length > 3) {
+            if (index_img_selecionado.includes(valor));
+        }
+
         img.src = dados_img[valor];
         img.classList.add("placa");
 
