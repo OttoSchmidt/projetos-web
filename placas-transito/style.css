@@ -34,10 +34,9 @@ main {
 }
 
 #imagens {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 #imagens img {
@@ -46,10 +45,16 @@ main {
 }
 
 #status {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: large;
 }
 
 #status p {
