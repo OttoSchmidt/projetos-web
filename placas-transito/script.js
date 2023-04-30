@@ -1,26 +1,67 @@
-function carregar (treeData) {
-    //tipos = ["auxiliar", "regulamentacao", "advertencia"];
-    tipos = "regulamentacao";
+let dados_img, dados_alt;
+
+function removerFundo () {
+    document.body.id = "";
+}
+
+function carregar () {
+    setTimeout(removerFundo, 300);
+
     document.getElementById("imagens").innerHTML = "";
     document.getElementById("frase").innerHTML = "";
+    index_img_selecionado = [];
 
-    for (let i = 0; i < 3; i++) {
-        img = document.createElement("img");
-        valor = Math.floor(Math.random() * (treeData[tipos+"-img"].length - 1));
-        img.src = treeData[tipos+"-img"][valor];
-        img.classList.add("placa");
-        img.setAttribute("data-valor", valor);
-        img.setAttribute("onclick", "verificar(" + i + ");");
-        document.getElementById("imagens").appendChild(img);
+    if (dados_img.length == 0) {
+        return;
     }
 
-    texto_index_random = Math.floor(Math.random() * 2);
-    texto_index_json = parseInt(document.getElementsByClassName("placa")[texto_index_random].getAttribute("data-valor"));
+    while (index_img_selecionado.length < 3) {
+        img = document.createElement("img");
+        valor = Math.floor(Math.random() * (dados_img.length));
+
+        img.src = dados_img[valor];
+        img.classList.add("placa");
+
+        img.setAttribute("data-valor", valor);
+        img.setAttribute("onclick", "verificar(" + index_img_selecionado.length + ");");
+
+        document.getElementById("imagens").appendChild(img);
+
+        index_img_selecionado.push(valor);
+    }
+
+    valor_img_correta = index_img_selecionado[Math.floor(Math.random() * 3)];
+    
     frase = document.createElement("p");
-    frase.innerHTML = treeData[tipos+"-alt"][texto_index_json];
-    frase.setAttribute("data-valor", texto_index_json);
+    frase.innerHTML = dados_alt[valor_img_correta];
+
+    frase.setAttribute("data-valor", valor_img_correta);
+
     frase.id = "correcao";
+
     document.getElementById("frase").appendChild(frase);
+}
+
+function verificar (index) {
+    gabarito_valor = (document.getElementById("correcao").getAttribute("data-valor"));
+
+    imagemSelecionada = document.getElementsByClassName("placa")[index];
+    imagemSelecionadaValor = imagemSelecionada.getAttribute("data-valor");
+
+    document.getElementById("total").innerHTML++;
+
+    if (imagemSelecionadaValor == gabarito_valor) {
+        document.getElementById("acertos").innerHTML++;
+
+        dados_img.splice(imagemSelecionadaValor, 1);
+        dados_alt.splice(imagemSelecionadaValor, 1);
+
+        document.body.id = "acerto";
+    } else {
+        document.body.id = "erro";
+    }
+
+    carregar();
 }
 
 function carregarJSON () {
@@ -32,22 +73,8 @@ function carregarJSON () {
     
     function reqListener(e) {
         treeData = JSON.parse(this.responseText);
-        carregar(treeData);
+        dados_img = treeData["imagens"];
+        dados_alt = treeData["alts"];
+        carregar();
     }
-}
-
-function verificar (index) {
-    gabarito = (document.getElementById("correcao").getAttribute("data-valor"));
-    imagemSelecionada = document.getElementsByClassName("placa")[index];
-
-    document.getElementById("total").innerHTML++;
-
-    if (imagemSelecionada.getAttribute("data-valor") == gabarito) {
-        document.getElementById("acertos").innerHTML++;
-    } else {
-        console.log("errado");
-    }
-
-    carregarJSON();
-
 }
