@@ -20,7 +20,9 @@ function carregar () {
         valor = Math.floor(Math.random() * (dados_img.length));
 
         if (dados_img.length > 3) {
-            if (index_img_selecionado.includes(valor));
+            if (index_img_selecionado.includes(valor)) {
+                continue;
+            }
         }
 
         img.src = dados_img[valor];
