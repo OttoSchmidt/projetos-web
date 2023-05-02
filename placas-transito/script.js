@@ -9,6 +9,7 @@ function carregar () {
 
     document.getElementById("imagens").innerHTML = "";
     document.getElementById("frase").innerHTML = "";
+    document.getElementById("resto").innerHTML = dados_img.length;
     index_img_selecionado = [];
 
     if (dados_img.length == 0) {
@@ -16,6 +17,7 @@ function carregar () {
     }
 
     while (index_img_selecionado.length < 3) {
+        div = document.createElement("div");
         img = document.createElement("img");
         valor = Math.floor(Math.random() * (dados_img.length));
 
@@ -29,9 +31,10 @@ function carregar () {
         img.classList.add("placa");
 
         img.setAttribute("data-valor", valor);
-        img.setAttribute("onclick", "verificar(" + index_img_selecionado.length + ");");
+        div.setAttribute("onclick", "verificar(" + index_img_selecionado.length + ");");
 
-        document.getElementById("imagens").appendChild(img);
+        div.appendChild(img);
+        document.getElementById("imagens").appendChild(div);
 
         index_img_selecionado.push(valor);
     }
@@ -54,11 +57,7 @@ function verificar (index) {
     imagemSelecionada = document.getElementsByClassName("placa")[index];
     imagemSelecionadaValor = imagemSelecionada.getAttribute("data-valor");
 
-    document.getElementById("total").innerHTML++;
-
     if (imagemSelecionadaValor == gabarito_valor) {
-        document.getElementById("acertos").innerHTML++;
-
         dados_img.splice(imagemSelecionadaValor, 1);
         dados_alt.splice(imagemSelecionadaValor, 1);
 
