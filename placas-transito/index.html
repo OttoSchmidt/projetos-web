@@ -9,13 +9,17 @@
     <script src="script.js"></script>
 </head>
 <body onload="carregarJSON();">
-    <main>
-            <div id="frase">
-                
-            </div>
-            <div id="imagens">
+    <div id="resultado" class="hidden">
+        <h2>Parabéns!</h2>
 
-            </div>
+        <p>Precisão: <span id="precisao"></span>%</p>
+        <p>Tempo decorrido: <span id="min"></span><span id="seg"></span></p>
+
+        <button onclick="window.location.reload();">Reiniciar</button>
+    </div>
+    <main>
+        <div id="frase"></div>
+        <div id="imagens"></div>
     </main>
     <div id="status">
         <p>Placas restantes:</p>

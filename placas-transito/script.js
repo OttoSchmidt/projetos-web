@@ -1,18 +1,31 @@
-let dados_img, dados_alt;
+let dados_img, dados_alt, tentativas = 0, inicioTempo, tamanhoOriginal;
 
 function removerFundo () {
     document.body.id = "";
 }
 
 function carregar () {
-    setTimeout(removerFundo, 300);
-
     document.getElementById("imagens").innerHTML = "";
     document.getElementById("frase").innerHTML = "";
     document.getElementById("resto").innerHTML = dados_img.length;
     index_img_selecionado = [];
 
     if (dados_img.length == 0) {
+        document.getElementsByTagName("main")[0].classList.add("hidden");
+        document.getElementById("status").classList.add("hidden");
+        document.getElementById("resultado").classList.remove("hidden");
+
+        document.getElementById("precisao").innerHTML = (tamanhoOriginal/tentativas * 100).toFixed(2);
+
+        tempoDecorrido = new Date() - inicioTempo;
+
+        if (tempoDecorrido/60000 >= 1) {
+            document.getElementById("min").innerHTML = Math.floor(tempoDecorrido/60000) + " minuto(s) e ";
+            tempoDecorrido -= Math.floor(tempoDecorrido/60000) * 60000;
+        }
+
+        document.getElementById("seg").innerHTML = Math.floor(tempoDecorrido/1000) + " segundo(s)";
+
         return;
     }
 
@@ -57,6 +70,8 @@ function verificar (index) {
     imagemSelecionada = document.getElementsByClassName("placa")[index];
     imagemSelecionadaValor = imagemSelecionada.getAttribute("data-valor");
 
+    tentativas++;
+
     if (imagemSelecionadaValor == gabarito_valor) {
         dados_img.splice(imagemSelecionadaValor, 1);
         dados_alt.splice(imagemSelecionadaValor, 1);
@@ -66,6 +81,7 @@ function verificar (index) {
         document.body.id = "erro";
     }
 
+    setTimeout(removerFundo, 300);
     carregar();
 }
 
@@ -80,6 +96,10 @@ function carregarJSON () {
         treeData = JSON.parse(this.responseText);
         dados_img = treeData["imagens"];
         dados_alt = treeData["alts"];
+
+        inicioTempo = new Date();
+        tamanhoOriginal = dados_img.length;
+
         carregar();
     }
 }
