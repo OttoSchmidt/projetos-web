@@ -16,6 +16,7 @@ function carregar () {
         document.getElementById("resultado").classList.remove("hidden");
 
         document.getElementById("precisao").innerHTML = (tamanhoOriginal/tentativas * 100).toFixed(2);
+        document.getElementById("erros").innerHTML = tentativas - tamanhoOriginal;
 
         tempoDecorrido = new Date() - inicioTempo;
 

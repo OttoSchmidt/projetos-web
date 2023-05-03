@@ -130,20 +130,16 @@ main {
 }
 
 #resultado h2 {
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
 }
 
 #resultado p {
     margin: 4px 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #resultado p:last-of-type {
     margin-top: 15px;
-}
-
-#resultado span {
-    font-weight: normal;
 }
 
 #resultado button {
@@ -159,3 +155,4 @@ main {
 #resultado button:hover {
     transform: scale(1.1);
 }
+
