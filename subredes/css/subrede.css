@@ -46,6 +46,7 @@ html {
 }
 
 body {
+  transition: 150ms;
   background: var(--cor-background);
   color: var(--cor-letra);
 }
@@ -112,7 +113,7 @@ main {
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--cor-background);
-  transition: 100ms;
+  transition: width 100ms, background 100ms, margin 200ms;
 }
 
 #dark #circulo-externo::before {
