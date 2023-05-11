@@ -1,3 +1,13 @@
+function alterarModo () {
+	bodyID = document.body.id;
+	if (bodyID == "dark") {
+		document.body.id="claro";
+	} else {
+		document.body.id="dark";
+	}
+
+}
+
 function atualizar () {
 	document.getElementsByClassName("selecionado")[0].classList.remove("selecionado");
 

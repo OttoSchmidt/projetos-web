@@ -21,11 +21,23 @@
     }
 }
 
-html {
-  background: #F2F2F2;
+#claro {
+  --cor-letra: #000;
   --cor-destaque: #0F62FE;
+  --cor-background: #F2F2F2;
   --cor-leve-destaque: #CFE0FF;
   --cor-borda: #8E8E8E;
+}
+
+#dark {
+  --cor-letra: #fff;
+  --cor-background: #181818;
+  --cor-destaque: #143677;
+  --cor-leve-destaque: #334669;
+  --cor-borda: #8E8E8E;
+}
+
+html {
   --fundo-botao-porcentagem: -53%;
 }
 
@@ -33,9 +45,79 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background: var(--cor-background);
+  color: var(--cor-letra);
+}
+
 main {
   width: fit-content;
   margin: 0 auto;
+}
+
+#modo {
+  width: 30px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#raios {
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;;
+}
+
+#claro #raios {
+  width: 100%;
+}
+
+#dark #raios {
+  transform: rotateZ(45deg);
+  width: 0%;
+}
+
+#raios g {
+  stroke: var(--cor-borda);
+}
+
+#circulo-externo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-borda);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+#claro #circulo-externo {
+  width: 50%;
+}
+
+#dark #circulo-externo {
+  width: 70%;
+}
+
+#circulo-externo::before {
+  position: absolute;
+  display:inline-block;
+  content: '';
+  width: 25%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cor-background);
+  transition: 100ms;
+}
+
+#dark #circulo-externo::before {
+  margin-left: 50%;
+  width: 70%;
 }
 
 #formulario {
@@ -105,6 +187,8 @@ select {
   border-radius: 9px;
   height: 30px;
   padding: 0 5px;
+  background: rgba(0, 0, 0, 0);
+  color: var(--cor-letra);
 }
 
 .inputs input:first-child {
@@ -148,7 +232,7 @@ table {
 
 table, td, tr, th {
   border-collapse: collapse;
-  border: 1px solid black;
+  border: 1px solid var(--cor-letra);
   text-align: center;
 }
 
@@ -168,7 +252,7 @@ td, th {
   transform: translateX(-75px);
   content: "?";
   background-color: var(--cor-leve-destaque);
-  border: 1px solid black;
+  border: 1px solid var(--cor-letra);
   border-radius: 100%;
 }
 
