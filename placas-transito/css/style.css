@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+body {
+    transition: 200ms;
+    height: 100vh;
+    margin: 0;
+    background: #262626;
+    color: white;
+}
+
+main {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.pagina {
+    color: white;
+    top: 20px;
+    left: 20px;
+    display: block;
+    position: absolute;
+}
+
+#frase {
+    margin: 50px 0;
+}
+
+#frase p {
+    font-weight: 600;
+    font-size:x-large;
+    text-align: center;
+}

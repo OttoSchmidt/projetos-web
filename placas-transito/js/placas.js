@@ -90,7 +90,7 @@ function carregarJSON () {
     var treeData;
     var oReq = new XMLHttpRequest();
     oReq.onload = reqListener;
-    oReq.open("get", "dados.json", true);
+    oReq.open("get", "json/dados.json", true);
     oReq.send();
     
     function reqListener(e) {

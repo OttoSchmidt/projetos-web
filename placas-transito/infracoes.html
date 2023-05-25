@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/infracoes.css">
+    <script src="js/infracoes.js"></script>
+    <title>Infrações</title>
+</head>
+<body>
+    <a href="index.html" class="pagina">Teste de Placas</a>
+
+    <div id="frase">
+        <p>Preencha a tabela com a quantidade de pontos e o valor da multa:</p>
+    </div>
+    
+    <main>
+        <table>
+            <tbody id="tabela">
+                <tr>
+                    <th>Gravidade</th>
+                    <th>Pontos</th>
+                    <th>Valores (R$)</th>
+                </tr>
+            </tbody>
+        </table>
+    
+        <button id="iniciar" onclick="inicio();">Iniciar</button>
+        <button id="terminar" onclick="verificar();" class="hidden">Finalizar</button>
+
+    </main>
+    
+</body>
+</html>

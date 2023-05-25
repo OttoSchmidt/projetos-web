@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    justify-content: center;
+}
+
+table, td, th {
+    border: 1px solid white;
+    border-collapse: collapse;
+    height:fit-content;
+    text-align: center;
+}
+
+th, .legenda {
+    padding: 5px 15px;
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+input, input:focus-visible {
+    background: inherit;
+    border: none;
+    outline: 0;
+    text-align: center;
+}
+

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 @media screen and (max-width: 900px) {
     #frase {
         margin: 15px 0 !important;
@@ -27,33 +25,12 @@
     }
 }
 
-* {
-    font-family: 'Poppins';
-}
-
-body {
-    transition: 200ms;
-    height: 100vh;
-    margin: 0;
-    background: #262626;
-    color: white;
-}
-
 #acerto {
     background-color: #427741;
 }
 
 #erro {
     background-color: #6f3a3a;
-}
-
-main {
-    margin: 0 auto;
-    height: 100%;
-}
-
-.hidden {
-    display: none;
 }
 
 #frase {
@@ -160,4 +137,3 @@ main {
 #resultado button:hover {
     transform: scale(1.1);
 }
-
