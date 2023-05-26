@@ -1,6 +1,17 @@
-main {
+body {
     display: grid;
-    justify-content: center;
+    grid-template-columns: 2fr 9fr;
+}
+
+nav {
+    padding: 25px 0;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+.pagina {
+    text-align: center;
+    grid-row: 1;
 }
 
 table, td, th {
@@ -10,14 +21,20 @@ table, td, th {
     text-align: center;
 }
 
+table {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 th, .legenda {
     padding: 5px 15px;
 }
 
 button {
+    display: block;
     height: fit-content;
     width: fit-content;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 input, input:focus-visible {
@@ -25,5 +42,15 @@ input, input:focus-visible {
     border: none;
     outline: 0;
     text-align: center;
+    color: white;
+    height: 100%;
 }
 
+.erro {
+    background-color: #6f3a3a;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+}

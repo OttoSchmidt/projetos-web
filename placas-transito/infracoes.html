@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +10,16 @@
     <title>Infrações</title>
 </head>
 <body>
-    <a href="index.html" class="pagina">Teste de Placas</a>
-
-    <div id="frase">
-        <p>Preencha a tabela com a quantidade de pontos e o valor da multa:</p>
-    </div>
-    
+    <nav>
+        <a href="index.html" class="pagina">Teste de Placas</a>
+        
+        <ul id="tentativas">
+            <p>Tentativas Anteriores:</p>
+        </ul>
+    </nav>
     <main>
+        <h3>Preencha a tabela com a quantidade de pontos e o valor da multa de acordo com a gravidade:</h3>
+
         <table>
             <tbody id="tabela">
                 <tr>
@@ -29,8 +32,6 @@
     
         <button id="iniciar" onclick="inicio();">Iniciar</button>
         <button id="terminar" onclick="verificar();" class="hidden">Finalizar</button>
-
     </main>
-    
 </body>
 </html>

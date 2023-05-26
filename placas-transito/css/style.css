@@ -23,13 +23,10 @@ main {
 
 .pagina {
     color: white;
-    top: 20px;
-    left: 20px;
     display: block;
-    position: absolute;
 }
 
-#frase {
+#frase, h3 {
     margin: 50px 0;
 }
 
