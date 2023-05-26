@@ -67,8 +67,6 @@ function verificar () {
         respostasValor[i] = parseFloat(document.getElementById("ind"+i).getElementsByClassName("1")[0].value.replace(/,/, '.'));
     }
 
-    console.log(respostasValor);
-
     for (i = 0; i < 4; i++) {
         inputColuna0 = document.getElementById("ind"+i).getElementsByClassName("0")[0];
         inputColuna1 = document.getElementById("ind"+i).getElementsByClassName("1")[0];
@@ -93,5 +91,6 @@ function verificar () {
     document.getElementById("tentativas").classList.remove("hidden");
 
     document.getElementById("iniciar").classList.remove("hidden");
+    document.getElementById("iniciar").innerHTML = "Reiniciar";
     document.getElementById("terminar").classList.add("hidden");
 }
