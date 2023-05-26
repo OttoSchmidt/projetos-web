@@ -1,4 +1,4 @@
-let dados_img, dados_alt, tentativas = 0, inicioTempo, tamanhoOriginal;
+let dados_img_template, dados_alt_template, dados_img, dados_alt, tentativas, inicioTempo, tamanhoOriginal;
 
 function removerFundo () {
     document.body.id = "";
@@ -11,21 +11,25 @@ function carregar () {
     index_img_selecionado = [];
 
     if (dados_img.length == 0) {
-        document.getElementsByTagName("main")[0].classList.add("hidden");
         document.getElementById("status").classList.add("hidden");
-        document.getElementById("resultado").classList.remove("hidden");
+        document.getElementById("reiniciar").classList.remove("hidden");
+        document.getElementById("frase").innerHTML = "Parabéns!";
 
-        document.getElementById("precisao").innerHTML = (tamanhoOriginal/tentativas * 100).toFixed(2);
-        document.getElementById("erros").innerHTML = tentativas - tamanhoOriginal;
-
+        let tempoDecorridoTexto = "";
         tempoDecorrido = new Date() - inicioTempo;
 
         if (tempoDecorrido/60000 >= 1) {
-            document.getElementById("min").innerHTML = Math.floor(tempoDecorrido/60000) + " minuto(s) e ";
+            tempoDecorridoTexto = Math.floor(tempoDecorrido/60000) + " min e ";
             tempoDecorrido -= Math.floor(tempoDecorrido/60000) * 60000;
         }
 
-        document.getElementById("seg").innerHTML = Math.floor(tempoDecorrido/1000) + " segundo(s)";
+        tempoDecorridoTexto += Math.floor(tempoDecorrido/1000) + "s";
+        erros = tentativas - tamanhoOriginal;
+
+        li = document.createElement("li");
+        li.innerHTML = "- " + erros + " erros (" + tempoDecorridoTexto + ")";
+        document.getElementById("tentativas").appendChild(li);
+        document.getElementById("tentativas").classList.remove("hidden");
 
         return;
     }
@@ -55,18 +59,14 @@ function carregar () {
 
     valor_img_correta = index_img_selecionado[Math.floor(Math.random() * 3)];
     
-    frase = document.createElement("p");
+    frase = document.getElementById("frase");
     frase.innerHTML = dados_alt[valor_img_correta];
 
     frase.setAttribute("data-valor", valor_img_correta);
-
-    frase.id = "correcao";
-
-    document.getElementById("frase").appendChild(frase);
 }
 
 function verificar (index) {
-    gabarito_valor = (document.getElementById("correcao").getAttribute("data-valor"));
+    gabarito_valor = (document.getElementById("frase").getAttribute("data-valor"));
 
     imagemSelecionada = document.getElementsByClassName("placa")[index];
     imagemSelecionadaValor = imagemSelecionada.getAttribute("data-valor");
@@ -86,6 +86,21 @@ function verificar (index) {
     carregar();
 }
 
+function reiniciar () {
+    dados_img = Array.from(dados_img_template);
+    dados_alt = Array.from(dados_alt_template);
+
+    inicioTempo = new Date();
+    tamanhoOriginal = dados_img.length;
+
+    document.getElementById("reiniciar").classList.add("hidden");
+    document.getElementById("status").classList.remove("hidden");
+
+    tentativas = 0;
+
+    carregar();
+}
+
 function carregarJSON () {
     var treeData;
     var oReq = new XMLHttpRequest();
@@ -95,12 +110,9 @@ function carregarJSON () {
     
     function reqListener(e) {
         treeData = JSON.parse(this.responseText);
-        dados_img = treeData["imagens"];
-        dados_alt = treeData["alts"];
+        dados_img_template = treeData["imagens"];
+        dados_alt_template = treeData["alts"];
 
-        inicioTempo = new Date();
-        tamanhoOriginal = dados_img.length;
-
-        carregar();
+        reiniciar();
     }
 }

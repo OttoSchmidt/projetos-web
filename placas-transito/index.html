@@ -10,25 +10,24 @@
     <script src="js/placas.js"></script>
 </head>
 <body onload="carregarJSON();">
-    <a href="infracoes.html" class="pagina">Teste de Infrações</a>
+    <nav>
+        <a href="infracoes.html" class="pagina">Teste de Infrações</a>
 
-    <div id="resultado" class="hidden">
-        <h2>Parabéns!</h2>
-
-        <p>Precisão: <span id="precisao"></span>% (Erros: <span id="erros"></span>)</p>
-        <p>Tempo decorrido: <span id="min"></span><span id="seg"></span></p>
-
-        <button onclick="window.location.reload();">Reiniciar</button>
-    </div>
-
+        <ul id="tentativas" class="hidden">
+            <p>Tentativas Anteriores:</p>
+        </ul>
+    </nav>
     <main>
-        <div id="frase"></div>
-        <div id="imagens"></div>
+        <div id="quiz">
+            <h2 id="frase"></h2>
+            <div id="imagens"></div>
+            <button id="reiniciar" class="hidden" onclick="reiniciar();">Reiniciar</button>
+        </div>
+        
+        <div id="status">
+            <p>Placas restantes:</p>
+            <p id="resto"></p>
+        </div>
     </main>
-
-    <div id="status">
-        <p>Placas restantes:</p>
-        <p id="resto"></p>
-    </div>
 </body>
 </html>

@@ -10,24 +10,41 @@ body {
     margin: 0;
     background: #262626;
     color: white;
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+}
+
+nav {
+    padding: 25px 0;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
 }
 
 main {
     margin: 0 auto;
     height: 100%;
+    width: 100%;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .pagina {
     color: white;
     display: block;
+    text-align: center;
+    grid-row: 1;
 }
 
 #frase, h3 {
     margin: 50px 0;
+    text-align: center;
 }
 
 #frase p {
