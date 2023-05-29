@@ -88,7 +88,6 @@ function verificar () {
     li = document.createElement("li");
     li.innerHTML = "- " + erros + " erros (" + Math.floor(tempoDecorrido/1000) + "s)";
     document.getElementById("tentativas").appendChild(li);
-    document.getElementById("tentativas").classList.remove("hidden");
 
     document.getElementById("iniciar").classList.remove("hidden");
     document.getElementById("iniciar").innerHTML = "Reiniciar";

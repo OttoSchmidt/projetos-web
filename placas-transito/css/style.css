@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+@media screen and (min-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: 2fr 9fr;
+    }
+
+    nav {
+        padding: 25px 0;
+        display: grid;
+        grid-template-rows: 1fr 9fr;
+    }
+
+    #tentativas {
+        display: block !important;
+    }
+}
+
 * {
     font-family: 'Poppins';
 }
@@ -10,14 +27,11 @@ body {
     margin: 0;
     background: #262626;
     color: white;
-    display: grid;
-    grid-template-columns: 2fr 9fr;
+    
 }
 
-nav {
-    padding: 25px 0;
-    display: grid;
-    grid-template-rows: 1fr 9fr;
+#tentativas {
+    display: none;
 }
 
 ul {
@@ -36,6 +50,7 @@ main {
 }
 
 .pagina {
+    margin: 25px;
     color: white;
     display: block;
     text-align: center;
