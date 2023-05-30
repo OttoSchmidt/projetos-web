@@ -3,13 +3,14 @@
 @media screen and (min-width: 800px) {
     body {
         display: grid;
-        grid-template-columns: 2fr 9fr;
+        grid-template-columns: 3fr 11fr;
     }
 
     nav {
         padding: 25px 0;
         display: grid;
-        grid-template-rows: 1fr 9fr;
+        grid-template-rows: 1fr 1fr 20fr;
+        grid-template-columns: 1fr;
     }
 
     #tentativas {
@@ -32,6 +33,7 @@ body {
 
 #tentativas {
     display: none;
+    margin-top: 50px;
 }
 
 ul {
@@ -51,10 +53,10 @@ main {
 
 .pagina {
     margin: 25px;
+    margin-bottom: 0;
     color: white;
     display: block;
     text-align: center;
-    grid-row: 1;
 }
 
 #frase, h3 {
