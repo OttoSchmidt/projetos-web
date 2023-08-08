@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-html {
+:root {
     --corBase1: #FFFFFF;
     --corBase2: #D9D9D9;
     --cor1: #F3F6FC;
@@ -18,7 +18,7 @@ nav {
     display: grid;
     grid-template-rows: 1fr 5fr 2fr;
     grid-template-columns: 1fr;
-    position: absolute;
+    position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
@@ -62,7 +62,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--cor2);
+    background: var(--cor1);
     width: 80%;
     height: 32px;
     border-radius: 100px;
@@ -70,7 +70,7 @@ a {
 }
 
 .selecionado > div{
-    background: var(--cor3) !important;
+    background: var(--cor2) !important;
 }
 
 .navBotao img {
@@ -132,7 +132,7 @@ section {
     background: var(--cor1);
     padding: 20px;
     border-radius: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .nomeSection {
@@ -144,4 +144,22 @@ section h2 {
     text-align: left;
     font-weight: 600;
     font-size: 18px;
+}
+
+section p {
+    font-weight: 600;
+}
+
+.circuloProgresso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    width: 48px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, var(--cor1) 79%, transparent 80% 100%),
+        conic-gradient(var(--cor3) 50%, var(--cor1) 0);    
 }

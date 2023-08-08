@@ -1,4 +1,4 @@
-html {
+:root {
     --corBase1: #FFFFFF;
     --corBase2: #D9D9D9;
     --cor1: #F3F6FC;
@@ -20,6 +20,7 @@ main {
 #curso {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: end;
 }
 
 #curso h2 {
@@ -31,15 +32,51 @@ main {
     grid-template-rows: 1fr 4fr;
 }
 
-#presenca #circulo {
-    background: var(--cor3);
-    border-radius: 50%;
-    aspect-ratio: 1;
-    width: 60px;
+#faltas {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: auto;
-    font-weight: 600;
+    color: black;
+}
+
+#forma1, #forma2 {
+    fill: var(--cor3);
+}
+
+#faltas svg{
+    width: 70px;
+    height: 70px;
+    transition: cubic-bezier(0.24, 0.29, 0.17, 1.8) 500ms;
+}
+
+#faltas:hover svg{
+    transform: rotate(50deg);
+}
+
+#preview {
+    padding: 20px 0;
+    margin-left: 15px;
+}
+
+.materia {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nota svg {
+    width: 50px;
+    height: 50px;
+}
+
+#faltas p, .nota p {
+    position: absolute;
+    z-index: 5;
 }

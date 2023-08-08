@@ -8,6 +8,15 @@
     <title>Area do Aluno</title>
 </head>
 <body>
+    <svg display="none">
+        <symbol id="forma2" viewBox="0 0 42 42">
+            <path d="M39.073 20.5c3.23 6.02.79 11.471-5.44 13.133-1.662 6.23-7.112 8.67-13.133 5.44-6.021 3.23-11.472.79-13.133-5.44-6.23-1.662-8.67-7.112-5.44-13.133-3.23-6.021-.79-11.472 5.44-13.133 1.661-6.23 7.112-8.67 13.133-5.44 6.02-3.23 11.471-.79 13.133 5.44 6.23 1.661 8.67 7.112 5.44 13.133z"/>
+        </symbol>
+
+        <symbol id="forma1" viewBox="0 0 40 40">
+            <path d="M.887 14.467C-2.845 5.875 5.875-2.845 14.467.887l1.42.617a10.323 10.323 0 0 0 8.225 0l1.42-.617c8.593-3.732 17.313 4.988 13.581 13.58l-.617 1.42a10.323 10.323 0 0 0 0 8.225l.617 1.42c3.732 8.593-4.989 17.313-13.58 13.581l-1.42-.617a10.323 10.323 0 0 0-8.225 0l-1.42.617C5.874 42.845-2.846 34.125.886 25.533l.617-1.42a10.323 10.323 0 0 0 0-8.225l-.617-1.42Z"/>
+        </symbol>
+    </svg>
     <nav>
         <div class="logo">
             <p>UP</p>
@@ -60,6 +69,7 @@
         <div class="painel">
             <section id="curso">
                 <h2>Ciência da Computação</h2>
+                <div class="circuloProgresso">50%</div>
             </section>
             <section id="presenca" class="maisDetalhes">
                 <div class="nomeSection">
@@ -68,8 +78,11 @@
                         <img src="icons/nav/arrow_forward.svg">
                     </a>
                 </div>
-                <div id="circulo">
-                    <p id="faltas">2</p>
+                <div id="faltas">
+                    <svg>
+                        <use xlink:href="#forma2" href="#forma2"></use>
+                    </svg>
+                    <p>2</p>
                 </div>
             </section>
             <section id="notas">
@@ -78,6 +91,35 @@
                     <a>
                         <img src="icons/nav/arrow_forward.svg">
                     </a>
+                    <div id="preview">
+                        <div class="materia">
+                            <h3>Desenvolvimento WEB</h3>
+                            <div class="nota">
+                                <svg>
+                                    <use xlink:href="#forma1" href="#forma1"></use>
+                                </svg>
+                                <p>8</p>
+                            </div>
+                        </div>
+                        <div class="materia">
+                            <h3>Programação de Computadores</h3>
+                            <div class="nota">
+                                <svg>
+                                    <use xlink:href="#forma1" href="#forma1"></use>
+                                </svg>
+                                <p>10</p>
+                            </div>
+                        </div>
+                        <div class="materia">
+                            <h3>Arquitetura</h3>
+                            <div class="nota">
+                                <svg>
+                                    <use xlink:href="#forma1" href="#forma1"></use>
+                                </svg>
+                                <p>7</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     
@@ -85,5 +127,6 @@
             </section>
         </div>
     </main>
+    
 </body>
 </html>
