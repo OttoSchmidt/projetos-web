@@ -1,0 +1,45 @@
+html {
+    --corBase1: #FFFFFF;
+    --corBase2: #D9D9D9;
+    --cor1: #F3F6FC;
+    --cor2: #C0D3F6;
+    --cor3: #88A3D7;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    margin-left: 100px;
+    padding: 40px;
+}
+
+.painel {
+    grid-column: 1;
+}
+
+#curso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#curso h2 {
+    text-align: center;
+}
+
+#presenca {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+#presenca #circulo {
+    background: var(--cor3);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+}

@@ -4,43 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="base.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="academico.css">
+    <title>Area do Aluno</title>
 </head>
 <body>
     <nav>
         <div class="logo">
             <p>UP</p>
         </div>
-        <a class="navBotao link selecionado">
-            <div>
-                <img src="icons/nav/school.svg">
-            </div>
-            <p>Vida Acadêmica</p>
-        </a>
-        <a class="navBotao link">
-            <div>
-                <img src="icons/nav/monetization_on.svg">
-            </div>
-            <p>Financeiro</p>
-        </a>
-        <a class="navBotao link">
-            <div>
-                <img src="icons/nav/article.svg">
-            </div>
-            <p>Documentos</p>
-        </a>
-        <a class="navBotao link">
-            <div>
-                <img src="icons/nav/support_agent.svg">
-            </div>
-            <p>CAA</p>
-        </a>
-        <a class="navBotao link">
-            <div>
-                <img src="icons/nav/source_notes.svg">
-            </div>
-            <p>Rematricula</p>
-        </a>
+        <div class="links">
+            <a class="navBotao selecionado">
+                <div>
+                    <img src="icons/nav/school.svg">
+                </div>
+                <p>Vida Acadêmica</p>
+            </a>
+            <a class="navBotao">
+                <div>
+                    <img src="icons/nav/monetization_on.svg">
+                </div>
+                <p>Financeiro</p>
+            </a>
+            <a class="navBotao">
+                <div>
+                    <img src="icons/nav/article.svg">
+                </div>
+                <p>Documentos</p>
+            </a>
+            <a class="navBotao">
+                <div>
+                    <img src="icons/nav/support_agent.svg">
+                </div>
+                <p>CAA</p>
+            </a>
+            <a class="navBotao">
+                <div>
+                    <img src="icons/nav/source_notes.svg">
+                </div>
+                <p>Rematricula</p>
+            </a>
+        </div>
         <div class="navBotao conta">
             <div>
                 <img src="icons/nav/account_circle.svg">
@@ -53,5 +56,34 @@
             </div>
         </div>
     </nav>
+    <main>
+        <div class="painel">
+            <section id="curso">
+                <h2>Ciência da Computação</h2>
+            </section>
+            <section id="presenca" class="maisDetalhes">
+                <div class="nomeSection">
+                    <h2>Minhas faltas</h2>
+                    <a>
+                        <img src="icons/nav/arrow_forward.svg">
+                    </a>
+                </div>
+                <div id="circulo">
+                    <p id="faltas">2</p>
+                </div>
+            </section>
+            <section id="notas">
+                <div class="nomeSection">
+                    <h2>Minhas notas</h2>
+                    <a>
+                        <img src="icons/nav/arrow_forward.svg">
+                    </a>
+                </div>
+                <div>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
