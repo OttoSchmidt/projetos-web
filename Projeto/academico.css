@@ -1,16 +1,10 @@
-:root {
-    --corBase1: #FFFFFF;
-    --corBase2: #D9D9D9;
-    --cor1: #F3F6FC;
-    --cor2: #C0D3F6;
-    --cor3: #88A3D7;
-}
+@import url(base.css);
 
 main {
     display: grid;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 2fr 7fr;
     margin-left: 100px;
-    padding: 40px;
+    padding: 30px;
 }
 
 .painel {
@@ -39,8 +33,12 @@ main {
     color: black;
 }
 
-#forma1, #forma2 {
-    fill: var(--cor3);
+#forma1 {
+    fill: var(--container-secundario);
+}
+
+#forma2 {
+    fill: var(--primario);
 }
 
 #faltas svg{
@@ -53,6 +51,11 @@ main {
     transform: rotate(50deg);
 }
 
+#faltas p {
+    color: var(--no-primario);
+    font-size: 24px;
+}
+
 #preview {
     padding: 20px 0;
     margin-left: 15px;
@@ -63,6 +66,11 @@ main {
     display: grid;
     grid-template-columns: 4fr 1fr;
     align-items: center;
+}
+
+.materia h3 {
+    font-size: 14px;
+    width: 80%;
 }
 
 .nota {

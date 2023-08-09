@@ -1,0 +1,13 @@
+:root {
+    --preto: #000;
+    --branco: #fff;
+    --primario: #255FA6;
+    --no-primario: #fff;
+    --secundario: #555F71;
+    --container-secundario: #D9E3F8;
+    --no-container-secundario: #121C2B;
+    --na-superfice: #1A1C1E;
+    --container-superfice-maisAlto: #E3E2E6;
+    --container-superfice-baixo: #F4F3F7;
+    --aviso: #BA1A1A;
+}

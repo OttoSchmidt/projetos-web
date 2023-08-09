@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url(cores.css);
 
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    color: var(--na-superfice);
 }
 
-:root {
-    --corBase1: #FFFFFF;
-    --corBase2: #D9D9D9;
-    --cor1: #F3F6FC;
-    --cor2: #C0D3F6;
-    --cor3: #88A3D7;
+body {
+    background: var(--branco);
 }
 
 nav {
@@ -25,7 +23,7 @@ nav {
     bottom: 0;
     height: 100vh;
     width: var(--largura);
-    background: var(--cor1);
+    background: var(--container-superfice-baixo);
     text-align: center;
     font-weight: 600;
 }
@@ -70,7 +68,7 @@ a {
 }
 
 .selecionado > div{
-    background: var(--cor2) !important;
+    background: var(--container-secundario) !important;
 }
 
 .navBotao img {
@@ -94,13 +92,13 @@ a {
 }
 
 .conta > div:first-child {
-    background: var(--corBase2);
+    background: var(--container-superfice-maisAlto);
     width: 42px;
     height: 42px;
 }
 
 .menuConta {
-    background: var(--cor1);
+    background: var(--container-superfice-baixo);
     position: fixed;
     z-index: -5;
     bottom: 0;
@@ -121,15 +119,21 @@ a {
     display: block;
     font-weight: 400;
     margin: 10px 0;
+    transition: 200ms;
+}
+
+.menuConta a:hover {
+    padding-left: 10px;
+    font-weight: 500;
 }
 
 #sair {
-    color: darkred;
+    color: var(--aviso);
 }
 
 section {
     position: relative;
-    background: var(--cor1);
+    background: var(--container-superfice-baixo);
     padding: 20px;
     border-radius: 22px;
     margin-bottom: 20px;
@@ -160,6 +164,24 @@ section p {
     aspect-ratio: 1;
     border-radius: 50%;
     background: 
-        radial-gradient(closest-side, var(--cor1) 79%, transparent 80% 100%),
-        conic-gradient(var(--cor3) 50%, var(--cor1) 0);    
+        radial-gradient(closest-side, var(--container-superfice-baixo) 79%, transparent 80% 100%),
+        conic-gradient(var(--primario) 50%, var(--container-superfice-baixo) 0);    
+}
+
+#pesquisa {
+    display: flex;
+    border-radius: 100px;
+    padding: 13px;
+    gap: 13px;
+}
+
+#estela {
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+input, input:focus-visible {
+    background: transparent;
+    border: none;
+    outline: none;
 }
