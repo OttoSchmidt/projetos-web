@@ -185,3 +185,45 @@ input, input:focus-visible {
     border: none;
     outline: none;
 }
+
+.funcoes {
+    border-radius: 30px;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    height: 56px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab p {
+    padding: 0 16px;
+    font-weight: 500;
+}
+
+.tabs .selecionado p {
+    color: var(--primario);
+}
+
+.tabs .selecionado::after {
+    position: absolute;
+    content: '';
+    background: var(--primario);
+    height: 4px;
+    width: 20px;
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+}
