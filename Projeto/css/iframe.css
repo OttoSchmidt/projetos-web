@@ -1,0 +1,41 @@
+@import url(base.css);
+
+* {
+    color: var(--na-superfice);
+}
+
+html, body {
+    height: 100%;
+}
+
+.aviso {
+    color: var(--aviso);
+    text-align: center;
+}
+
+.superfice {
+    background: var(--superfice);
+    border-radius: 22px;
+    padding: 20px 0 5px 20px;
+}
+
+body {
+    background: transparent;
+    gap: 20px;
+}
+
+ul {
+    margin-top: 10px; 
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    color: var(--primario);
+}
+
+a:hover {
+    text-decoration: underline;
+}
