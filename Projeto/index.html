@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/academico.css">
+    <script src="base.js"></script>
     <title>Area do Aluno</title>
 </head>
 <body>
@@ -59,7 +60,7 @@
             <p>Conta</p>
             <div class="menuConta">
                 <a>Mudar curso</a>
-                <a>Alterar dados</a>
+                <a>Alterar preferências</a>
                 <a id="sair">Sair</a>
             </div>
         </div>
@@ -131,18 +132,18 @@
             </section>
         </div>
         <div class="funcoes">
-            <div class="tabs">
-                <div class="tab selecionado"><p>Certificados</p></div>
-                <div class="tab"><p>Diploma</p></div>
-                <div class="tab"><p>Biblioteca</p></div>
-                <div class="tab"><p>Histórico</p></div>
-                <div class="tab"><p>Plataforma de Prova</p></div>
-                <div class="tab"><p>Horário de Aulas</p></div>
-                <div class="tab"><p>Webestágio</p></div>
-                <div class="tab"><p>Eventos</p></div>
+            <div id="tabs" data-selecionado="0">
+                <div class="tab selecionado" onclick="alterarTab(0);"><p>Certificados</p></div>
+                <div class="tab" onclick="alterarTab(1);"><p>Diploma</p></div>
+                <div class="tab" onclick="alterarTab(2);"><p>Biblioteca</p></div>
+                <div class="tab" onclick="alterarTab(3);"><p>Histórico</p></div>
+                <div class="tab" onclick="alterarTab(4);"><p>Horarios</p></div>
+                <div class="tab" onclick="alterarTab(5);"><p>Webestágio</p></div>
+                <div class="tab" onclick="alterarTab(6);"><p>Eventos</p></div>
+                <a class="tab"><p>Plataforma de Prova</p></a>
             </div>
             <section class="conteudo">
-                <iframe scrolling="no" src="academico/biblioteca.html"></iframe>
+                <iframe scrolling="no" src="academico/certificados.html" id="mostrar"></iframe>
             </section>
         </div>
     </main>

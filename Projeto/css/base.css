@@ -190,7 +190,7 @@ input, input:focus-visible {
     border-radius: 30px;
 }
 
-.tabs {
+#tabs {
     position: relative;
     display: flex;
     width: 100%;
@@ -209,16 +209,20 @@ input, input:focus-visible {
     width: 100%;
 }
 
+.tab:hover {
+    cursor: pointer;
+}
+
 .tab p {
     padding: 0 16px;
     font-weight: 500;
 }
 
-.tabs .selecionado p {
+#tabs .selecionado p {
     color: var(--primario);
 }
 
-.tabs .selecionado::after {
+#tabs .selecionado::after {
     position: absolute;
     content: '';
     background: var(--primario);
@@ -230,7 +234,8 @@ input, input:focus-visible {
 
 .conteudo {
     min-height: 300px;
-    height: 100%;
+    height: 100vh;
+    padding-bottom: 20px;
 }
 
 iframe {
@@ -238,4 +243,52 @@ iframe {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.seletores {
+    display: flex;
+    align-items: center;
+    padding:16px;
+}
+
+.seletores label {
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+.radio {
+    -webkit-appearance: none;
+    position: relative;
+    font: inherit;
+    appearance: none;
+    background-color: var(--inherit);
+    color: var(--na-superfice);
+    width: 20px;
+    aspect-ratio: 1;
+    border: 0.15em solid var(--na-superfice);
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+.radio::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    aspect-ratio: 1;
+    background: var(--na-superfice);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms;
+}
+
+.radio:checked {
+    color: var(--primario);
+    border-color: var(--primario);
+}
+
+.radio:checked::after {
+    width: 10px;
+    background: var(--primario);
 }

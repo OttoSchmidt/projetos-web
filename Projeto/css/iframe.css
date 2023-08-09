@@ -39,3 +39,16 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.wrapperRadioConteudo {
+    background: var(--superfice);
+    border-radius: 12px;
+}
+
+.seletores:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.seletores:last-child {
+    border-radius: 0 0 12px 12px;
+}
