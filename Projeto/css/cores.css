@@ -35,7 +35,7 @@ body {
         --no-aviso: #690005;
     }
 
-    nav img {
+    nav img, .nomeSection img {
         filter: invert(1);
     }
 }
