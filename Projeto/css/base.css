@@ -30,6 +30,7 @@ nav {
 
 a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .logo {
@@ -131,12 +132,36 @@ a {
     color: var(--aviso);
 }
 
+main {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    gap: 80px;
+    margin-left: 100px;
+    padding: 30px;
+    width: 87vw;
+}
+
 section {
     position: relative;
     background: var(--container-superfice-baixo);
     padding: 20px;
     border-radius: 22px;
     margin-bottom: 20px;
+}
+
+.painel {
+    grid-column: 1;
+    width: 100%;
+}
+
+#curso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+}
+
+#curso h2 {
+    text-align: center;
 }
 
 .nomeSection {
@@ -291,4 +316,23 @@ iframe {
 .radio:checked::after {
     width: 10px;
     background: var(--primario);
+}
+
+table {
+    width: 100%;
+    margin: 10px 0;
+}
+
+table, tr, td, th {
+    border: 1px solid var(--na-superfice);
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px;
+    text-align: center;
+}
+
+.tituloTabela {
+    text-align: center;
 }

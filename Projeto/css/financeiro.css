@@ -1,0 +1,74 @@
+@import url(base.css);
+
+#situacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px auto;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#situacao svg {
+    margin: 10px 0;
+    width: 60px;
+    height: 60px;
+}
+
+#situacao div {
+    position: relative;
+}
+
+#total svg, #total .quant {
+    fill:var(--primario);
+    color: var(--no-primario);
+}
+
+#vencido svg, #vencido .quant {
+    fill: var(--aviso);
+    color: var(--no-aviso);
+}
+
+#aberto svg, #aberto .quant {
+    fill: var(--container-primario);
+    color: var(--no-container-primario);
+}
+
+.quant {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.mes {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.mes h3 {
+    font-size: 15px;
+    width: 80%;
+}
+
+.valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    width: 100px;
+    height: 50px;
+    background: var(--container-primario);
+    border-radius: 50px;
+}
+
+.valor p {
+    color: var(--no-container-primario);
+    position: absolute;
+    z-index: 5;
+}

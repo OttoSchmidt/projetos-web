@@ -16,45 +16,83 @@
         .seletores {
             background: var(--superfice);
         }
+
+        .semestres {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="selecionadorRadio">
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>1° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem1">
+            <label for="sem1">1° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>2° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem2">
+            <label for="sem2">2° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>3° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem3">
+            <label for="sem3">3° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>4° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem4">
+            <label for="sem4">4° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>5° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem5">
+            <label for="sem5">5° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>6° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem6">
+            <label for="sem6">6° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>7° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem7">
+            <label for="sem7">7° semestre</label>
         </div>
         <div class="seletores">
-            <input type="radio" name="historico" class="radio">
-            <label>8° semestre</label>
+            <input type="radio" name="historico" class="radio" id="sem8">
+            <label for="sem8">8° semestre</label>
         </div>
     </div>
     <div class="wrapperRadioConteudo">
-
+        <div id="sem1Tabela" class="semestres">
+            <div class="detalhesSemestre">
+                <p>Disciplinas: <span class="detalhe">6</span></p>
+                <p>Situação: <span class="detalhe">Concluido</span></p>
+            </div>
+            <div class="materias">
+                <div class="tituloTabela">Nome</div>
+                <div class="hidden">
+                    <table>
+                        <tr>
+                            <th>Código:</th>
+                            <td>24073</td>
+                        </tr>
+                        <tr>
+                            <th>CH:</th>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <th>Faltas:</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Média:</th>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <th>Situação:</th>
+                            <td class="aprovado">Aprovado</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

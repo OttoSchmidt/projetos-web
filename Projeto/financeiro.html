@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/academico.css">
+    <link rel="stylesheet" type="text/css" href="css/financeiro.css">
     <script src="base.js"></script>
-    <title>Area do Aluno</title>
+    <title>Financeiro</title>
 </head>
 <body>
     <svg display="none">
@@ -22,13 +22,13 @@
             <p>UP</p>
         </div>
         <div class="links">
-            <a class="navBotao selecionado" href="#">
+            <a class="navBotao" href="index.html">
                 <div>
                     <img src="icons/nav/school.svg">
                 </div>
                 <p>Vida Acadêmica</p>
             </a>
-            <a class="navBotao" href="financeiro.html">
+            <a class="navBotao selecionado" href="#">
                 <div>
                     <img src="icons/nav/monetization_on.svg">
                 </div>
@@ -76,74 +76,82 @@
                 <h2>Ciência da Computação</h2>
                 <div class="circuloProgresso">50%</div>
             </section>
-            <section id="presenca" class="maisDetalhes">
+            <section id="mensalidade" class="maisDetalhes">
                 <div class="nomeSection">
-                    <h2>Minhas faltas</h2>
+                    <h2>Mensalidade</h2>
                     <a>
                         <img src="icons/nav/arrow_forward.svg">
                     </a>
                 </div>
-                <div id="faltas">
-                    <svg>
-                        <use xlink:href="#forma2" href="#forma2"></use>
-                    </svg>
-                    <p>2</p>
+                <div id="situacao">
+                    <div id="total">
+                        <p>Total</p>
+                        <svg>
+                            <use xlink:href="#forma2" href="#forma2"></use>
+                        </svg>
+                        <p class="quant">2</p>
+                    </div>
+                    <div id="aberto">
+                        <p>Aberto</p>
+                        <svg>
+                            <use xlink:href="#forma2" href="#forma2"></use>
+                        </svg>
+                        <p class="quant">2</p>
+                    </div>
+                    <div id="vencido">
+                        <p>Vencido</p>
+                        <svg>
+                            <use xlink:href="#forma2" href="#forma2"></use>
+                        </svg>
+                        <p class="quant">0</p>
+                    </div>
                 </div>
-            </section>
-            <section id="notas">
-                <div class="nomeSection">
-                    <h2>Minhas notas</h2>
-                    <a>
-                        <img src="icons/nav/arrow_forward.svg">
-                    </a>
+                <div id="proximas">
                     <div id="preview">
-                        <div class="materia">
-                            <h3>Desenvolvimento WEB</h3>
-                            <div class="nota">
-                                <svg>
-                                    <use xlink:href="#forma1" href="#forma1"></use>
-                                </svg>
-                                <p>8</p>
+                        <div class="mes">
+                            <h3>Setembro</h3>
+                            <div class="valor">
+                                <div class="background"></div>
+                                <p>R$####,##</p>
                             </div>
                         </div>
-                        <div class="materia">
-                            <h3>Programação de Computadores</h3>
-                            <div class="nota">
-                                <svg>
-                                    <use xlink:href="#forma1" href="#forma1"></use>
-                                </svg>
-                                <p>10</p>
+                        <div class="mes">
+                            <h3>Outubro</h3>
+                            <div class="valor">
+                                <div class="background"></div>
+
+                                <p>R$####,##</p>
                             </div>
                         </div>
-                        <div class="materia">
-                            <h3>Arquitetura</h3>
-                            <div class="nota">
-                                <svg>
-                                    <use xlink:href="#forma1" href="#forma1"></use>
-                                </svg>
-                                <p>7</p>
+                        <div class="mes">
+                            <h3>Novembro</h3>
+                            <div class="valor">
+                                <div class="background"></div>
+
+                                <p>R$####,##</p>
+                            </div>
+                        </div>
+                        <div class="mes">
+                            <h3>Dezembro</h3>
+                            <div class="valor">
+                                <div class="background"></div>
+
+                                <p>R$####,##</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    
                 </div>
             </section>
         </div>
         <div class="funcoes">
             <div id="tabs" data-selecionado="0">
-                <div class="tab selecionado" onclick="alterarTab(0);"><p>Certificados</p></div>
-                <div class="tab" onclick="alterarTab(1);"><p>Diploma</p></div>
-                <div class="tab" onclick="alterarTab(2);"><p>Biblioteca</p></div>
-                <div class="tab" onclick="alterarTab(3);"><p>Curriculo</p></div>
-                <div class="tab" onclick="alterarTab(4);"><p>Horarios</p></div>
-                <div class="tab" onclick="alterarTab(5);"><p>Webestágio</p></div>
-                <div class="tab" onclick="alterarTab(6);"><p>Eventos</p></div>
-                <a class="tab"><p>Plataforma de Prova</p></a>
+                <div class="tab selecionado" onclick="alterarTab(0);"><p>Taxas Facultativas</p></div>
+                <div class="tab" onclick="alterarTab(1);"><p>Parcelamento da Mensalidade</p></div>
+                <div class="tab" onclick="alterarTab(2);"><p>Oferta Rematricula</p></div>
+                <div class="tab" onclick="alterarTab(3);"><p>Confissões de Divida</p></div>
             </div>
             <section class="conteudo">
-                <iframe scrolling="no" src="academico/certificados.html" id="mostrar" data-diretorio="academico/"></iframe>
+                <iframe scrolling="no" src="financeiro/taxas.html" id="mostrar" data-diretorio="financeiro/"></iframe>
             </section>
         </div>
     </main>

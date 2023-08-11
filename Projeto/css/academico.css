@@ -1,27 +1,5 @@
 @import url(base.css);
 
-main {
-    display: grid;
-    grid-template-columns: 2fr 7fr;
-    gap: 80px;
-    margin-left: 100px;
-    padding: 30px;
-}
-
-.painel {
-    grid-column: 1;
-}
-
-#curso {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: end;
-}
-
-#curso h2 {
-    text-align: center;
-}
-
 #presenca {
     display: grid;
     grid-template-rows: 1fr 4fr;

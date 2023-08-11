@@ -19,6 +19,12 @@ html, body {
     padding: 20px 0 5px 20px;
 }
 
+.vazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     background: transparent;
     gap: 20px;
@@ -51,4 +57,29 @@ a:hover {
 
 .seletores:last-child {
     border-radius: 0 0 12px 12px;
+}
+
+.semestres {
+    padding: 15px 10px;
+}
+
+.detalhesSemestre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-column: 1 / 3;
+    border-bottom: 1px solid var(--na-superfice);
+    padding-bottom: 10px;
+}
+
+.detalhe {
+    display: block;
+}
+
+.aprovado {
+    color: var(--primario);
+}
+
+.reprovado {
+    color: var(--aviso);
 }
