@@ -83,3 +83,33 @@ a:hover {
 .reprovado {
     color: var(--aviso);
 }
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: fit-content;
+    padding-top: 15px;
+    gap: 20px;
+    height: min-content;
+}
+
+.card {
+    background: var(--superfice);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: fit-content;
+    border-radius: 25px;
+    transition: 150ms;
+    width: 70%;
+    height: 20%;
+    text-align: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    position: relative;
+    scale: 1.05;
+}

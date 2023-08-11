@@ -1,0 +1,13 @@
+@import url(base.css);
+
+.primario {
+    background: var(--container-primario);
+    fill: var(--no-container-primario);
+    color: var(--no-container-primario);
+}
+
+.terciario {
+    background: var(--container-terciario);
+    fill: var(--no-container-terciario);
+    color: var(--no-container-terciario);
+}

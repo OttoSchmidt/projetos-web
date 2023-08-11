@@ -23,11 +23,6 @@
 #faltas svg{
     width: 70px;
     height: 70px;
-    transition: cubic-bezier(0.24, 0.29, 0.17, 1.8) 500ms;
-}
-
-#faltas:hover svg{
-    transform: rotate(50deg);
 }
 
 #faltas p {

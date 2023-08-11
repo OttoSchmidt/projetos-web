@@ -211,6 +211,14 @@ input, input:focus-visible {
     outline: none;
 }
 
+.giroFigura svg {
+    transition: cubic-bezier(0.24, 0.29, 0.17, 1.8) 500ms;
+}
+
+.giroFigura:hover svg {
+    transform: rotate(50deg);
+}
+
 .funcoes {
     border-radius: 30px;
 }
@@ -333,10 +341,49 @@ td, th {
     text-align: center;
 }
 
+.barraProgresso {
+    height: 4px;
+    width: 100%;
+    background: var(--container-superfice-maisAlto);
+    position: relative;
+}
+
+.progresso {
+    height: 100%;
+    background: var(--primario);
+    position: absolute;
+    left: 0;
+}
+
+#botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.botao {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    width: min-content;
+    padding: 0 20px 0 16px;
+    border-radius: 16px;
+    font-size: 16px;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+.botao svg {
+    width: 18px;
+    aspect-ratio: 1;
+    margin-right: 12px;
+}
+
 .tituloTabela {
     text-align: center;
 }
-
 
 ::-webkit-scrollbar {
     width: 7px;

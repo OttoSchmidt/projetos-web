@@ -1,0 +1,25 @@
+@import url(base.css);
+
+#horas p {
+    margin: 20px 0 10px 0;
+    font-size: 15px;
+}
+
+#num {
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#num svg {
+    fill: var(--primario);
+    width: 70px;
+    height: 70px;
+}
+
+#num p {
+    color: var(--no-primario);
+    position: absolute;
+    z-index: 5;
+}

@@ -8,6 +8,8 @@ body {
     --no-container-primario: #001B3C;
     --container-secundario: #D9E3F8;
     --no-container-secundario: #121C2B;
+    --container-terciario: #F8D8FE;
+    --no-container-terciario: #28132F;
     --na-superfice: #1A1C1E;
     --superfice: #FAF9FD;
     --container-superfice-maisAlto: #E3E2E6;
@@ -27,6 +29,8 @@ body {
         --no-container-primario: #D5E3FF;
         --container-secundario: #3E4758;
         --no-container-secundario: #D9E3F8;
+        --container-terciario: #563E5D;
+        --no-container-terciario: #F8D8FE;
         --na-superfice: #C7C6CA;
         --superfice: #121316;
         --container-superfice-maisAlto: #343538;
