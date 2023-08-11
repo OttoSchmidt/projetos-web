@@ -1,4 +1,4 @@
-:root {
+body {
     --preto: #000;
     --branco: #fff;
     --primario: #255FA6;
@@ -14,4 +14,28 @@
     --container-superfice-baixo: #F4F3F7;
     --aviso: #BA1A1A;
     --no-aviso: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --preto: #fff;
+        --branco: #000;
+        --primario: #A8C8FF;
+        --no-primario: #003061;
+        --secundario: #BDC7DC;
+        --container-primario: #004689;
+        --no-container-primario: #D5E3FF;
+        --container-secundario: #3E4758;
+        --no-container-secundario: #D9E3F8;
+        --na-superfice: #C7C6CA;
+        --superfice: #121316;
+        --container-superfice-maisAlto: #343538;
+        --container-superfice-baixo: #0D0E11;
+        --aviso: #FFB4AB;
+        --no-aviso: #690005;
+    }
+
+    nav img {
+        filter: invert(1);
+    }
 }
