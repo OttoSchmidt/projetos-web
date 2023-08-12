@@ -39,7 +39,7 @@ body {
         --no-aviso: #690005;
     }
 
-    nav img, .nomeSection img {
+    nav img, .nomeSection img, .conta-mobile img {
         filter: invert(1);
     }
 }

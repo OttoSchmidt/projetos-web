@@ -12,11 +12,11 @@ body {
 }
 
 nav {
+    position: fixed;
     --largura: 100px;
     display: grid;
     grid-template-rows: 1fr 5fr 2fr;
     grid-template-columns: 1fr;
-    position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
@@ -69,7 +69,7 @@ a {
 }
 
 .selecionado > div{
-    background: var(--container-secundario) !important;
+    background: var(--container-primario) !important;
 }
 
 .navBotao img {
@@ -284,6 +284,10 @@ iframe {
     padding:16px;
 }
 
+.seletores:hover {
+    cursor: pointer;
+}
+
 .seletores label {
     margin-left: 16px;
     font-size: 16px;
@@ -396,4 +400,62 @@ td, th {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--na-superfice);
+}
+
+.conta-mobile {
+    display: none;
+}
+
+/* TELA PEQUENA */
+@media screen and (max-width: 800px) {
+    nav {
+        top: initial;
+        height: 85px;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    #tabs {
+        overflow-x: auto;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    main {
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    #estela {
+        display: none;
+    }
+
+    .conta-mobile {
+        display: block;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .logo, nav .conta {
+        display: none;
+    }
+
+    .menuConta {
+        display: block;
+        left:auto;
+        right: 0;
+        top: 0;
+        opacity: 1;
+        height: fit-content;
+        z-index: 5;
+        border-radius: 22px;
+        padding: 10px 0;
+    }
+
+    #tabs {
+        display: none;
+    }
 }

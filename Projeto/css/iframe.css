@@ -28,6 +28,7 @@ html, body {
 body {
     background: transparent;
     gap: 20px;
+    width: 100vw;
 }
 
 ul {
