@@ -12,11 +12,10 @@
     color: var(--no-container-terciario);
 }
 
-
 @media screen and (max-width: 900px) {
     .painel {
         display: grid;
-        grid-template-columns: 4fr 3fr;
+        grid-template-columns: 4fr 2fr;
         gap: 0;
     }
 
@@ -41,5 +40,11 @@
     #pagSolicitacao {
         grid-column: 1;
         grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .painel {
+        grid-template-columns: 4fr 3fr;
     }
 }

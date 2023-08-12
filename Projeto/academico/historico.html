@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/iframe.css">
+    <script src="../base.js"></script>
     <style>
         body {
             display: grid;
@@ -23,7 +24,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="gerarTabelaCurriculo();">
     <div class="selecionadorRadio">
         <div class="seletores">
             <input type="radio" name="historico" class="radio" id="sem1" checked="checked">
@@ -65,7 +66,7 @@
                 <p>Situação: <span class="detalhe">Concluido</span></p>
             </div>
             <div class="materias">
-                <div class="tituloTabela">Nome</div>
+                <p>Nome</p>
                 <div class="hidden">
                     <table>
                         <tr>

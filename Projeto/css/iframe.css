@@ -51,6 +51,7 @@ a:hover {
 .wrapperRadioConteudo {
     background: var(--superfice);
     border-radius: 12px;
+    width: 95%;
 }
 
 .seletores:first-child {
@@ -65,6 +66,14 @@ a:hover {
     padding: 15px 10px;
 }
 
+.materias {
+    margin-bottom: 20px;
+}
+
+.materias table {
+    table-layout: fixed;
+}
+
 .detalhesSemestre {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -76,6 +85,11 @@ a:hover {
 
 .detalhe {
     display: block;
+}
+
+.materias p {
+    text-align: center;
+    font-weight: 600;
 }
 
 .aprovado {

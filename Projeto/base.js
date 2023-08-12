@@ -33,3 +33,34 @@ function atualizarBarras () {
         }
     }
 }
+
+function gerarTabelaCurriculo () {
+    div = document.createElement("div");
+    div.classList.add("materias");
+
+    p = document.createElement("p");
+    p.innerHTML = "teste";
+    div.appendChild(p);
+
+    table = document.createElement("table");
+    tbody = document.createElement("tbody");
+
+    titulos = ["Código:", "CH:", "Faltas:", "Média:", "Situação:"];
+
+    for (i = 0; i < 5; i++) {
+        linha = document.createElement("tr");
+        th = document.createElement("th");
+        td = document.createElement("td");
+
+        th.innerHTML = titulos[i];
+        td.innerHTML = i;
+
+        linha.appendChild(th);
+        linha.appendChild(td);
+        tbody.appendChild(linha);
+    }
+
+    table.appendChild(tbody);
+    div.appendChild(table);
+    document.getElementsByClassName("semestres")[0].appendChild(div);
+}
