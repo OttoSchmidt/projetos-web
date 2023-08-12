@@ -11,3 +11,35 @@
     fill: var(--no-container-terciario);
     color: var(--no-container-terciario);
 }
+
+
+@media screen and (max-width: 900px) {
+    .painel {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        gap: 0;
+    }
+
+    #botoes {
+        grid-row: 2 / 4;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botao {
+        grid-column: 2;
+    }
+
+    #agendar {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #pagSolicitacao {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}

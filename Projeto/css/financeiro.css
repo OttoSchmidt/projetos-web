@@ -45,7 +45,7 @@
 .mes {
     margin-bottom: 18px;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 5fr 4fr;
     align-items: center;
 }
 

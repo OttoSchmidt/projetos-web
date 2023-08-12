@@ -5,6 +5,8 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     color: var(--na-superfice);
+
+    /*Necessario para as tabs terem a barra de rolagem*/
     overflow-x: hidden;
 }
 
@@ -13,8 +15,8 @@ body {
 }
 
 nav {
-    position: fixed;
     --largura: 100px;
+    position: fixed;
     display: grid;
     grid-template-rows: 1fr 5fr 2fr;
     grid-template-columns: 1fr;
@@ -26,6 +28,10 @@ nav {
     background: var(--container-superfice-baixo);
     text-align: center;
     font-weight: 600;
+}
+
+nav * {
+    overflow: initial;
 }
 
 a {
@@ -158,6 +164,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: end;
+    align-items: center;
 }
 
 #curso h2 {
@@ -368,14 +375,15 @@ td, th {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
+    align-content: center;
+    justify-items: center;
 }
 
 .botao {
     height: 56px;
     display: flex;
     align-items: center;
-    width: min-content;
-    padding: 0 20px 0 16px;
+    padding: 0 16px 0 12px;
     border-radius: 16px;
     font-size: 16px;
 }
@@ -387,7 +395,7 @@ td, th {
 .botao svg {
     width: 18px;
     aspect-ratio: 1;
-    margin-right: 12px;
+    margin-right: 5px;
 }
 
 .tituloTabela {
@@ -434,6 +442,7 @@ td, th {
 
     #pesquisa {
         grid-template-columns: 8fr 1fr 1fr;
+        grid-column: 1 / 3;
     }
 
     #estela {
@@ -466,6 +475,32 @@ td, th {
         right: 0;
     }
 
+    .painel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    section {
+        padding: 12px 10px 12px 15px;
+    }
+
+    section .nomeSection {
+        grid-template-columns: 8fr 2fr;
+        position: relative;
+        overflow: initial;
+    }
+
+    .nomeSection a {
+        position: absolute;
+        right: 0;
+    }
+
+    #curso {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
     .funcoes {
         width: 100%;
     }
@@ -480,6 +515,20 @@ td, th {
     main {
         margin-left: 7.5vw;
         gap: 20px;
+    }
+
+    #curso {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    #botoes {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .botoes {
+        width: 100%;
+        padding: 0 20px 0 16px;
     }
 }
 
