@@ -1,3 +1,9 @@
+:root {
+    --celularLargura: 900px;
+    --telaMediaLargura: 1300px;
+    --telaGrande: 1700px;
+}
+
 [data-tema = "light"] {
     --preto: #000;
     --branco: #fff;
@@ -32,6 +38,7 @@
     --no-container-terciario: #F8D8FE;
     --na-superfice: #C7C6CA;
     --superfice: #121316;
+    --outline: #8E9199;
     --container-superfice-maisAlto: #343538;
     --container-superfice-baixo: #0D0E11;
     --aviso: #FFB4AB;

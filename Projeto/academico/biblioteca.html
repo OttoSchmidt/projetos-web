@@ -7,8 +7,19 @@
     <link rel="stylesheet" type="text/css" href="../css/iframe.css">
     <style>
         body {
+            height: max-content;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .superfice {
+            padding-bottom: 15px;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>

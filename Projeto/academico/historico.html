@@ -23,6 +23,27 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
+
+        @media screen and (max-width: 700px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 14fr;
+            }
+
+            .selecionadorRadio {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: repeat(8, 1fr);
+                overflow-x: scroll;
+            }
+
+            .seletores {
+                width: max-content;
+                padding: 0 20px;
+            }
+
+
+        }
     </style>
 </head>
 <body onload="gerarTabelaCurriculo();">

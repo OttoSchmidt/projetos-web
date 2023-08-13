@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url(cores.css);
+@import url(variaveis.css);
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -390,6 +390,7 @@ td, th {
     padding: 0 16px 0 12px;
     border-radius: 16px;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .botao:hover {
@@ -419,7 +420,7 @@ td, th {
 
 ::-webkit-scrollbar {
     width: 7px;
-    height: 7px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -428,7 +429,8 @@ td, th {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--na-superfice);
+    background: var(--secundario);
+    filter: opacity(.5);
 }
 
 #conta-mobile {
