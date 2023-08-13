@@ -34,6 +34,21 @@ function atualizarBarras () {
     }
 }
 
+function menuUsuario () {
+    document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "ativo";
+    document.getElementById("fundoContexto").style.right = "0vw";
+}
+
+function removerMenuUsuario () {
+    document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "";
+    document.getElementById("fundoContexto").style.right = "200vw";
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("conta-mobile").addEventListener("click", menuUsuario);
+});
+
 function gerarTabelaCurriculo () {
     div = document.createElement("div");
     div.classList.add("materias");

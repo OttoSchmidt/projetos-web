@@ -39,7 +39,11 @@ body {
         --no-aviso: #690005;
     }
 
-    nav img, .nomeSection img, .conta-mobile img {
+    nav img, .nomeSection img, #pesquisa img {
         filter: invert(1);
+    }
+
+    #estela {
+        filter: invert(0) !important;
     }
 }

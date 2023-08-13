@@ -406,6 +406,15 @@ td, th {
     text-align: center;
 }
 
+#fundoContexto {
+    top: 0;
+    height: 150vh;
+    width: 100vw;
+    position: absolute;
+    right: 200vw;
+    z-index: 3;
+}
+
 ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -420,7 +429,7 @@ td, th {
     background: var(--na-superfice);
 }
 
-.conta-mobile {
+#conta-mobile {
     display: none;
 }
 
@@ -453,7 +462,7 @@ td, th {
         display: none;
     }
 
-    .conta-mobile {
+    #conta-mobile {
         display: block;
         padding: 0;
         margin: 0;
@@ -509,7 +518,7 @@ td, th {
         width: 100%;
     }
 
-    .menuConta #ativo {
+    #ativo {
         right: 0;
     }
 }
