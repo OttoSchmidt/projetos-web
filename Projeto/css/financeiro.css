@@ -1,5 +1,13 @@
 @import url(base.css);
 
+.painel {
+    height: max-content;
+}
+
+.dashboard {
+    grid-column: 1 / 3;
+}
+
 #situacao {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -71,4 +79,74 @@
     color: var(--no-container-primario);
     position: absolute;
     z-index: 5;
+}
+
+@media screen and (max-width: 900px) {
+    .painel {
+        position: relative;
+    }
+
+    #curso {
+        position: absolute;
+        width: 35%;
+        height: 150px;
+        z-index: 3;
+        padding: 10px 20px;
+    }
+
+    #mensalidade {
+        background: transparent;
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+    #resumo, #preview {
+        background: var(--container-superfice-baixo);
+        padding: 20px 20px 10px 20px;
+        border-top-left-radius: 22px;
+    }
+
+    #resumo {
+        grid-column: 2;
+    }
+
+    #situacao {
+        grid-template-columns: 1fr;
+    }
+
+    #aberto, #vencido {
+        display: none;
+    }
+
+    #preview {
+        position: relative;
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #mensalidade::after, #mensalidade::before {
+        content: '';
+        position: absolute;
+        aspect-ratio: 1;
+        z-index: 2;
+        top: 35%;
+        left: 50%;
+    }
+
+    #mensalidade::before {
+        width: 20px;
+        background: var(--container-superfice-baixo);
+        transform: translate(-100%, -80%);
+    }
+
+    #mensalidade::after {
+        width: 40px;
+        background: var(--branco);
+        border-radius: 50%;
+        transform: translate(-100%, -100%);
+    }
 }
