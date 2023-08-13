@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="tema.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/academico.css">
+    <link rel="stylesheet" type="text/css" href="css/preferencias.css">
     <script src="base.js"></script>
     <title>Preferências</title>
     <script>
@@ -20,6 +20,15 @@
             document.getElementById(valorTema).setAttribute("checked", "checked");
         }
     </script>
+    <style>
+        main h2 {
+            margin:10px 0 40px 0px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <svg display="none">
@@ -95,13 +104,13 @@
                 <p onclick="removerMenuUsuario();">Continuar</p>
             </div>
         </div>
+        <h2>Configurações</h2>
         <section id="config">
-            <h2>Configurações</h2>
             <div>
                 <h3>Tema:</h3>
                 <div class="selecionadorRadio" id="tema">
                     <div class="seletores">
-                        <input type="radio" name="tema" class="radio" id="sys" onchange="alterarTema(0);" checked="checked">
+                        <input type="radio" name="tema" class="radio" id="padrao" onchange="alterarTema(0);" checked="checked">
                         <label for="padrao">Padrão do navegador</label>
                     </div>
                     <div class="seletores">

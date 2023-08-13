@@ -571,7 +571,7 @@ td, th {
 }
 
 /*TELA POUCO PEQUENA */
-@media screen and (max-width: 1300px) and (min-width: 901px) {
+@media screen and (max-width: 1400px) and (min-width: 901px) {
     nav {
         width: 7.5vw;
     }
