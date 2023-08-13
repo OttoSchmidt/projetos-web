@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="tema.js"></script>
     <link rel="stylesheet" type="text/css" href="css/academico.css">
     <script src="base.js"></script>
     <title>Preferências</title>
+    <script>
+        window.onload = () => {
+            //atualizar radioss
+            valorTema = localStorage.getItem("tema");
+            inputs = document.getElementById("tema").getElementsByTagName("input");
+            
+            for (i = 0; i < inputs.length; i++) {
+                inputs[i].removeAttribute("checked");
+            }
+
+            document.getElementById(valorTema).setAttribute("checked", "checked");
+        }
+    </script>
 </head>
 <body>
     <svg display="none">
@@ -81,7 +95,26 @@
                 <p onclick="removerMenuUsuario();">Continuar</p>
             </div>
         </div>
+        <section id="config">
+            <h2>Configurações</h2>
+            <div>
+                <h3>Tema:</h3>
+                <div class="selecionadorRadio" id="tema">
+                    <div class="seletores">
+                        <input type="radio" name="tema" class="radio" id="sys" onchange="alterarTema(0);" checked="checked">
+                        <label for="padrao">Padrão do navegador</label>
+                    </div>
+                    <div class="seletores">
+                        <input type="radio" name="tema" class="radio" id="dark" onchange="alterarTema(1);">
+                        <label for="dark">Escuro</label>
+                    </div>
+                    <div class="seletores">
+                        <input type="radio" name="tema" class="radio" id="light" onchange="alterarTema(2);">
+                        <label for="light">Claro</label>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
 </body>
 </html>

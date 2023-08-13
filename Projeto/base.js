@@ -44,7 +44,9 @@ function removerMenuUsuario () {
     document.getElementById("fundoContexto").style.right = "200vw";
     document.getElementById("fundoContexto").style.opacity = "0";
 
-    document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "";
+    if (document.getElementById("conta-mobile")) {
+        document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "";
+    }
 }
 
 function mudarCurso () {
