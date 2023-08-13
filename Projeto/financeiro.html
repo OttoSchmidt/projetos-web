@@ -59,7 +59,7 @@
             </div>
             <p>Conta</p>
             <div class="menuConta">
-                <a>Mudar curso</a>
+                <a onclick="mudarCurso();">Mudar curso</a>
                 <a href="preferencias.html">Alterar preferências</a>
                 <a id="sair">Sair</a>
             </div>
@@ -67,6 +67,20 @@
     </nav>
     <main>
         <div id="fundoContexto" onclick="removerMenuUsuario();"></div>
+        <div class="menuContexto" id="mudarCurso">
+            <h2>Mudar curso</h2>
+            <p>Veja abaixo todos os cursos que você já fez na Cruzeiro. Selecione o curso que deseja ver informações sobre.</p>
+            <div class="selecionadorRadio">
+                <div class="seletores">
+                    <label for="cc">Ciência da Computação</label>
+                    <input type="radio" name="cursos" class="radio" id="cc" checked="checked">
+                </div>
+            </div>
+            <div class="opcoesContexto">
+                <p onclick="removerMenuUsuario();">Cancelar</p>
+                <p onclick="removerMenuUsuario();">Continuar</p>
+            </div>
+        </div>
         <div class="painel">
             <section id="pesquisa">
                 <img id="estela" src="icons/estela.png">
@@ -77,7 +91,7 @@
                         <img src="icons/nav/account_circle.svg">
                     </div>
                     <div class="menuConta">
-                        <a>Mudar curso</a>
+                        <a onclick="mudarCurso();">Mudar curso</a>
                         <a href="preferencias.html">Alterar preferências</a>
                         <a id="sair">Sair</a>
                     </div>

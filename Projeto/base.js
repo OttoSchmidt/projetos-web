@@ -40,10 +40,18 @@ function menuUsuario () {
 }
 
 function removerMenuUsuario () {
-    document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "";
+    document.getElementById("mudarCurso").style.top = "-100%";
     document.getElementById("fundoContexto").style.right = "200vw";
+    document.getElementById("fundoContexto").style.opacity = "0";
+
+    document.getElementById("conta-mobile").getElementsByClassName("menuConta")[0].id = "";
 }
 
+function mudarCurso () {
+    document.getElementById("mudarCurso").style.top = "50%";
+    document.getElementById("fundoContexto").style.right = "0vw";
+    document.getElementById("fundoContexto").style.opacity = "0.25";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("conta-mobile").addEventListener("click", menuUsuario);
