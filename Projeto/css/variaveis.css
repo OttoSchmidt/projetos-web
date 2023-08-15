@@ -20,6 +20,7 @@
     --superfice: #FAF9FD;
     --container-superfice-maisAlto: #E3E2E6;
     --container-superfice-baixo: #F4F3F7;
+    --outline: #74777F;
     --aviso: #BA1A1A;
     --no-aviso: #FFFFFF;
 }
@@ -41,11 +42,12 @@
     --outline: #8E9199;
     --container-superfice-maisAlto: #343538;
     --container-superfice-baixo: #0D0E11;
+    --outline: #8E9199;
     --aviso: #FFB4AB;
     --no-aviso: #690005;
 }
 
-[data-tema="dark"] nav img, [data-tema="dark"] .nomeSection img, [data-tema="dark"] #pesquisa img {
+[data-tema="dark"] #pesquisa img {
     filter: invert(1);
 }
 

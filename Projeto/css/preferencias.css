@@ -2,19 +2,76 @@
 
 main {
     grid-template-columns: 1fr 4fr;
+    gap: 20px;
 }
 
-section {
+.posicao {
+    margin-top: 33px;
+}
+
+.posicao h1 {
+    font-size: 26px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 5px;
+    margin: 15px 5px 0 15px;
+    align-items: center;
+    padding: 12px 0 12px 20px;
+}
+
+.resumo.vendo {
+    border: 2px var(--preto) solid;
+    border-radius: 40px;
+    color: var(--no-container-primario);
+}
+
+.resumo.vendo span {
+    color: var(--primario);
+}
+
+.resumo span {
+    width: fit-content;
+}
+
+#config {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 26px 26px 70px;
+}
+
+#config > div {
     width: max-content;
-    padding-right: 20px;
 }
 
 .selecionadorRadio {
-    margin: 10px 0 5px 0;
+    margin: 15px 0 5px 0;
 }
 
 .seletores {
     padding: 10px 10px 10px 25px;
+}
+
+#cores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 15px 30px;
+}
+
+.cor {
+    aspect-ratio: 1;
+    width: 64px;
+    border-radius: 18px;
+    background: red;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.cor:hover {
+    border-radius: 50px;
 }
 
 @media screen and (max-width: 900px) {

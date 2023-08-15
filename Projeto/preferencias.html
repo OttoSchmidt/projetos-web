@@ -20,15 +20,6 @@
             document.getElementById(valorTema).setAttribute("checked", "checked");
         }
     </script>
-    <style>
-        main h2 {
-            margin:10px 0 40px 0px;
-        }
-
-        h3 {
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
     <svg display="none">
@@ -104,10 +95,21 @@
                 <p onclick="removerMenuUsuario();">Continuar</p>
             </div>
         </div>
-        <h2>Configurações</h2>
+        <div class="posicao">
+            <h1>Configurações</h1>
+            <div class="resumo vendo">
+                <span class="material-symbols-outlined">
+                    palette
+                </span>
+                <div>
+                    <h3>Estilo</h3>
+                    <p>Tema, cores</p>
+                </div>
+            </div>
+        </div>
         <section id="config">
             <div>
-                <h3>Tema:</h3>
+                <h3>Tema</h3>
                 <div class="selecionadorRadio" id="tema">
                     <div class="seletores">
                         <input type="radio" name="tema" class="radio" id="padrao" onchange="alterarTema(0);" checked="checked">
@@ -121,6 +123,20 @@
                         <input type="radio" name="tema" class="radio" id="light" onchange="alterarTema(2);">
                         <label for="light">Claro</label>
                     </div>
+                </div>
+            </div>
+            <div>
+                <h3>Cores</h3>
+                <div id="cores">
+                    <div class="cor" id="cor1" onclick="mudarCores(0);"></div>
+                    <div class="cor" id="cor2" onclick="mudarCores(1);"></div>
+                    <div class="cor" id="cor3" onclick="mudarCores(2);"></div>
+                    <div class="cor" id="cor4" onclick="mudarCores(3);"></div>
+                    <div class="cor" id="cor5" onclick="mudarCores(4);"></div>
+                    <div class="cor" id="cor6" onclick="mudarCores(5);"></div>
+                    <div class="cor" id="cor7" onclick="mudarCores(6);"></div>
+                    <div class="cor" id="cor8" onclick="mudarCores(7);"></div>
+                    <div class="cor" id="cor9" onclick="mudarCores(8);"></div>
                 </div>
             </div>
         </section>
