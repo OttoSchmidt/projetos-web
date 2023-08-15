@@ -9,6 +9,14 @@ section {
     padding-right: 20px;
 }
 
+.selecionadorRadio {
+    margin: 10px 0 5px 0;
+}
+
+.seletores {
+    padding: 10px 10px 10px 25px;
+}
+
 @media screen and (max-width: 900px) {
     main {
         grid-template-columns: 1fr;

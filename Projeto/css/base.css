@@ -104,17 +104,17 @@ a {
     background: var(--container-superfice-baixo);
     position: fixed;
     z-index: -5;
-    bottom: 0;
-    left: -50px;
+    left: var(--largura);
+    bottom: -100%;
     opacity: 0;
     padding: 10px 20px;
     border-radius: 0 20px 20px 0;
     width: 120px;
-    transition: 100ms;
+    transition: 250ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .conta:hover .menuConta {
-    left: var(--largura);
+    bottom: 0;
     opacity: 100%;
 }
 
@@ -383,7 +383,7 @@ td, th {
     height: 56px;
     display: flex;
     align-items: center;
-    padding: 0 16px 0 12px;
+    padding: 0 16px 0 18px;
     border-radius: 16px;
     font-size: 16px;
     font-weight: 500;

@@ -69,8 +69,6 @@
     }
 
     #preview {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 10%;
+        margin: 10px 5vw;
     }
 }
