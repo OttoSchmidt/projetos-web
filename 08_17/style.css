@@ -18,20 +18,30 @@ h3 {
 }
 
 a {
-    font-size: 24px;
+    font-size: 16px;
     margin: 5px 0;
     text-decoration: underline;
     color: black;
 }
 
 /*TABELAS*/
+table {
+    margin: 10px 0;
+}
+
 table, th, tr, td {
     border: 1px solid black;
-    border-collapse:collapse;
-    text-align: center;
+    border-collapse: collapse;
 }
 
 td, th {
-    padding: 5px 10px;
+    padding: 5px 20px 5px 0px;
+    text-align: left;
+    align-items: center;
 }
 
+img {
+    width: 150px;
+    display: block;
+    margin: 5px auto;
+}
