@@ -65,13 +65,36 @@ main {
     aspect-ratio: 1;
     width: 64px;
     border-radius: 18px;
-    background: red;
     transition: 200ms;
     cursor: pointer;
 }
 
 .cor:hover {
     border-radius: 50px;
+}
+
+#cor1 {
+    background: #255FA6;
+}
+
+#cor2 {
+    background: #006d42;
+}
+
+#cor3 {
+    background: #b4017f;
+}
+
+#cor4 {
+    background: #785a00;
+}
+
+#cor5 {
+    background: #00696b;
+}
+
+#cor6 {
+    background: #a9371b;
 }
 
 @media screen and (max-width: 900px) {

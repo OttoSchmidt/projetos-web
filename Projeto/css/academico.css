@@ -58,6 +58,10 @@
     height: 50px;
 }
 
+.nota p {
+    color: var(--no-container-secundario);
+}
+
 #faltas p, .nota p {
     position: absolute;
     z-index: 5;
