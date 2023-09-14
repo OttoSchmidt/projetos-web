@@ -477,13 +477,14 @@ td, th {
     cursor: pointer;
 }
 
-/* TELA PEQUENA */
+/*tela muito pequena ate pequena */
 @media screen and (max-width: 900px) {
     nav {
         top: initial;
         height: 85px;
         width: 100%;
         grid-template-rows: 1fr;
+        overflow-x: scroll;
     }
 
     .links {
@@ -528,6 +529,7 @@ td, th {
         left:auto;
         right: -100%;
         top: 65px;
+        bottom: auto;
         opacity: 1;
         height: fit-content;
         z-index: 10;
@@ -538,6 +540,30 @@ td, th {
         right: 0;
     }
 
+    #ativo {
+        display: block;
+        right: 0vw;
+    }
+}
+
+/*TELA MUITO PEQUENA */
+@media screen and (max-width: 409px) {
+    .navBotao {
+        margin: auto 5px;
+        min-width: 50px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .painel {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TELA PEQUENA */
+@media screen and (max-width: 900px) and (min-width: 410px) {
     .painel {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -566,11 +592,6 @@ td, th {
 
     .funcoes {
         width: 100%;
-    }
-
-    #ativo {
-        display: block;
-        right: 0vw;
     }
 }
 
@@ -607,5 +628,4 @@ td, th {
         padding-left: 20px;
         max-width: 1450px;
     }
-
 }

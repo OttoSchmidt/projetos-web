@@ -67,7 +67,13 @@
     z-index: 5;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 409px) {
+    #notas {
+        grid-column: 1 / 2;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 900px) {
     #notas {
         grid-column: 1 / 3;
     }

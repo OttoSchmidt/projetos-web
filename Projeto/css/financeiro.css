@@ -81,7 +81,7 @@
     z-index: 5;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 410px) and (max-width: 900px) {
     .painel {
         position: relative;
     }
@@ -149,4 +149,8 @@
         border-radius: 50%;
         transform: translate(-100%, -100%);
     }
+}
+
+@media screen and (max-width: 409px) {
+
 }

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: #eeeeee url(img/pexels.jpg);
+}
+
+main {
+    margin: 0 50px;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+p {
+    text-indent: 1rem;
+}
+
+.fonte {
+    font-size:xx-small;
+    vertical-align: top;
+}
