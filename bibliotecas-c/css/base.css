@@ -12,6 +12,23 @@ body{
     padding: 46px 28px 0px 32.5px;
 }
 
+nav{
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    background: var(--surface-container);
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 88px;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.lista_down{
+    grid-row: 3;
+}
+
 header{
     padding: 40px 50px;
     background-color: var(--primary-container);
