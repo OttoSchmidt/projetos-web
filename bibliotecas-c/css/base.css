@@ -16,14 +16,16 @@ header{
     padding: 40px 50px;
     background-color: var(--primary-container);
     border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 main{
-    padding: 67px 92.5px 544px 61px;
+    padding: 37px 70.5px 544px 61px;
 }
 
 section{
-    padding: ;
+    padding: 37px 60.12px 10px 37px;
 }
 
 h1{
@@ -44,4 +46,12 @@ h3{
 h4{
     font-size: 20px;
     font-weight: 500;
+}
+
+section p{
+    margin: 10px 20px 30px 20px;
+}
+
+header p{
+    margin: 10px 20px 15px 20px;
 }
