@@ -1,5 +1,6 @@
 @import url(cores.css);
 @import url(typography.module.css);
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 .material-symbols-outlined {
     font-variation-settings:

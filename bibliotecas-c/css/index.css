@@ -1,5 +1,4 @@
 @import url(temas.css);
-@import url(cores.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
@@ -10,7 +9,7 @@
 }
 
 body{
-    padding: 46px 28px 0px 32.5px;
+    padding: 46px 28px 0 32px;
 }
 
 /*padding: 25px 50px 75px 100px;*/

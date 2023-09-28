@@ -9,7 +9,7 @@
 }
 
 body{
-    padding: 46px 28px 0px 32.5px;
+    padding: 46px 28px 0 32px;
 }
 
 nav{
@@ -38,7 +38,7 @@ header{
 }
 
 main{
-    padding: 37px 70.5px 544px 61px;
+    padding: 37px 70px 544px 61px;
     display: grid;
     grid-template-columns: 9fr 1fr;
 }
@@ -48,7 +48,7 @@ main > div {
 }
 
 section{
-    padding: 37px 60.12px 10px 37px;
+    padding: 37px 60px 10px 37px;
 }
 
 h1{
@@ -76,10 +76,10 @@ section p{
 }
 
 header p{
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
 }
 
 li{
     list-style: none;
-    margin: 10px 10px;
+    margin: 10px;
 }
