@@ -1,7 +1,43 @@
 @import url(temas.css);
+@import url(cores.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+body{
+    padding: 46px 28px 0px 32.5px;
+}
+
+/*padding: 25px 50px 75px 100px;*/
+
+header{
+    padding: 50px 25px 50px 5px;
+    background-color: var(--primary-container);
+    border-radius: 25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.button{
+    background-color: var(--primary);
+    border-radius: 25px;
+    color: white;
+
+    display: block;
+
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    margin: 50px auto;
+
 }
