@@ -79,7 +79,25 @@ header p{
     margin: 10px;
 }
 
+aside {
+    /*Para position sticky funcionar, eh necessario fornecer a altura*/
+    height: fit-content;
+    position: sticky;
+    top: 20%;
+}
+
 li{
     list-style: none;
-    margin: 10px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+li:not(.visivel-indice) {
+    display: none;
+}
+
+#selecionado {
+    color: var(--primary);
+    border-radius: 25px;
+    border: 1px var(--outline) solid;
 }
