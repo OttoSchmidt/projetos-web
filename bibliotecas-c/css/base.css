@@ -10,6 +10,8 @@
 
 body{
     padding: 46px 28px 0 32px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
 }
 
 nav{
@@ -30,6 +32,7 @@ nav{
 }
 
 header{
+    grid-column: span 2;
     padding: 40px 50px;
     background-color: var(--primary-container);
     border-radius: 25px;
@@ -37,10 +40,12 @@ header{
     grid-template-columns: 1fr 1fr;
 }
 
+h2,aside{
+    margin-top: 37px;
+}
+
 main{
-    padding: 37px 70px 544px 61px;
-    display: grid;
-    grid-template-columns: 9fr 1fr;
+    padding: 0px 70px 544px 61px;
 }
 
 main > div {
@@ -101,3 +106,4 @@ li:not(.visivel-indice) {
     border-radius: 25px;
     border: 1px var(--outline) solid;
 }
+
