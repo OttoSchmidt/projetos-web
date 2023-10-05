@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script src="js/tema.js"></script>
     <title>stdio.h</title>
 </head>
 <body>
-
+<nav>
+    <div class="lista_up">
+        <a class="linkPaginaNAV" href="index.html">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
+            <div id="navBibliotecas">
+                <a href="#">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="string.html">string.h</a>
+                <a href="math.html">math.h</a>
+            </div>
+        </div>
+    </div>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
 <main>
     <header>
-        <h1>< stdio.h ></h1>
+        <h1>&lt;stdio.h&gt;</h1>
         <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper
                 urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper
                 urna ut mi lacinia congue. Lorem ipsum dolor.</p>
         </div>
     </header>
-        <div>
+    <div>
         <h2 id="fclose">fclose</h2>
         <section>
             <h3>Descrição</h3>
@@ -73,7 +100,8 @@
             <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Retorna um valor diferente de zero caso o indicador de erro esteja relacionado com a stream, caso contrário, retorna zero.</p>
+            <p>Retorna um valor diferente de zero caso o indicador de erro esteja relacionado com a stream, caso
+                contrário, retorna zero.</p>
         </section>
         <h2 id="fflush">fflush</h2>
         <section>
@@ -144,7 +172,8 @@
             </table>
 
             <h3>Valor de retorno</h3>
-            <p>Retorna um ponteiro para uma stream FILE. Se a operação não for bem sucedida, retorna NULL e a variável errno indica erro.</p>
+            <p>Retorna um ponteiro para uma stream FILE. Se a operação não for bem sucedida, retorna NULL e a variável
+                errno indica erro.</p>
         </section>
         <h2 id="fread">fread</h2>
         <section>
@@ -161,7 +190,8 @@
             <p>- stream – ponteiro para um objeto FILE</p>
 
             <h3>Valor de retorno</h3>
-            <p>Retorna a quantidade de elementos lidos com sucesso. Se esse número for diferente em relação ao parâmetro nmemb, então ocorreu um erro ou EOF foi alcançado.</p>
+            <p>Retorna a quantidade de elementos lidos com sucesso. Se esse número for diferente em relação ao parâmetro
+                nmemb, então ocorreu um erro ou EOF foi alcançado.</p>
         </section>
         <h2 id="freopen">freopen</h2>
         <section>
@@ -203,18 +233,11 @@
             </table>
 
             <h3>Valor de retorno</h3>
-            <p>Caso o arquivo tenha sido aberto com sucesso, a função retorna um ponteiro para a nova stream, caso contrário, é retornado NULL.</p>
+            <p>Caso o arquivo tenha sido aberto com sucesso, a função retorna um ponteiro para a nova stream, caso
+                contrário, é retornado NULL.</p>
         </section>
 
 
-
-
-
-
-
-
-
-        
         <h2 id="fclose"> fclose </h2>
         <section>
             <h3>Descrição</h3>
@@ -509,23 +532,55 @@
             <h3>Valor de retorno</h3>
             <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
         </section>
+    </div>
 
+    <aside>
+        <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
+        <h4>stdio.h</h4>
+        <ul id="indice">
+            <li id="selecionado"><a href='#fclose'>fclose</a></li>
+            <li><a href='#clearerr'>clearerr</a></li>
+            <li><a href='#feof'>feof</a></li>
+            <li><a href='#ferror'>ferror</a></li>
+            <li><a href='#fflush'>fflush</a></li>
+            <li><a href='#fgetpos'>fgetpos</a></li>
+            <li><a href='#fopen'>fopen</a></li>
+            <li><a href='#fread'>fread</a></li>
+            <li><a href='#freopen'>freopen</a></li>
+            <li><a href='#fseek'>fseek</a></li>
+            <li><a href='#fsetpos'>fsetpos</a></li>
+            <li><a href='#ftell'>ftell</a></li>
+            <li><a href='#fwrite'>fwrite</a></li>
+            <li><a href='#remove'>remove</a></li>
+            <li><a href='#rename'>rename</a></li>
+            <li><a href='#rewind'>rewind</a></li>
+            <li><a href='#setbuf'>setbuf</a></li>
+            <li><a href='#setvbuf'>setvbuf</a></li>
+            <li><a href='#tmpfile'>tmpfile</a></li>
+            <li><a href='#tmpnam'>tmpnam</a></li>
+            <li><a href='#fprintf'>fprintf</a></li>
+            <li><a href='#printf'>printf</a></li>
+            <li><a href='#sprintf'>sprintf</a></li>
+            <li><a href='#vfprintf'>vfprintf</a></li>
+            <li><a href='#vsprintf'>vsprintf</a></li>
+            <li><a href='#fscanf'>fscanf</a></li>
+            <li><a href='#scanf'>scanf</a></li>
+            <li><a href='#sscanf'>sscanf</a></li>
+            <li><a href='#fgetc'>fgetc</a></li>
+            <li><a href='#fgets'>fgets</a></li>
+            <li><a href='#fputc'>fputc</a></li>
+            <li><a href='#fputs'>fputs</a></li>
+            <li><a href='#getc'>getc</a></li>
+            <li><a href='#getchar'>getchar</a></li>
+            <li><a href='#gets'>gets</a></li>
+            <li><a href='#putc'>putc</a></li>
+            <li><a href='#putchar'>putchar</a></li>
+            <li><a href='#puts'>puts</a></li>
+            <li><a href='#ungetc'>ungetc</a></li>
+            <li><a href='#perror'>perror</a></li>
 
-
-        </div>
-
-        <aside>
-            <input id="barraPesquisa" type="text" placeholder="Digite uma função">
-            <h4>stdio.h</h4>
-            <ul id="indice">
-                <li class="visivel-indice" id="selecionado">clearerr</li>
-                <li class="visivel-indice">fclose</li>
-                <li class="visivel-indice">feof</li>
-                <li class="visivel-indice">ferror</li>
-                <li class="visivel-indice">fflush</li>
-                <li>teste</li>
-            </ul>
-        </aside>
+        </ul>
+    </aside>
 </main>
 </body>
 <script src="js/indice.js"></script>

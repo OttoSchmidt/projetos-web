@@ -12,46 +12,60 @@
 body{
     background: var(--background);
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 1fr 13fr;
+    transition: background 200ms linear, color 200ms linear;
 }
 
-nav{
-    display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
+nav {
     background: var(--surface-container);
     height: 100%;
+    text-align: center;
     position: fixed;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    z-index: 5;
 }
 
-#biblioteca:hover .navBibliotecas {
-    left: 100%;
-}
-
-.navBibliotecas {
+#navBibliotecas {
+    z-index: -5;
+    height: 100%;
     position: absolute;
-    top: 0;
-    left: -100%;
+    top: -150%;
+    left: 100%;
+    background: var(--surface-container);
+    border-left: 1px solid var(--outline);
+    padding: 20px 0 0 20px;
+    min-width: 150px;
+    text-align: left;
+    transition: 180ms linear, display 0ms linear;
 }
 
-a{
+#navBibliotecas a {
+    display: block;
+    margin-bottom: 1em;
+}
+
+#biblioteca:hover #navBibliotecas {
+    top: 0;
+}
+
+.linkPaginaNAV{
+    cursor: pointer;
+    display: block;
     text-decoration: none;
     color: var(--black);
 }
 
-a div{
+.linkPaginaNAV div:first-child{
     padding: 3px 0;
     display: grid;
     justify-content: center;
     border-radius: 25px;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 
-a span {
-    display: block;
-}
-
-#paginaSelecionada div{
+.paginaSelecionada div{
     background: var(--primary-container);
 }
 
@@ -59,26 +73,35 @@ nav p{
     padding: 8px;
 }
 
-.lista_down{
-    grid-row: 3;
-    text-align: center;
-}
-
 .lista_up{
     text-align: center;
-
 }
 
-.lista_up a{
-    display: block;
-    margin-top: 40px;
+.lista_up .linkPaginaNAV{
+    margin-top: 25px;
+}
+
+.lista_down{
+    grid-row: 3;
+}
+
+.lista_down .linkPaginaNAV, #btnTema {
+    margin-bottom: 25px;
+}
+
+#btnTema {
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 50%;
+    border: 3px solid var(--outline);
 }
 
 main{
     grid-column: 2;
-    padding: 46px 28px 0 32px;
+    padding: 45px 30px 0 30px;
     display: grid;
     grid-template-columns: 9fr 1fr;
+    column-gap: 90px;
 }
 
 header{
@@ -88,18 +111,16 @@ header{
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-h2,aside{
-    margin-top: 37px;
-}
-
-main > div {
-    margin-right: 30px;
+h2, aside{
+    margin-top: 35px;
 }
 
 section{
-    padding: 37px 60px 10px 37px;
+    margin-bottom: 70px;
+    padding: 35px 0 0 35px;
 }
 
 h1{
@@ -113,13 +134,11 @@ h2{
 }
 
 h3{
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 25px;
 }
 
 h4{
     font-size: 20px;
-    font-weight: 600;
 }
 
 section p{
@@ -138,27 +157,32 @@ aside {
 }
 
 #barraPesquisa{
-    border: 0px;
+    border: 0;
     border-radius: 25px;
     outline: none;
     margin-bottom: 16px;
-    padding: 6px;
+    padding: 6px 10px 6px;
     background-color: var(--surface-container);
 }
 
-li{
+#indice {
+    max-height: 45vh;
+    overflow-y: auto;
+}
+
+.esconder {
+    display: none;
+}
+
+li, li a{
+    text-decoration: none;
     list-style: none;
     padding: 5px 10px;
     margin: 5px 0;
 }
 
-li:not(.visivel-indice) {
-    display: none;
-}
-
-#selecionado {
+#selecionado a {
     color: var(--primary);
     border-radius: 25px;
     border: 1px var(--outline) solid;
 }
-

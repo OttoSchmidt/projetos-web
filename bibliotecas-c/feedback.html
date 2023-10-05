@@ -4,62 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css"  href="css/base.css">
-    <title>Document</title>
+    <script src="js/tema.js"></script>
+    <title>Feedback</title>
 </head>
 <body>
     <nav>
         <div class="lista_up">
-            <a href="index.html">
+            <a class="linkPaginaNAV" href="index.html">
                 <div><span class="material-symbols-outlined">home</span></div>
                 <p>Início</p>
             </a>
-            <a href="#" id="biblioteca">
+            <div class="linkPaginaNAV" id="biblioteca">
                 <div><span class="material-symbols-outlined">book_2</span></div>
                 <p>Bibliotecas</p>
-                <div class="navBibliotecas">
-                    <a href="">stdio.h</a>
+                <div id="navBibliotecas">
+                    <a href="stdio.html">stdio.h</a>
+                    <a href="stdlib.html">stdlib.h</a>
+                    <a href="string.html">string.h</a>
+                    <a href="math.html">math.h</a>
                 </div>
-            </a>
+            </div>
         </div>
         <div class="lista_down">
-            <a href="#" id="paginaSelecionada">
+            <a class="linkPaginaNAV paginaSelecionada" href="#">
                 <div><span class="material-symbols-outlined">feedback</span></div>
                 <p>Feedback</p>
             </a>
+            <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
         </div>
     </nav>
-
     <main>
-        <header>    </header>
-
-        
-
+        <header>
+            <h1>Feedback</h1>
+            <div>
+                <p></p>
+            </div>
+        </header>
         <section>
             <div>
                 <label for="nome"> Nome </label>
                 <input type="text" name="nome" id="nome" required>
             </div>
-
             <div>
                 <label for="email"> Email </label>
                 <input type="email" name="email" id="email" required>
             </div>
-
             <div>
                 <label for="feedback"> Descreva seu feedback </label>
                 <textarea name="feedback" id="feedback"></textarea>
             </div>
-
             <div>
                 <input type="checkbox" id="checkbox" name="checkbox" />
                 <label for="checkbox">Concordo em receber email sobre atualizações do meu feedback</label>
             </div>
-
             <div><input type="submit" value="ENVIAR"></div>
         </section>
-        <footer>
-            
-        </footer>
     </main>
 </body>
 </html>

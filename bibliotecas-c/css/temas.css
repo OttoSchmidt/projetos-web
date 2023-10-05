@@ -1,5 +1,4 @@
 @import url(cores.css);
-@import url(typography.module.css);
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 .material-symbols-outlined {
@@ -9,7 +8,8 @@
     'GRAD' 0,
     'opsz' 24;
 }
-:root {
+
+body {
     --black: #000;
     --white: #fff;
     --primary: var(--md-sys-color-primary-light);
@@ -63,7 +63,7 @@
     --surface-dim: var(--md-sys-color-surface-dim-light);
 }
 
-.dark {
+.modoEscuro {
     --black: #fff;
     --white: #000;
     --primary: var(--md-sys-color-primary-dark);
