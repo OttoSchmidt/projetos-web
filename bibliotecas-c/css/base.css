@@ -27,8 +27,28 @@ nav{
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+nav p{
+    padding: 8px;
+}
+
 .lista_down{
     grid-row: 3;
+    text-align: center;
+}
+
+.lista_up{
+    text-align: center;
+
+}
+
+.lista_up a{
+    display: block;
+    margin-top: 40px;
 }
 
 header{
