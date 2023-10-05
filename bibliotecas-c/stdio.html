@@ -7,28 +7,70 @@
     <title>stdio.h</title>
 </head>
 <body>
-<header>
-    <h1>< stdio.h ></h1>
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
-            urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
-            urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-    </div>
-</header>
+
 <main>
+    <header>
+        <h1>< stdio.h ></h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
+                urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
+                urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+        </div>
+    </header>
+
         <h2 id="fclose"> fclose </h2>
         <section>
             <h3>Descrição</h3>
             <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>int fclose (FILE *stream);</p>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="clearerr">clearerr</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Limpa o EOF e indicadores de erros da stream recebida.</p>
+
+            <h3>Declaração</h3>
+            <p>void clearerr(FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Se detectar que o argumento não é uma stream válida, retorna -1 e atribui errno para EBADF.</p>
+        </section>
+        <h2 id="feof">feof</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Testa o indicador EOF da stream recebida.</p>
+
+            <h3>Declaração</h3>
+            <p>int feof(FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna um valor diferente de zero quando EOF for valido, caso contrário, retorna zero.</p>
+        </section>
+        <h2 id="ferror">ferror</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Testa o indicador de erro da stream recebida.</p>
+
+            <h3>Declaração</h3>
+            <p>int ferror(FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
@@ -70,73 +112,20 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
                 semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
         </section>
-        <h2 id="clearerr">clearerr</h2>
-        <section>
-            <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
 
-            <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-        </section>
-        <h2 id="clearerr">clearerr</h2>
-        <section>
-            <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-        </section>
-        <h2 id="clearerr">clearerr</h2>
-        <section>
-            <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-            <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-        </section>
+        <aside>
+            <input id="barraPesquisa" type="text" placeholder="Digite uma função">
+            <h4>stdio.h</h4>
+            <ul id="indice">
+                <li class="visivel-indice" id="selecionado">clearerr</li>
+                <li class="visivel-indice">fclose</li>
+                <li class="visivel-indice">feof</li>
+                <li class="visivel-indice">ferror</li>
+                <li class="visivel-indice">fflush</li>
+                <li>teste</li>
+            </ul>
+        </aside>
 </main>
-<aside>
-    <input id="barraPesquisa" type="text" placeholder="Digite uma função">
-    <h4>stdio.h</h4>
-    <ul id="indice">
-        <li class="visivel-indice" id="selecionado">clearerr</li>
-        <li class="visivel-indice">fclose</li>
-        <li class="visivel-indice">feof</li>
-        <li class="visivel-indice">ferror</li>
-        <li class="visivel-indice">fflush</li>
-        <li>teste</li>
-    </ul>
-</aside>
 </body>
 <script src="js/indice.js"></script>
 </html>
