@@ -19,7 +19,7 @@
         </div>
     </header>
         <div>
-        <h2 id="fclose"> fclose </h2>
+        <h2 id="fclose">fclose</h2>
         <section>
             <h3>Descrição</h3>
             <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
@@ -92,23 +92,428 @@
         <h2 id="fgetpos">fgetpos</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Copia a posição atual do arquivo em stream e armazena em pos.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>int fgetpos(FILE *stream, fpos_t *pos);</p>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>- stream: ponteiro para um objeto FILE.</p>
+            <p>- pos: ponteiro para um objeto fpos_t.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna zero em sucesso, caso contrário, retorna um número diferente de zero.</p>
         </section>
-        </div>
+        <h2 id="fopen">fopen</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Abre o arquivo que filename esta apontando para, utilizando o modo dado.</p>
+
+            <h3>Declaração</h3>
+            <p>FILE *fopen(const char *filename, const char *mode);</p>
+
+            <h3>Parametros</h3>
+            <p>- filename: contém o nome do arquivo para ser aberto.</p>
+            <p>- mode: contém o modo de acesso.</p>
+
+            <table>
+                <tr>
+                    <td>r (read)</td>
+                    <td>Leitura (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w (write)</td>
+                    <td>Inicia um arquivo limpo, caso já exista, o conteúdo do arquivo é apagado</td>
+                </tr>
+                <tr>
+                    <td>a (append)</td>
+                    <td>Acrescenta dados no fim de um arquivo</td>
+                </tr>
+                <tr>
+                    <td>r+</td>
+                    <td>Ler e escrever (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w+</td>
+                    <td>Criar um arquivo vazio para ler e escrever</td>
+                </tr>
+                <tr>
+                    <td>a+</td>
+                    <td>Abre um arquivo para ler e acrescentar</td>
+                </tr>
+            </table>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna um ponteiro para uma stream FILE. Se a operação não for bem sucedida, retorna NULL e a variável errno indica erro.</p>
+        </section>
+        <h2 id="fread">fread</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Copia os dados de uma stream para um vetor indicado por um ponteiro (ptr).</p>
+
+            <h3>Declaração</h3>
+            <p>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>- ptr: ponteiro para um bloco de memória com tamanho mínimo de *nmemb bytes</p>
+            <p>- size – tamanho em bytes de cada elemento a ser lido.</p>
+            <p>- nmemb – número de elementos, cada um possui tamanho size bytes</p>
+            <p>- stream – ponteiro para um objeto FILE</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna a quantidade de elementos lidos com sucesso. Se esse número for diferente em relação ao parâmetro nmemb, então ocorreu um erro ou EOF foi alcançado.</p>
+        </section>
+        <h2 id="freopen">freopen</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Associa uma stream aberta a um novo filename e, ao mesmo tempo, fecha o arquivo antigo na stream.</p>
+
+            <h3>Declaração</h3>
+            <p>FILE *freopen(const char *filename, const char *mode, FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>- filename: contém o nome do arquivo para ser aberto</p>
+            <p>- mode: contém o modo de acesso</p>
+
+            <table>
+                <tr>
+                    <td>r (read)</td>
+                    <td>Leitura (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w (write)</td>
+                    <td>Inicia um arquivo limpo, caso já exista, o conteúdo do arquivo é apagado</td>
+                </tr>
+                <tr>
+                    <td>a (append)</td>
+                    <td>Acrescenta dados no fim de um arquivo</td>
+                </tr>
+                <tr>
+                    <td>r+</td>
+                    <td>Ler e escrever (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w+</td>
+                    <td>Criar um arquivo vazio para ler e escrever</td>
+                </tr>
+                <tr>
+                    <td>a+</td>
+                    <td>Abre um arquivo para ler e acrescentar</td>
+                </tr>
+            </table>
+
+            <h3>Valor de retorno</h3>
+            <p>Caso o arquivo tenha sido aberto com sucesso, a função retorna um ponteiro para a nova stream, caso contrário, é retornado NULL.</p>
+        </section>
+
+
+
+
+
+
+
+
+
         
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <p>int fclose (FILE *stream);</p>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+
+
+
+        </div>
+
         <aside>
             <input id="barraPesquisa" type="text" placeholder="Digite uma função">
             <h4>stdio.h</h4>
