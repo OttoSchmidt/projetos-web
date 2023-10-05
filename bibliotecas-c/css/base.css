@@ -22,7 +22,6 @@ nav{
     left: 0;
     top: 0;
     height: 100%;
-    width: 88px;
     position: fixed;
     overflow-x: hidden;
 }
@@ -51,6 +50,12 @@ nav p{
     margin-top: 40px;
 }
 
+main{
+    padding: 0px 70px 544px 61px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
 header{
     grid-column: span 2;
     padding: 40px 50px;
@@ -62,10 +67,6 @@ header{
 
 h2,aside{
     margin-top: 37px;
-}
-
-main{
-    padding: 0px 70px 544px 61px;
 }
 
 main > div {
