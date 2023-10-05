@@ -111,6 +111,15 @@ aside {
     top: 20%;
 }
 
+#barraPesquisa{
+    border: 0px;
+    border-radius: 25px;
+    outline: none;
+    margin-bottom: 16px;
+    padding: 6px;
+    background-color: var(--surface-container);
+}
+
 li{
     list-style: none;
     padding: 5px 10px;
