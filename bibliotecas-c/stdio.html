@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script src="js/tema.js"></script>
     <title>stdio.h</title>
 </head>
 <body>
-<nav>
+<nav class="navPrincipal">
     <div class="lista_up">
         <a class="linkPaginaNAV" href="index.html">
             <div><span class="material-symbols-outlined">home</span></div>
@@ -534,7 +534,7 @@
         </section>
     </div>
 
-    <aside>
+    <nav class="navIndice">
         <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
         <h4>stdio.h</h4>
         <ul id="indice">
@@ -578,9 +578,8 @@
             <li><a href='#puts'>puts</a></li>
             <li><a href='#ungetc'>ungetc</a></li>
             <li><a href='#perror'>perror</a></li>
-
         </ul>
-    </aside>
+    </nav>
 </main>
 </body>
 <script src="js/indice.js"></script>

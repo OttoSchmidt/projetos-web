@@ -1,7 +1,7 @@
 @import url(temas.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,25 +9,23 @@
     color: var(--black);
 }
 
-body{
+body {
     background: var(--background);
     display: grid;
     grid-template-columns: 1fr 13fr;
     transition: background 200ms linear, color 200ms linear;
 }
 
-nav {
+.navPrincipal {
     background: var(--surface-container);
     height: 100%;
     text-align: center;
     position: fixed;
     display: grid;
     grid-template-rows: 1fr 6fr 1fr;
-    z-index: 5;
 }
 
 #navBibliotecas {
-    z-index: -5;
     height: 100%;
     position: absolute;
     top: -150%;
@@ -49,14 +47,14 @@ nav {
     top: 0;
 }
 
-.linkPaginaNAV{
+.linkPaginaNAV {
     cursor: pointer;
     display: block;
     text-decoration: none;
     color: var(--black);
 }
 
-.linkPaginaNAV div:first-child{
+.linkPaginaNAV div:first-child {
     padding: 3px 0;
     display: grid;
     justify-content: center;
@@ -65,23 +63,19 @@ nav {
     margin: 0 auto;
 }
 
-.paginaSelecionada div{
+.paginaSelecionada div {
     background: var(--primary-container);
 }
 
-nav p{
-    padding: 8px;
+.navPrincipal p {
+    margin: 8px 10px;
 }
 
-.lista_up{
-    text-align: center;
-}
-
-.lista_up .linkPaginaNAV{
+.lista_up .linkPaginaNAV {
     margin-top: 25px;
 }
 
-.lista_down{
+.lista_down {
     grid-row: 3;
 }
 
@@ -96,15 +90,16 @@ nav p{
     border: 3px solid var(--outline);
 }
 
-main{
+main {
     grid-column: 2;
     padding: 45px 30px 0 30px;
     display: grid;
     grid-template-columns: 9fr 1fr;
     column-gap: 90px;
+    row-gap: 35px;
 }
 
-header{
+header {
     grid-column: span 2;
     padding: 40px 50px;
     background-color: var(--primary-container);
@@ -114,55 +109,55 @@ header{
     align-items: center;
 }
 
-h2, aside{
-    margin-top: 35px;
-}
-
-section{
+section {
     margin-bottom: 70px;
     padding: 35px 0 0 35px;
 }
 
-h1{
+h1 {
     font-size: 70px;
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-size: 60px;
     font-weight: 400;
 }
 
-h3{
+h3 {
     font-size: 25px;
 }
 
-h4{
+h4 {
     font-size: 20px;
 }
 
-section p{
+section p {
     margin: 10px 20px 30px 20px;
 }
 
-header p{
+header p {
     margin: 10px;
 }
 
-aside {
+.navIndice {
     /*Para position sticky funcionar, eh necessario fornecer a altura*/
     height: fit-content;
     position: sticky;
     top: 20%;
 }
 
-#barraPesquisa{
+#barraPesquisa {
     border: 0;
     border-radius: 25px;
     outline: none;
     margin-bottom: 16px;
     padding: 6px 10px 6px;
     background-color: var(--surface-container);
+}
+
+#barraPesquisa:focus {
+    outline: 1px solid var(--outline-variant);
 }
 
 #indice {
@@ -174,7 +169,7 @@ aside {
     display: none;
 }
 
-li, li a{
+li, li a {
     text-decoration: none;
     list-style: none;
     padding: 5px 10px;
@@ -185,4 +180,25 @@ li, li a{
     color: var(--primary);
     border-radius: 25px;
     border: 1px var(--outline) solid;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 25px;
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface-container-highest);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--on-surface-variant);
 }

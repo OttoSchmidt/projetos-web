@@ -1,15 +1,18 @@
-@import url(cores.css);
+@import url(cores_base.css);
+/*ICONES SAO UMA FONTE*/
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
+/*CONFIG PARA OS ICONES*/
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
 }
 
-body {
+/*TEMA BASE MATERIAL YOU PARA LIGHT*/
+:root:not([data-tema = 'dark']) {
     --black: #000;
     --white: #fff;
     --primary: var(--md-sys-color-primary-light);
@@ -63,7 +66,8 @@ body {
     --surface-dim: var(--md-sys-color-surface-dim-light);
 }
 
-.modoEscuro {
+/*TEMA BASE MATERIAL YOU PARA DARK*/
+:root[data-tema = 'dark'] {
     --black: #fff;
     --white: #000;
     --primary: var(--md-sys-color-primary-dark);

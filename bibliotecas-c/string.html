@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <title>string.h</title>
 </head>
 <body>
-<nav>
+<nav class="navPrincipal">
     <div class="lista_up">
         <a class="linkPaginaNAV" href="index.html">
             <div><span class="material-symbols-outlined">home</span></div>
@@ -35,7 +36,7 @@
 
 <main>
     <header>
-        <h1>< string.h ></h1>
+        <h1>&lt;string.h&gt;</h1>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
                 semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
@@ -47,7 +48,7 @@
         <h2 id='memchr'>memchr</h2>
         <section>
             <h3>Descrição</h3>
-            <p>procura a primeira ocorrência do caractere c (um caractere não assinado) nos primeiros n bytes da string apontada, pelo argumento str.</p>
+            <p>Procura a primeira ocorrência do caractere c (um caractere não assinado) nos primeiros n bytes da string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
             <p class='codigo'>void *memchr(const void *str, int c, size_t n)</p>
             <h3>Argumentos</h3>
@@ -62,7 +63,7 @@
         <h2 id='memcmp'>memcmp</h2>
         <section>
             <h3>Descrição</h3>
-            <p>) compara os primeiros n bytes da área de memória str1 e da área de memória str2.</p>
+            <p>Compara os primeiros n bytes da área de memória str1 e da área de memória str2.</p>
             <h3>Declaração</h3>
             <p class='codigo'>int memcmp(const void *str1, const void *str2, size_t n)</p>
             <h3>Argumentos</h3>
@@ -94,7 +95,7 @@
         <h2 id='memmove'>memmove</h2>
         <section>
             <h3>Descrição</h3>
-            <p>copia n caracteres de str2 para str1, mas para blocos de memória sobrepostos, memmove() é uma abordagem mais segura que memcpy().</p>
+            <p>Copia n caracteres de str2 para str1, mas para blocos de memória sobrepostos, memmove() é uma abordagem mais segura que memcpy().</p>
             <h3>Declaração</h3>
             <p class='codigo'>void *memmove(void *str1, const void *str2, size_t n)</p>
             <h3>Argumentos</h3>
@@ -109,7 +110,7 @@
         <h2 id='memset'>memset</h2>
         <section>
             <h3>Descrição</h3>
-            <p>copia o caractere c (um caractere não assinado) para os primeiros n caracteres da string apontada, pelo argumento str.</p>
+            <p>Copia o caractere c (um caractere não assinado) para os primeiros n caracteres da string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
             <p class='codigo'>void *memset(void *str, int c, size_t n)</p>
             <h3>Argumentos</h3>
@@ -124,7 +125,7 @@
         <h2 id='strcat'>strcat</h2>
         <section>
             <h3>Descrição</h3>
-            <p>anexa a string apontada por src ao final da string apontada por dest.</p>
+            <p>Anexa a string apontada por src ao final da string apontada por dest.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strcat(char *dest, const char *src)</p>
             <h3>Argumentos</h3>
@@ -138,7 +139,7 @@
         <h2 id='strchr'>strchr</h2>
         <section>
             <h3>Descrição</h3>
-            <p>procura a primeira ocorrência do caractere c (um caractere não assinado) na string apontada pelo argumento str.</p>
+            <p>Procura a primeira ocorrência do caractere c (um caractere não assinado) na string apontada pelo argumento str.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strchr(const char *str, int c)</p>
             <h3>Argumentos</h3>
@@ -152,7 +153,7 @@
         <h2 id='strcmp'>strcmp</h2>
         <section>
             <h3>Descrição</h3>
-            <p>compara a string apontada por str1 com a string apontada por str2.</p>
+            <p>Compara a string apontada por str1 com a string apontada por str2.</p>
             <h3>Declaração</h3>
             <p class='codigo'>int strcmp(const char *str1, const char *str2)</p>
             <h3>Argumentos</h3>
@@ -166,7 +167,7 @@
         <h2 id='strncmp'>strncmp</h2>
         <section>
             <h3>Descrição</h3>
-            <p>compara no máximo os primeiros n bytes de str1 e str2.</p>
+            <p>Compara no máximo os primeiros n bytes de str1 e str2.</p>
             <h3>Declaração</h3>
             <p class='codigo'>int strncmp(const char *str1, const char *str2, size_t n)</p>
             <h3>Argumentos</h3>
@@ -181,7 +182,7 @@
         <h2 id='strcoll'>strcoll</h2>
         <section>
             <h3>Descrição</h3>
-            <p>compara a string str1 com str2. o resultado depende da configuração lc_collate do local.</p>
+            <p>Compara a string str1 com str2. o resultado depende da configuração lc_collate do local.</p>
             <h3>Declaração</h3>
             <p class='codigo'>int strcoll(const char *str1, const char *str2)</p>
             <h3>Argumentos</h3>
@@ -195,7 +196,7 @@
         <h2 id='strcpy'>strcpy</h2>
         <section>
             <h3>Descrição</h3>
-            <p>copia a string apontada, por src para dest.</p>
+            <p>Copia a string apontada, por src para dest.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strcpy(char *dest, const char *src)</p>
             <h3>Argumentos</h3>
@@ -209,7 +210,7 @@
         <h2 id='strncpy'>strncpy</h2>
         <section>
             <h3>Descrição</h3>
-            <p>copia até n caracteres da string apontada, de src para dest. no caso em que o comprimento de src é menor que n, o restante de dest será preenchido com bytes nulos.</p>
+            <p>Copia até n caracteres da string apontada, de src para dest. no caso em que o comprimento de src é menor que n, o restante de dest será preenchido com bytes nulos.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strncpy(char *dest, const char *src, size_t n)</p>
             <h3>Argumentos</h3>
@@ -224,7 +225,7 @@
         <h2 id='strcspn'>strcspn</h2>
         <section>
             <h3>Descrição</h3>
-            <p>calcula o comprimento do segmento inicial de str1, que consiste inteiramente em caracteres que não estão em str2.</p>
+            <p>Calcula o comprimento do segmento inicial de str1, que consiste inteiramente em caracteres que não estão em str2.</p>
             <h3>Declaração</h3>
             <p class='codigo'>size_t strcspn(const char *str1, const char *str2)</p>
             <h3>Argumentos</h3>
@@ -238,7 +239,7 @@
         <h2 id='strerror'>strerror</h2>
         <section>
             <h3>Descrição</h3>
-            <p>pesquisa em uma matriz interna o número de erro errnum e retorna um ponteiro para uma string de mensagem de erro. as strings de erro produzidas pelo strerror dependem da plataforma de desenvolvimento e do compilador.</p>
+            <p>Pesquisa em uma matriz interna o número de erro errnum e retorna um ponteiro para uma string de mensagem de erro. as strings de erro produzidas pelo strerror dependem da plataforma de desenvolvimento e do compilador.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strerror(int errnum)</p>
             <h3>Argumentos</h3>
@@ -251,7 +252,7 @@
         <h2 id='strlen'>strlen</h2>
         <section>
             <h3>Descrição</h3>
-            <p>calcula o comprimento da string str até, mas não incluindo o caractere nulo de terminação.</p>
+            <p>Calcula o comprimento da string str até, mas não incluindo o caractere nulo de terminação.</p>
             <h3>Declaração</h3>
             <p class='codigo'>size_t strlen(const char *str)</p>
             <h3>Argumentos</h3>
@@ -264,7 +265,7 @@
         <h2 id='strpbrk'>strpbrk</h2>
         <section>
             <h3>Descrição</h3>
-            <p>encontra o primeiro caractere na string str1 que corresponde a qualquer caractere especificado em str2. isso não inclui os caracteres nulos de terminação.</p>
+            <p>Encontra o primeiro caractere na string str1 que corresponde a qualquer caractere especificado em str2. isso não inclui os caracteres nulos de terminação.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strpbrk(const char *str1, const char *str2)</p>
             <h3>Argumentos</h3>
@@ -278,7 +279,7 @@
         <h2 id='strrchr'>strrchr</h2>
         <section>
             <h3>Descrição</h3>
-            <p>procura a última ocorrência do caractere c (um caractere não assinado) na string apontada, pelo argumento str.</p>
+            <p>Procura a última ocorrência do caractere c (um caractere não assinado) na string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strrchr(const char *str, int c)</p>
             <h3>Argumentos</h3>
@@ -292,7 +293,7 @@
         <h2 id='strspn'>strspn</h2>
         <section>
             <h3>Descrição</h3>
-            <p>calcula o comprimento do segmento inicial de str1 que consiste inteiramente em caracteres em str2.</p>
+            <p>Calcula o comprimento do segmento inicial de str1 que consiste inteiramente em caracteres em str2.</p>
             <h3>Declaração</h3>
             <p class='codigo'>size_t strspn(const char *str1, const char *str2)</p>
             <h3>Argumentos</h3>
@@ -320,7 +321,7 @@
         <h2 id='strtok'>strtok</h2>
         <section>
             <h3>Descrição</h3>
-            <p>quebra a string str em uma série de tokens usando o delimitador delim.</p>
+            <p>Quebra a string str em uma série de tokens usando o delimitador delim.</p>
             <h3>Declaração</h3>
             <p class='codigo'>char *strtok(char *str, const char *delim)</p>
             <h3>Argumentos</h3>
@@ -334,7 +335,7 @@
         <h2 id='strxfrm'>strxfrm</h2>
         <section>
             <h3>Descrição</h3>
-            <p>transforma os primeiros n caracteres da string src na localidade atual e os coloca na string dest.</p>
+            <p>Transforma os primeiros n caracteres da string src na localidade atual e os coloca na string dest.</p>
             <h3>Declaração</h3>
             <p class='codigo'>size_t strxfrm(char *dest, const char *src, size_t n)</p>
             <h3>Argumentos</h3>
@@ -347,7 +348,7 @@
             <p>Esta função retorna o comprimento da string transformada, não incluindo o caractere nulo de terminação.</p>
         </section>
     </div>
-    <aside>
+    <nav class="navIndice">
         <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
         <h4>string.h</h4>
         <ul id="indice">
@@ -372,11 +373,9 @@
             <li><a href='#strstr'>strstr</a></li>
             <li><a href='#strtok'>strtok</a></li>
             <li><a href='#strxfrm'>strxfrm</a></li>
-
         </ul>
-    </aside>
+    </nav>
 </main>
-
 </body>
 <script src="js/indice.js"></script>
 </html>
