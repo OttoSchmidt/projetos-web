@@ -1,46 +1,382 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/base.css">
-        <title>string.h</title>
-    </head>
-    <body>
-        <header>
-            <h1>< string.h ></h1>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                </div>
-        </header>
-        <main>
-                <h2>clearerr</h2>
-                    <section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <title>string.h</title>
+</head>
+<body>
+<nav>
+    <div class="lista_up">
+        <a class="linkPaginaNAV" href="index.html">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
+            <div id="navBibliotecas">
+                <a href="stdio.html">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="#">string.h</a>
+                <a href="math.html">math.h</a>
+            </div>
+        </div>
+    </div>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
 
-                        <h3>Descrição</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Declaração</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Parametros</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Valor de retorno</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                    </section>
-        </main>
-        <aside>
-            <h4>string.h</h4>
+<main>
+    <header>
+        <h1>< string.h ></h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+        </div>
+    </header>
+    <div>
+        <h2 id='memchr'>memchr</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>procura a primeira ocorrência do caractere c (um caractere não assinado) nos primeiros n bytes da string apontada, pelo argumento str.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>void *memchr(const void *str, int c, size_t n)</p>
+            <h3>Argumentos</h3>
             <ul>
-                <li class="visivel-indice" id="selecionado">clearerr</li>
-                <li class="visivel-indice">fclose</li>
-                <li class="visivel-indice">feof</li>
-                <li class="visivel-indice">ferror</li>
-                <li class="visivel-indice">fflush</li>
+                <li>str - Este é o ponteiro para o bloco de memória onde a pesquisa é realizada.</li>
+                <li>c - Este é o valor a ser passado como um int, mas a função realiza uma pesquisa byte por byte usando a conversão de caractere não assinado deste valor.</li>
+                <li>n - Este é o número de bytes a serem analisados.</li>
             </ul>
-        </aside>
-    </body>
-    <script src="js/indice.js"></script>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para o byte correspondente ou NULL se o caractere não ocorrer na área de memória especificada.</p>
+        </section>
+        <h2 id='memcmp'>memcmp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>) compara os primeiros n bytes da área de memória str1 e da área de memória str2.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>int memcmp(const void *str1, const void *str2, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Este é o ponteiro para um bloco de memória.</li>
+                <li>str2 - Este é o ponteiro para um bloco de memória.</li>
+                <li>n - Este é o número de bytes a serem comparados.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>se o valor de retorno <0, indica que str1 é menor que str2.
+                se o valor de retorno> 0, indica que str2 é menor que str1.
+                se o valor de retorno = 0, então indica que str1 é igual a str2.</p>
+        </section>
+        <h2 id='memcpy'>memcpy</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função da biblioteca c void *memcpy(void *dest, const void *src, size_t n) copia n caracteres da área de memória src para a área de memória dest.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>void *memcpy(void *dest, const void * src, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>dest - Este é um ponteiro para o array de destino onde o conteúdo deve ser copiado, convertido em tipo para um ponteiro do tipo void*.</li>
+                <li>src - Este é um ponteiro para a fonte de dados a ser copiada, convertido em tipo para um ponteiro do tipo void*.</li>
+                <li>n - Este é o número de bytes a serem copiados.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para o destino, que é str1.</p>
+        </section>
+        <h2 id='memmove'>memmove</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>copia n caracteres de str2 para str1, mas para blocos de memória sobrepostos, memmove() é uma abordagem mais segura que memcpy().</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>void *memmove(void *str1, const void *str2, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Este é um ponteiro para a matriz de destino onde o conteúdo deve ser copiado, convertido em tipo para um ponteiro do tipo void*.</li>
+                <li>str2 - Este é um ponteiro para a fonte de dados a ser copiado, convertido em tipo para um ponteiro do tipo void*.</li>
+                <li>n - Este é o número de bytes a serem copiados.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para o destino, que é str1.</p>
+        </section>
+        <h2 id='memset'>memset</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>copia o caractere c (um caractere não assinado) para os primeiros n caracteres da string apontada, pelo argumento str.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>void *memset(void *str, int c, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é um ponteiro para o bloco de memória a ser preenchido.</li>
+                <li>c - Este é o valor a ser definido. O valor é passado como um int, mas a função preenche o bloco de memória usando a conversão unsigned char deste valor.</li>
+                <li>n - Este é o número de bytes a serem definidos para o valor.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para a área de memória str.</p>
+        </section>
+        <h2 id='strcat'>strcat</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>anexa a string apontada por src ao final da string apontada por dest.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strcat(char *dest, const char *src)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>dest - Este é um ponteiro para o array de destino, que deve conter uma string C e deve ser grande o suficiente para conter a string resultante concatenada.</li>
+                <li>src - Esta é a string a ser anexada. Isto não deve sobrepor-se ao destino.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para a string resultante dest.</p>
+        </section>
+        <h2 id='strchr'>strchr</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>procura a primeira ocorrência do caractere c (um caractere não assinado) na string apontada pelo argumento str.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strchr(const char *str, int c)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string C a ser verificada.</li>
+                <li>c - Este é o caractere a ser pesquisado em str.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Isso retorna um ponteiro para a primeira ocorrência do caractere c na string str ou NULL se o caractere não for encontrado.</p>
+        </section>
+        <h2 id='strcmp'>strcmp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>compara a string apontada por str1 com a string apontada por str2.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>int strcmp(const char *str1, const char *str2)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a primeira string a ser comparada.</li>
+                <li>str2 - Esta é a segunda string a ser comparada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna valores que são os seguintes -</p>
+        </section>
+        <h2 id='strncmp'>strncmp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>compara no máximo os primeiros n bytes de str1 e str2.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>int strncmp(const char *str1, const char *str2, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a primeira string a ser comparada.</li>
+                <li>str2 - Esta é a segunda string a ser comparada.</li>
+                <li>n - O número máximo de caracteres a serem comparados.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna valores que são os seguintes -</p>
+        </section>
+        <h2 id='strcoll'>strcoll</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>compara a string str1 com str2. o resultado depende da configuração lc_collate do local.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>int strcoll(const char *str1, const char *str2)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a primeira string a ser comparada.</li>
+                <li>str2 - Esta é a segunda string a ser comparada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna valores que são os seguintes -</p>
+        </section>
+        <h2 id='strcpy'>strcpy</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>copia a string apontada, por src para dest.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strcpy(char *dest, const char *src)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado.</li>
+                <li>src - Esta é a string a ser copiada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Isso retorna um ponteiro para a string de destino dest.</p>
+        </section>
+        <h2 id='strncpy'>strncpy</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>copia até n caracteres da string apontada, de src para dest. no caso em que o comprimento de src é menor que n, o restante de dest será preenchido com bytes nulos.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strncpy(char *dest, const char *src, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado.</li>
+                <li>src - Esta é a string a ser copiada.</li>
+                <li>n - O número de caracteres a serem copiados da fonte.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o ponteiro para a string copiada.</p>
+        </section>
+        <h2 id='strcspn'>strcspn</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>calcula o comprimento do segmento inicial de str1, que consiste inteiramente em caracteres que não estão em str2.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>size_t strcspn(const char *str1, const char *str2)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a string C principal a ser verificada.</li>
+                <li>str2 - Esta é a string que contém uma lista de caracteres para corresponder em str1.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o número de caracteres no segmento inicial da string str1 que não estão na string str2.</p>
+        </section>
+        <h2 id='strerror'>strerror</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>pesquisa em uma matriz interna o número de erro errnum e retorna um ponteiro para uma string de mensagem de erro. as strings de erro produzidas pelo strerror dependem da plataforma de desenvolvimento e do compilador.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strerror(int errnum)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>errnum - Este é o número do erro, geralmente errno.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para a string de erro que descreve o erro errnum.</p>
+        </section>
+        <h2 id='strlen'>strlen</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>calcula o comprimento da string str até, mas não incluindo o caractere nulo de terminação.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>size_t strlen(const char *str)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string cujo comprimento deve ser encontrado.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o comprimento da string.</p>
+        </section>
+        <h2 id='strpbrk'>strpbrk</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>encontra o primeiro caractere na string str1 que corresponde a qualquer caractere especificado em str2. isso não inclui os caracteres nulos de terminação.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strpbrk(const char *str1, const char *str2)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a string C a ser verificada.</li>
+                <li>str2 - Esta é a string C que contém os caracteres a serem correspondidos.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para o caractere em str1 que corresponde a um dos caracteres em str2, ou NULL se tal caractere não for encontrado.</p>
+        </section>
+        <h2 id='strrchr'>strrchr</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>procura a última ocorrência do caractere c (um caractere não assinado) na string apontada, pelo argumento str.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strrchr(const char *str, int c)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string C.</li>
+                <li>c - Este é o personagem a ser localizado. É passado como promoção interna, mas é convertido internamente de volta para char.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para a última ocorrência do caractere em str. Se o valor não for encontrado, a função retornará um ponteiro nulo.</p>
+        </section>
+        <h2 id='strspn'>strspn</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>calcula o comprimento do segmento inicial de str1 que consiste inteiramente em caracteres em str2.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>size_t strspn(const char *str1, const char *str2)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str1 - Esta é a string C principal a ser verificada.</li>
+                <li>str2 - Esta é a string que contém a lista de caracteres a serem correspondidos em str1.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o número de caracteres no segmento inicial de str1 que consiste apenas em caracteres de str2.</p>
+        </section>
+        <h2 id='strstr'>strstr</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função encontra a primeira ocorrência da agulha da substring no palheiro da string. os caracteres finais '\0' não são comparados.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strstr(const char *haystack, const char *needle)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>haystack - Esta é a string C principal a ser digitalizada.</li>
+                <li>agulha - Este é o pequeno barbante a ser pesquisado no barbante do palheiro.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para a primeira ocorrência no palheiro de qualquer sequência inteira de caracteres especificada em agulha, ou um ponteiro nulo se a sequência não estiver presente no palheiro.</p>
+        </section>
+        <h2 id='strtok'>strtok</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>quebra a string str em uma série de tokens usando o delimitador delim.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>char *strtok(char *str, const char *delim)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - O conteúdo desta string é modificado e dividido em strings menores (tokens).</li>
+                <li>delim - Esta é a string C que contém os delimitadores. Estes podem variar de uma chamada para outra.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um ponteiro para o primeiro token encontrado na string. Um ponteiro nulo será retornado se não houver mais tokens para recuperar.</p>
+        </section>
+        <h2 id='strxfrm'>strxfrm</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>transforma os primeiros n caracteres da string src na localidade atual e os coloca na string dest.</p>
+            <h3>Declaração</h3>
+            <p class='codigo'>size_t strxfrm(char *dest, const char *src, size_t n)</p>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado. Pode ser um ponteiro nulo se o argumento para n for zero.</li>
+                <li>src - Esta é a string C a ser transformada na localidade atual.</li>
+                <li>n - O número máximo de caracteres a serem copiados para str1.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o comprimento da string transformada, não incluindo o caractere nulo de terminação.</p>
+        </section>
+    </div>
+    <aside>
+        <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
+        <h4>string.h</h4>
+        <ul id="indice">
+            <li id="selecionado"><a href='#memchr'>memchr</a></li>
+            <li><a href='#memcmp'>memcmp</a></li>
+            <li><a href='#memcpy'>memcpy</a></li>
+            <li><a href='#memmove'>memmove</a></li>
+            <li><a href='#memset'>memset</a></li>
+            <li><a href='#strcat'>strcat</a></li>
+            <li><a href='#strchr'>strchr</a></li>
+            <li><a href='#strcmp'>strcmp</a></li>
+            <li><a href='#strncmp'>strncmp</a></li>
+            <li><a href='#strcoll'>strcoll</a></li>
+            <li><a href='#strcpy'>strcpy</a></li>
+            <li><a href='#strncpy'>strncpy</a></li>
+            <li><a href='#strcspn'>strcspn</a></li>
+            <li><a href='#strerror'>strerror</a></li>
+            <li><a href='#strlen'>strlen</a></li>
+            <li><a href='#strpbrk'>strpbrk</a></li>
+            <li><a href='#strrchr'>strrchr</a></li>
+            <li><a href='#strspn'>strspn</a></li>
+            <li><a href='#strstr'>strstr</a></li>
+            <li><a href='#strtok'>strtok</a></li>
+            <li><a href='#strxfrm'>strxfrm</a></li>
+
+        </ul>
+    </aside>
+</main>
+
+</body>
+<script src="js/indice.js"></script>
 </html>

@@ -7,9 +7,10 @@ window.addEventListener("scroll", ()=> {
     document.getElementById("selecionado").id = "";
 
     for (let i = 0; i < h2.length; i++) {
-        if (scrollY < h2[i].offsetTop + window.innerHeight/2) {
+        if (scrollY > h2[i].offsetTop - window.innerHeight * 0.3) {
             atual = i;
             document.getElementById("indice").scrollTo(0, i * indiceLista[0].offsetHeight);
+        } else {
             break;
         }
     }
@@ -22,7 +23,8 @@ function procurar() {
     navLista = document.getElementById("indice").getElementsByTagName("li");
 
     for (let item of navLista) {
-        conteudo = item.getElementsByTagName("a")[0].textContent.toLowerCase();
+        conteudo = item.getElementsByTagName("a")[0].textContent;
+        texto = texto.toLowerCase();
 
         if (conteudo.includes(texto)) {
             item.classList.remove("esconder");
@@ -30,6 +32,4 @@ function procurar() {
             item.classList.add("esconder");
         }
     }
-
-    console.log("busca terminada");
 }
