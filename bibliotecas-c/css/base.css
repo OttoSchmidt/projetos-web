@@ -1,12 +1,13 @@
 @import url(temas.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/*reset dos elementos*/
 * {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    color: var(--black);
+    color: var(--on-background);
 }
 
 body {
@@ -26,9 +27,10 @@ body {
 }
 
 #navBibliotecas {
-    height: 100%;
+    box-sizing: border-box; /*util para o height levar em consideração o padding*/
+    height: 100vh;
     position: absolute;
-    top: -150%;
+    top: -120vh;
     left: 100%;
     background: var(--surface-container);
     border-left: 1px solid var(--outline);
@@ -36,10 +38,11 @@ body {
     min-width: 150px;
     text-align: left;
     transition: 180ms linear, display 0ms linear;
+    border-radius: 0 25px 25px 0;
 }
 
 #navBibliotecas a {
-    display: block;
+    display: block; /*para os links não ficarem um do lado do outro*/
     margin-bottom: 1em;
 }
 
@@ -48,13 +51,13 @@ body {
 }
 
 .linkPaginaNAV {
-    cursor: pointer;
+    cursor: pointer; /*altera o icone do mouse, quando ele estiver em cima do elemento*/
     display: block;
     text-decoration: none;
-    color: var(--black);
+    color: var(--on-background);
 }
 
-.linkPaginaNAV div:first-child {
+.linkPaginaNAV div:first-child { /*seleciona a primeira div filha (o elemento parente do icone no nav)*/
     padding: 3px 0;
     display: grid;
     justify-content: center;
@@ -86,7 +89,7 @@ body {
 #btnTema {
     cursor: pointer;
     padding: 13px;
-    border-radius: 50%;
+    border-radius: 50%; /*transforma em um circulo*/
     border: 3px solid var(--outline);
 }
 
@@ -100,7 +103,7 @@ main {
 }
 
 header {
-    grid-column: span 2;
+    grid-column: span 2; /*faz o elemento expandir n colunas (no caso, n = 2)*/
     padding: 40px 50px;
     background-color: var(--primary-container);
     border-radius: 25px;
@@ -144,29 +147,29 @@ header p {
     /*Para position sticky funcionar, eh necessario fornecer a altura*/
     height: fit-content;
     position: sticky;
-    top: 20%;
+    top: 20%; /*faz o elemento mudar para position:fixed; quando o elemento estiver em 20% do topo da pagina*/
 }
 
 #barraPesquisa {
     border: 0;
     border-radius: 25px;
-    outline: none;
+    outline: none; /*borda*/
     margin-bottom: 16px;
     padding: 6px 10px 6px;
     background-color: var(--surface-container);
 }
 
 #barraPesquisa:focus {
-    outline: 1px solid var(--outline-variant);
+    outline: 1px solid var(--outline);
 }
 
 #indice {
-    max-height: 45vh;
-    overflow-y: auto;
+    max-height: 45vh; /*limita a altura em 45% da altura da tela*/
+    overflow-y: auto; /*coloca a barra de rolagem*/
 }
 
 .esconder {
-    display: none;
+    display: none; /*remove o elemento visualmente*/
 }
 
 li, li a {
@@ -182,19 +185,19 @@ li, li a {
     border: 1px var(--outline) solid;
 }
 
+
+/*barra de rolagem*/
 ::-webkit-scrollbar {
     width: 8px;
 }
 
-::-webkit-scrollbar-button {
-    display: none;
-}
-
+/*fundo da barra de rolagem*/
 ::-webkit-scrollbar-track {
     border-radius: 25px;
     background: var(--background);
 }
 
+/*o negocio que move dentro da barra de rolagem*/
 ::-webkit-scrollbar-thumb {
     background: var(--surface-container-highest);
 }
