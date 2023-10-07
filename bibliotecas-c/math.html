@@ -2,10 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="js/tema.js"></script> <!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="icon" href="img/favicon.ico">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="img/favicon.ico" rel="icon">
     <title>math.h</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
             <div><span class="material-symbols-outlined">feedback</span></div>
             <p>Feedback</p>
         </a>
-        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+        <span class="material-symbols-outlined" id="btnTema" onclick="alterarTema();">dark_mode</span>
     </div>
 </nav>
 <main>
@@ -50,7 +50,7 @@
             <h3>Descrição</h3>
             <p>Retorna o arco cosseno de x em radianos.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double acos(double x)</p>
+            <code class="language-clike">double acos(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante no intervalo [-1,+1].</li>
@@ -63,7 +63,7 @@
             <h3>Descrição</h3>
             <p>Retorna o arco seno de x em radianos.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double asin(double x)</p>
+            <code class="language-clike">double asin(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante no intervalo [-1,+1].</li>
@@ -76,7 +76,7 @@
             <h3>Descrição</h3>
             <p>Retorna o arco tangente de x em radianos.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double atan(double x)</p>
+            <code class="language-clike">double atan(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -89,7 +89,7 @@
             <h3>Descrição</h3>
             <p>Retorna o arco tangente em radianos de y/x com base nos sinais de ambos os valores para determinar o quadrante correto.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double atan2(double y, double x)</p>
+            <code class="language-clike">double atan2(double y, double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante que representa uma coordenada x.</li>
@@ -103,7 +103,7 @@
             <h3>Descrição</h3>
             <p>Retorna o cosseno de um ângulo radiano x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double cos(double x)</p>
+            <code class="language-clike">double cos(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante que representa um ângulo expresso em radianos.</li>
@@ -116,7 +116,7 @@
             <h3>Descrição</h3>
             <p>Retorna o cosseno hiperbólico de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double cosh(double x)</p>
+            <code class="language-clike">double cosh(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -129,7 +129,7 @@
             <h3>Descrição</h3>
             <p>Retorna o seno de um ângulo radiano x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double sin(double x)</p>
+            <code class="language-clike">double sin(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante que representa um ângulo expresso em radianos.</li>
@@ -142,7 +142,7 @@
             <h3>Descrição</h3>
             <p>Retorna o seno hiperbólico de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double sinh(double x)</p>
+            <code class="language-clike">double sinh(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -155,7 +155,7 @@
             <h3>Descrição</h3>
             <p>Retorna a tangente hiperbólica de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double tanh(double x)</p>
+            <code class="language-clike">double tanh(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -168,7 +168,7 @@
             <h3>Descrição</h3>
             <p>Retorna o valor de e elevado à x-ésima potência.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double exp(double x)</p>
+            <code class="language-clike">double exp(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -181,7 +181,7 @@
             <h3>Descrição</h3>
             <p>O valor de retorno é a mantissa e o número inteiro apontado pelo expoente é o expoente. O valor resultante é x = mantissa * 2 ^ expoente.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double frexp(double x, int *exponent)</p>
+            <code class="language-clike">double frexp(double x, int *exponent)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante a ser calculado.</li>
@@ -195,7 +195,7 @@
             <h3>Descrição</h3>
             <p>Retorna x multiplicado por 2 elevado à potência do expoente.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double ldexp(double x, int exponent)</p>
+            <code class="language-clike">double ldexp(double x, int exponent)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor de ponto flutuante que representa o significando.</li>
@@ -209,7 +209,7 @@
             <h3>Descrição</h3>
             <p>Retorna o logaritmo natural (logaritmo de base e) de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double log(double x)</p>
+            <code class="language-clike">double log(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -222,7 +222,7 @@
             <h3>Descrição</h3>
             <p>Retorna o logaritmo comum (logaritmo de base 10) de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double log10(double x)</p>
+            <code class="language-clike">double log10(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -235,7 +235,7 @@
             <h3>Descrição</h3>
             <p>Retorna o componente fracionário (parte após o decimal) e define inteiro como o componente inteiro.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double modf(double x, double *integer)</p>
+            <code class="language-clike">double modf(double x, double *integer)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -249,7 +249,7 @@
             <h3>Descrição</h3>
             <p>Retorna x elevado à potência de y, ou seja, xy.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double pow(double x, double y)</p>
+            <code class="language-clike">double pow(double x, double y)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor base do ponto flutuante.</li>
@@ -263,7 +263,7 @@
             <h3>Descrição</h3>
             <p>Retorna a raiz quadrada de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double sqrt(double x)</p>
+            <code class="language-clike">double sqrt(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -276,7 +276,7 @@
             <h3>Descrição</h3>
             <p>Retorna o menor valor inteiro maior ou igual a x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double ceil(double x)</p>
+            <code class="language-clike">double ceil(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -289,7 +289,7 @@
             <h3>Descrição</h3>
             <p>Retorna o valor absoluto de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double fabs(double x)</p>
+            <code class="language-clike">double fabs(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -302,7 +302,7 @@
             <h3>Descrição</h3>
             <p>Retorna o maior valor inteiro menor ou igual a x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double floor(double x)</p>
+            <code class="language-clike">double floor(double x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
@@ -315,7 +315,7 @@
             <h3>Descrição</h3>
             <p>Retorna o resto de x dividido por y.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double fmod(double x, double y)</p>
+            <code class="language-clike">double fmod(double x, double y)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor de ponto flutuante com o numerador de divisão, ou seja, x.</li>
@@ -326,7 +326,7 @@
         </section>
     </div>
     <nav class="navIndice">
-        <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
+        <input id="barraPesquisa" oninput="procurar();" placeholder="Procurar função" type="text">
         <h4>math.h</h4>
         <ul id="indice">
             <li id="selecionado"><a href='#acos'>acos</a></li>
@@ -353,6 +353,7 @@
         </ul>
     </nav>
 </main>
-</body>
 <script src="js/indice.js"></script>
+<script src="js/prism.js"></script> <!--NECESSARIO PARA O HIGHLIGHT DO CODIGO C-->
+</body>
 </html>
