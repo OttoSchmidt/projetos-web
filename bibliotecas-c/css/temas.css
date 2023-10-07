@@ -1,15 +1,28 @@
 @import url(cores_base.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code');
 /*ICONES SAO UMA FONTE*/
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 /*CONFIG PARA OS ICONES*/
 .material-symbols-outlined {
+    transition: 200ms;
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
             'GRAD' 0,
             'opsz' 24;
+}
+
+.linkPaginaNAV:hover .material-symbols-outlined {
+    font-variation-settings:
+            'wght' 600,
+            'opsz' 30;
+}
+
+.paginaSelecionada .material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 1 !important;
 }
 
 /*TEMA BASE MATERIAL YOU PARA LIGHT*/

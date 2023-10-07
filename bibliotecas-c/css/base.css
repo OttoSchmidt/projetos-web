@@ -19,6 +19,7 @@ body {
 .navPrincipal {
     background: var(--surface-container);
     height: 100%;
+    min-width: 88px;
     text-align: center;
     position: fixed;
     display: grid;
@@ -26,6 +27,7 @@ body {
 }
 
 #navBibliotecas {
+    cursor: default; /*resetar o cursor dentro do menu*/
     box-sizing: border-box; /*util para o height levar em consideração o padding*/
     height: 100vh;
     position: absolute;
@@ -42,7 +44,16 @@ body {
 
 #navBibliotecas a {
     display: block; /*para os links não ficarem um do lado do outro*/
-    margin-bottom: 1em;
+    width: 80%;
+    margin: 5px 0;
+    padding: .5em 0;
+    border-radius: 25px;
+    transition: all 200ms cubic-bezier(.22, .61, 0.36, 1);
+}
+
+#navBibliotecas a:hover {
+    padding-left: 1em;
+    background: var(--surface-container-highest);
 }
 
 #biblioteca:hover #navBibliotecas {
@@ -61,15 +72,25 @@ body {
     display: grid;
     justify-content: center;
     border-radius: 25px;
-    width: 60%;
+    width: 66%;
     margin: 0 auto;
 }
 
-.paginaSelecionada div {
-    background: var(--primary-container);
+.linkPaginaNAV > div, #btnTema:hover {
+    transition: 200ms cubic-bezier(.22, .61, 0.36, 1);
+}
+
+.linkPaginaNAV:hover div:first-child, #btnTema:hover {
+    background: var(--surface-container-highest);
+}
+
+.paginaSelecionada div:first-child {
+    background: var(--primary-container) !important; /*!important é necessário para sobrescrever background do :hover*/
 }
 
 .navPrincipal p {
+    font-size: 12px;
+    font-weight: 500;
     margin: 8px 10px;
 }
 
@@ -159,7 +180,7 @@ header p {
 }
 
 #barraPesquisa:focus {
-    outline: 1px solid var(--outline);
+    outline: 2px solid var(--outline);
 }
 
 #indice {
@@ -176,6 +197,7 @@ li, li a {
     list-style: none;
     padding: 5px 10px;
     margin: 5px 0;
+    border-radius: 25px;
 }
 
 #selecionado a {
