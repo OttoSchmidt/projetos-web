@@ -9,14 +9,50 @@
     <title>Início</title>
 </head>
 <body>
+    <nav class="navPrincipal">
+        <div class="lista_up">
+            <a class="linkPaginaNAV" href="index.html">
+                <div><span class="material-symbols-outlined">home</span></div>
+                <p>Início</p>
+            </a>
+            <div class="linkPaginaNAV" id="biblioteca">
+                <div><span class="material-symbols-outlined">book_2</span></div>
+                <p>Bibliotecas</p>
+
+                <div id="navBibliotecas">
+                    <a href="stdio.html">stdio.h</a>
+                    <a href="stdlib.html">stdlib.h</a>
+                    <a href="string.html">string.h</a>
+                    <a href="math.html">math.h</a>
+                </div>
+
+            </div>
+
+            <a class="linkPaginaNAV" href="#">
+                <div><span class="material-symbols-outlined">data_object</span></div>
+                <p>Macros</p>
+            </a>
+
+            <a class="linkPaginaNAV" href="#">
+                <div><span class="material-symbols-outlined">code</span></div>
+                <p>Variáveis</p>
+            </a>
+
+        </div>
+        <div class="lista_down">
+            <a class="linkPaginaNAV paginaSelecionada" href="#">
+                <div><span class="material-symbols-outlined">feedback</span></div>
+                <p>Feedback</p>
+            </a>
+            <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+        </div>
+    </nav>
+
     <main>
         <header>
             <h1>Principais Bibliotecas em C</h1>
             <button class="button">EXPLORAR</button>
         </header>
-
-        <nav>
-        </nav>
 
         <section>
             <h2>MACROS</h2>
