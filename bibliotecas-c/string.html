@@ -60,7 +60,7 @@
             <h3>Descrição</h3>
             <p>Procura a primeira ocorrência do caractere c (um caractere não assinado) nos primeiros n bytes da string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *memchr(const void *str, int c, size_t n)</p>
+            <code class='language-clike'>void *memchr(const void *str, int c, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é o ponteiro para o bloco de memória onde a pesquisa é realizada.</li>
@@ -75,7 +75,7 @@
             <h3>Descrição</h3>
             <p>Compara os primeiros n bytes da área de memória str1 e da área de memória str2.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int memcmp(const void *str1, const void *str2, size_t n)</p>
+            <code class='language-clike'>int memcmp(const void *str1, const void *str2, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Este é o ponteiro para um bloco de memória.</li>
@@ -92,7 +92,7 @@
             <h3>Descrição</h3>
             <p>A função da biblioteca c void *memcpy(void *dest, const void *src, size_t n) copia n caracteres da área de memória src para a área de memória dest.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *memcpy(void *dest, const void * src, size_t n)</p>
+            <code class='language-clike'>void *memcpy(void *dest, const void * src, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>dest - Este é um ponteiro para o array de destino onde o conteúdo deve ser copiado, convertido em tipo para um ponteiro do tipo void*.</li>
@@ -107,7 +107,7 @@
             <h3>Descrição</h3>
             <p>Copia n caracteres de str2 para str1, mas para blocos de memória sobrepostos, memmove() é uma abordagem mais segura que memcpy().</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *memmove(void *str1, const void *str2, size_t n)</p>
+            <code class='language-clike'>void *memmove(void *str1, const void *str2, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Este é um ponteiro para a matriz de destino onde o conteúdo deve ser copiado, convertido em tipo para um ponteiro do tipo void*.</li>
@@ -122,7 +122,7 @@
             <h3>Descrição</h3>
             <p>Copia o caractere c (um caractere não assinado) para os primeiros n caracteres da string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *memset(void *str, int c, size_t n)</p>
+            <code class='language-clike'>void *memset(void *str, int c, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é um ponteiro para o bloco de memória a ser preenchido.</li>
@@ -137,7 +137,7 @@
             <h3>Descrição</h3>
             <p>Anexa a string apontada por src ao final da string apontada por dest.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strcat(char *dest, const char *src)</p>
+            <code class='language-clike'>char *strcat(char *dest, const char *src)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>dest - Este é um ponteiro para o array de destino, que deve conter uma string C e deve ser grande o suficiente para conter a string resultante concatenada.</li>
@@ -151,7 +151,7 @@
             <h3>Descrição</h3>
             <p>Procura a primeira ocorrência do caractere c (um caractere não assinado) na string apontada pelo argumento str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strchr(const char *str, int c)</p>
+            <code class='language-clike'>char *strchr(const char *str, int c)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string C a ser verificada.</li>
@@ -165,7 +165,7 @@
             <h3>Descrição</h3>
             <p>Compara a string apontada por str1 com a string apontada por str2.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int strcmp(const char *str1, const char *str2)</p>
+            <code class='language-clike'>int strcmp(const char *str1, const char *str2)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a primeira string a ser comparada.</li>
@@ -179,7 +179,7 @@
             <h3>Descrição</h3>
             <p>Compara no máximo os primeiros n bytes de str1 e str2.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int strncmp(const char *str1, const char *str2, size_t n)</p>
+            <code class='language-clike'>int strncmp(const char *str1, const char *str2, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a primeira string a ser comparada.</li>
@@ -194,7 +194,7 @@
             <h3>Descrição</h3>
             <p>Compara a string str1 com str2. o resultado depende da configuração lc_collate do local.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int strcoll(const char *str1, const char *str2)</p>
+            <code class='language-clike'>int strcoll(const char *str1, const char *str2)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a primeira string a ser comparada.</li>
@@ -208,7 +208,7 @@
             <h3>Descrição</h3>
             <p>Copia a string apontada, por src para dest.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strcpy(char *dest, const char *src)</p>
+            <code class='language-clike'>char *strcpy(char *dest, const char *src)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado.</li>
@@ -222,7 +222,7 @@
             <h3>Descrição</h3>
             <p>Copia até n caracteres da string apontada, de src para dest. no caso em que o comprimento de src é menor que n, o restante de dest será preenchido com bytes nulos.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strncpy(char *dest, const char *src, size_t n)</p>
+            <code class='language-clike'>char *strncpy(char *dest, const char *src, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado.</li>
@@ -237,7 +237,7 @@
             <h3>Descrição</h3>
             <p>Calcula o comprimento do segmento inicial de str1, que consiste inteiramente em caracteres que não estão em str2.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t strcspn(const char *str1, const char *str2)</p>
+            <code class='language-clike'>size_t strcspn(const char *str1, const char *str2)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a string C principal a ser verificada.</li>
@@ -249,9 +249,9 @@
         <h2 id='strerror'>strerror</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Pesquisa em uma matriz interna o número de erro errnum e retorna um ponteiro para uma string de mensagem de erro. as strings de erro produzidas pelo strerror dependem da plataforma de desenvolvimento e do compilador.</p>
+            <p>Pesquisa em um vetor o número de erro errnum e retorna um ponteiro para uma string de mensagem de erro. As strings de erro produzidas pelo strerror dependem da plataforma de desenvolvimento e do compilador.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strerror(int errnum)</p>
+            <code class='language-clike'>char *strerror(int errnum)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>errnum - Este é o número do erro, geralmente errno.</li>
@@ -262,9 +262,9 @@
         <h2 id='strlen'>strlen</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Calcula o comprimento da string str até, mas não incluindo o caractere nulo de terminação.</p>
+            <p>calcula o comprimento da string str até, mas não incluindo o caractere nulo de terminação.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t strlen(const char *str)</p>
+            <code class='language-clike'>size_t strlen(const char *str)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string cujo comprimento deve ser encontrado.</li>
@@ -275,9 +275,9 @@
         <h2 id='strpbrk'>strpbrk</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Encontra o primeiro caractere na string str1 que corresponde a qualquer caractere especificado em str2. isso não inclui os caracteres nulos de terminação.</p>
+            <p>encontra o primeiro caractere na string str1 que corresponde a qualquer caractere especificado em str2. isso não inclui os caracteres nulos de terminação.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strpbrk(const char *str1, const char *str2)</p>
+            <code class='language-clike'>char *strpbrk(const char *str1, const char *str2)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a string C a ser verificada.</li>
@@ -289,9 +289,9 @@
         <h2 id='strrchr'>strrchr</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Procura a última ocorrência do caractere c (um caractere não assinado) na string apontada, pelo argumento str.</p>
+            <p>procura a última ocorrência do caractere c (um caractere não assinado) na string apontada, pelo argumento str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strrchr(const char *str, int c)</p>
+            <code class='language-clike'>char *strrchr(const char *str, int c)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string C.</li>
@@ -303,9 +303,9 @@
         <h2 id='strspn'>strspn</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Calcula o comprimento do segmento inicial de str1 que consiste inteiramente em caracteres em str2.</p>
+            <p>calcula o comprimento do segmento inicial de str1 que consiste inteiramente em caracteres em str2.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t strspn(const char *str1, const char *str2)</p>
+            <code class='language-clike'>size_t strspn(const char *str1, const char *str2)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str1 - Esta é a string C principal a ser verificada.</li>
@@ -319,7 +319,7 @@
             <h3>Descrição</h3>
             <p>A função encontra a primeira ocorrência da agulha da substring no palheiro da string. os caracteres finais '\0' não são comparados.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strstr(const char *haystack, const char *needle)</p>
+            <code class='language-clike'>char *strstr(const char *haystack, const char *needle)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>haystack - Esta é a string C principal a ser digitalizada.</li>
@@ -331,9 +331,9 @@
         <h2 id='strtok'>strtok</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Quebra a string str em uma série de tokens usando o delimitador delim.</p>
+            <p>quebra a string str em uma série de tokens usando o delimitador delim.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *strtok(char *str, const char *delim)</p>
+            <code class='language-clike'>char *strtok(char *str, const char *delim)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - O conteúdo desta string é modificado e dividido em strings menores (tokens).</li>
@@ -345,9 +345,9 @@
         <h2 id='strxfrm'>strxfrm</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Transforma os primeiros n caracteres da string src na localidade atual e os coloca na string dest.</p>
+            <p>transforma os primeiros n caracteres da string src na localidade atual e os coloca na string dest.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t strxfrm(char *dest, const char *src, size_t n)</p>
+            <code class='language-clike'>size_t strxfrm(char *dest, const char *src, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>dest - Este é o ponteiro para o array de destino onde o conteúdo deve ser copiado. Pode ser um ponteiro nulo se o argumento para n for zero.</li>
@@ -388,4 +388,5 @@
 </main>
 </body>
 <script src="js/indice.js"></script>
+<script src="js/prism.js"></script> <!--NECESSARIO PARA O HIGHLIGHT DO CODIGO C-->
 </html>
