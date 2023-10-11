@@ -5,11 +5,20 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
+    color: var(--on-background);
 }
 
 
-/*padding: 25px 50px 75px 100px;*/
+.navPrincipal {
+    background: var(--surface-container);
+    height: 100%;
+    min-width: 88px;
+    text-align: center;
+    position: fixed;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+}
 
 header{
     grid-column: span 2;
@@ -57,6 +66,10 @@ th{
     font-size: 20px;
 }
 
+.titulo{
+    border-bottom: 25px;
+}
+
 .button{
     background-color: var(--primary);
     border-radius: 25px;
@@ -71,3 +84,4 @@ th{
     margin: 50px auto;
 
 }
+
