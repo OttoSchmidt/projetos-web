@@ -15,15 +15,34 @@ body{
 /*padding: 25px 50px 75px 100px;*/
 
 header{
-    padding: 50px 25px 50px 5px;
+    grid-column: span 2;
+    padding: 50px 25px 1px 25px;
     background-color: var(--primary-container);
     border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+main{
+    column-gap: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 h1{
     text-align: center;
     font-size: 60px;
     font-weight: 700;
+}
+
+section{
+    text-align: center;
+    background-color: var(--secondary-container);
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+table{
+    width: 100%;
 }
 
 .button{
