@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <link rel="stylesheet" type="text/css"  href="css/base.css">
+    <link rel="stylesheet" type="text/css"  href="css/feedback.css">
     <link rel="icon" href="img/favicon.ico">
     <title>Feedback</title>
 </head>
@@ -58,22 +59,25 @@
             </div>
         </header>
         <section>
-            <div>
-                <label for="nome"> Nome </label>
-                <input type="text" name="nome" id="nome" required>
+            <div class="esquerdo">
+                <div class="caixa_pequena">
+                    <label for="nome"> Nome </label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="caixa_pequena">
+                    <label for="email"> Email </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="container_checkbox">
+                    <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" />
+                    <label for="checkbox">Concordo em receber email sobre atualizações do meu feedback</label>
+                </div>
             </div>
-            <div>
-                <label for="email"> Email </label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div>
-                <label for="feedback"> Descreva seu feedback </label>
+            <div class="caixa_grande">
+                <label for="feedback" id="texto_textarea"> Descreva seu feedback </label>
                 <textarea name="feedback" id="feedback"></textarea>
             </div>
-            <div>
-                <input type="checkbox" id="checkbox" name="checkbox" />
-                <label for="checkbox">Concordo em receber email sobre atualizações do meu feedback</label>
-            </div>
+
             <div><input type="submit" value="ENVIAR"></div>
         </section>
     </main>
