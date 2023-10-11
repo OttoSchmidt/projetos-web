@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
-    <link rel="stylesheet" type="text/css"  href="css/base.css">
     <link rel="stylesheet" type="text/css"  href="css/feedback.css">
     <link rel="icon" href="img/favicon.ico">
     <title>Feedback</title>
@@ -59,12 +58,12 @@
             </div>
         </header>
         <section>
-            <div class="esquerdo">
-                <div class="caixa_pequena">
+            <div>
+                <div class="caixa cPequena">
                     <label for="nome"> Nome </label>
                     <input type="text" name="nome" id="nome" required>
                 </div>
-                <div class="caixa_pequena">
+                <div class="caixa cPequena">
                     <label for="email"> Email </label>
                     <input type="email" name="email" id="email" required>
                 </div>
@@ -73,11 +72,10 @@
                     <label for="checkbox">Concordo em receber email sobre atualizações do meu feedback</label>
                 </div>
             </div>
-            <div class="caixa_grande">
+            <div class="caixa cGrande">
                 <label for="feedback" id="texto_textarea"> Descreva seu feedback </label>
                 <textarea name="feedback" id="feedback"></textarea>
             </div>
-
             <div><input type="submit" value="ENVIAR"></div>
         </section>
     </main>

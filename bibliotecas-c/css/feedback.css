@@ -1,56 +1,76 @@
+@import url(base.css);
+
+main {
+    display: block; /*remove o grid do main*/
+}
+
 section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 0;
+    width: 80%;
+    margin: 60px auto 0; /*margin auto na lateral para centralizar o elemento*/
 }
-.caixa_pequena{
-    border: 2px;
-    background-color: var(--md-sys-color-surface-container-light);
-    width: 327px;
-    height: 44px;
+
+section > div { /*seleciona div que seja filho direto de section*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%;
+}
+
+.caixa {
+    box-sizing: border-box; /*a largura levera em conta padding e margin*/
+    background-color: var(--surface-container);
+    width: 100%;
     border-radius: 25px;
-    margin: 30px;
-    padding-left: 20px;
+}
+
+.cPequena{
+    display: grid; /*necessário para manter a msm separação entre label e input em vários elementos, para ficar alinhado*/
+    grid-template-columns: 1fr 4fr;
+    padding: 0 20px;
+}
+
+.cPequena label {
+    margin: auto;
 }
 
 input{
     border: none;
     outline: none;
-    background-color: var(--md-sys-color-surface-container-light);
+    background-color: var(--surface-container);
     padding: 14px;
 }
 
-label{
-    font-weight: 400;
-    color: #000000;
+.cGrande{
+    width: 80%;
+    min-height: 230px;
+    padding: 10px 40px;
 }
 
-.caixa_grande{
-    border: 2px;
-    background-color: var(--md-sys-color-surface-container-light);
-    border-radius: 25px;
-    width: 307px;
-    height: 232px;
-    padding: 10px;
-    padding-left: 60px;
-}
-
-#texto_textarea{
-    margin-left: 13%;
-    font-weight: 400;
+.cGrande label{
+    text-align: center;
 }
 
 textarea{
+    margin: 5px auto;
     resize: none;
     border: none;
     outline: none;
-    background-color: var(--md-sys-color-surface-container-light);
+    background-color: transparent;
     width: 80%;
-    height: 80%;
-    padding-top: 5px;
+    height: 90%;
 }
 
 .container_checkbox{
-    display: inline;  
+    margin: 0 auto;
+    display: flex; /*necessário para seperar o input e label*/
+    column-gap: 16px;
+    width: 60%;
 }
 
-
+.container_checkbox label {
+    font-size: 12px;
+}
