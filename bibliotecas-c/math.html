@@ -1,49 +1,370 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/base.css">
-        <title>math.h</title>
-    </head>
-    <body>
-        <header>
-            <h1>< math.h ></h1>
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                </div>
-        </header>
-        <main>
-            <div>
-                <h2>clearerr</h2>
-                    <section>
-
-                        <h3>Descrição</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Declaração</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Parametros</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-
-                        <h3>Valor de retorno</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-                    </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>math.h</title>
+</head>
+<body>
+<nav class="navPrincipal">
+    <div class="lista_up">
+        <a class="linkPaginaNAV" href="index.html">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
+            <div id="navBibliotecas">
+                <a href="stdio.html">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="string.html">string.h</a>
+                <a href="">math.h</a>
             </div>
-                
-                <aside>
-                    <h4>math.h</h4>
-                    <ul>
-                        <li>clearerr</li>
-                        <li>fclose</li>
-                        <li>feof</li>
-                        <li>ferror</li>
-                        <li>fflush</li>
-                    </ul>
-                </aside>
+        </div>
 
-        </main>
-    </body>
+        <a class="linkPaginaNAV" href="#">
+            <div><span class="material-symbols-outlined">data_object</span></div>
+            <p>Macros</p>
+        </a>
+
+        <a class="linkPaginaNAV" href="#">
+            <div><span class="material-symbols-outlined">code</span></div>
+            <p>Variáveis</p>
+        </a>
+        
+    </div>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span class="material-symbols-outlined" id="btnTema" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
+<main>
+    <header>
+        <h1>&lt;math.h&gt;</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+        </div>
+    </header>
+    <div>
+        <h2 id='acos'>acos</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o arco cosseno de x em radianos.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double acos(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante no intervalo [-1,+1].</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o cosseno do arco principal de x, no intervalo [0, pi] radianos.</p>
+        </section>
+        <h2 id='asin'>asin</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o arco seno de x em radianos.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double asin(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante no intervalo [-1,+1].</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o arco seno de x, no intervalo [-pi/2,+pi/2] radianos.</p>
+        </section>
+        <h2 id='atan'>atan</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o arco tangente de x em radianos.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double atan(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o arco tangente principal de x, no intervalo [-pi/2,+pi/2] radianos.</p>
+        </section>
+        <h2 id='atan2'>atan2</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o arco tangente em radianos de y/x com base nos sinais de ambos os valores para determinar o quadrante correto.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double atan2(double y, double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante que representa uma coordenada x.</li>
+                <li>y - Este é o valor do ponto flutuante que representa uma coordenada y.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna a tangente do arco principal de y/x, no intervalo [-pi,+pi] radianos.</p>
+        </section>
+        <h2 id='cos'>cos</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o cosseno de um ângulo radiano x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double cos(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante que representa um ângulo expresso em radianos.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o cosseno de x.</p>
+        </section>
+        <h2 id='cosh'>cosh</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o cosseno hiperbólico de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double cosh(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o cosseno hiperbólico de x.</p>
+        </section>
+        <h2 id='sin'>sin</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o seno de um ângulo radiano x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double sin(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante que representa um ângulo expresso em radianos.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o seno de x.</p>
+        </section>
+        <h2 id='sinh'>sinh</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o seno hiperbólico de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double sinh(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o seno hiperbólico de x.</p>
+        </section>
+        <h2 id='tanh'>tanh</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna a tangente hiperbólica de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double tanh(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna a tangente hiperbólica de x.</p>
+        </section>
+        <h2 id='exp'>exp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o valor de e elevado à x-ésima potência.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double exp(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o valor exponencial de x.</p>
+        </section>
+        <h2 id='frexp'>frexp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>O valor de retorno é a mantissa e o número inteiro apontado pelo exponent é o expoente. o valor resultante é x = mantissa * 2 ^ expoente.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double frexp(double x, int *exponent)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante a ser calculado.</li>
+                <li>exponent - Este é o ponteiro para um objeto int onde o valor do expoente deve ser armazenado.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna a fração normalizada. Se o argumento x não for zero, a fração normalizada será x vezes uma potência de dois e seu valor absoluto estará sempre no intervalo de 1/2 (inclusivo) a 1 (exclusivo). Se x for zero, então a fração normalizada é zero e zero é armazenado em exp.</p>
+        </section>
+        <h2 id='ldexp'>ldexp</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna x multiplicado por 2 elevado à potência do exponent.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double ldexp(double x, int exponent)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor de ponto flutuante que representa o significando.</li>
+                <li>exponent - Este é o valor do expoente.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna x * 2 exp</p>
+        </section>
+        <h2 id='log'>log</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o logaritmo natural (logaritmo de base e) de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double log(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o logaritmo natural de x.</p>
+        </section>
+        <h2 id='log10'>log10</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o logaritmo comum (logaritmo de base 10) de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double log10(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o logaritmo comum de x, para valores de x maiores que zero.</p>
+        </section>
+        <h2 id='modf'>modf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o componente fracionário (parte após o decimal) e define integer como o componente inteiro.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double modf(double x, double *integer)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+                <li>integer - Este é o ponteiro para um objeto onde a parte integral deve ser armazenada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna a parte fracionária de x, com o mesmo sinal.</p>
+        </section>
+        <h2 id='pow'>pow</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna x elevado à potência de y, ou seja, x^y.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double pow(double x, double y)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor base do ponto flutuante.</li>
+                <li>y - Este é o valor da potência do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o resultado de elevar x à potência y.</p>
+        </section>
+        <h2 id='sqrt'>sqrt</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna a raiz quadrada de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double sqrt(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna a raiz quadrada de x.</p>
+        </section>
+        <h2 id='ceil'>ceil</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o menor valor inteiro maior ou igual a x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double ceil(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o menor valor integral não inferior a x.</p>
+        </section>
+        <h2 id='fabs'>fabs</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o valor absoluto de x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double fabs(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o valor absoluto de x.</p>
+        </section>
+        <h2 id='floor'>floor</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o maior valor inteiro menor ou igual a x.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double floor(double x)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor do ponto flutuante.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o maior valor integral não maior que x.</p>
+        </section>
+        <h2 id='fmod'>fmod</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna o resto de x dividido por y.</p>
+            <h3>Declaração</h3>
+            <code class="language-clike">double fmod(double x, double y)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>x - Este é o valor de ponto flutuante com o numerador de divisão, ou seja, x.</li>
+                <li>y - Este é o valor do ponto flutuante com o denominador de divisão, ou seja, y.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o resto da divisão x/y.</p>
+        </section>
+    </div>
+    <nav class="navIndice">
+        <input id="barraPesquisa" oninput="procurar();" placeholder="Procurar função" type="text">
+        <h4>math.h</h4>
+        <ul id="indice">
+            <li id="selecionado"><a href='#acos'>acos</a></li>
+            <li><a href='#asin'>asin</a></li>
+            <li><a href='#atan'>atan</a></li>
+            <li><a href='#atan2'>atan2</a></li>
+            <li><a href='#cos'>cos</a></li>
+            <li><a href='#cosh'>cosh</a></li>
+            <li><a href='#sin'>sin</a></li>
+            <li><a href='#sinh'>sinh</a></li>
+            <li><a href='#tanh'>tanh</a></li>
+            <li><a href='#exp'>exp</a></li>
+            <li><a href='#frexp'>frexp</a></li>
+            <li><a href='#ldexp'>ldexp</a></li>
+            <li><a href='#log'>log</a></li>
+            <li><a href='#log10'>log10</a></li>
+            <li><a href='#modf'>modf</a></li>
+            <li><a href='#pow'>pow</a></li>
+            <li><a href='#sqrt'>sqrt</a></li>
+            <li><a href='#ceil'>ceil</a></li>
+            <li><a href='#fabs'>fabs</a></li>
+            <li><a href='#floor'>floor</a></li>
+            <li><a href='#fmod'>fmod</a></li>
+        </ul>
+    </nav>
+</main>
+<script src="js/indice.js"></script>
+<script src="js/prism.js"></script> <!--NECESSARIO PARA O HIGHLIGHT DO CODIGO C-->
+</body>
 </html>

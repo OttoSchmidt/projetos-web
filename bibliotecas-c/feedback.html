@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <!-- Comentario para testar se o git ta funcionando no meu notwbook (leonardo)-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <link rel="stylesheet" type="text/css"  href="css/base.css">
-    <title>Document</title>
+    <link rel="icon" href="img/favicon.ico">
+    <title>Feedback</title>
 </head>
 <body>
+
+    <nav class="navPrincipal">
+        <div class="lista_up">
+            <a class="linkPaginaNAV" href="index.html">
+                <div><span class="material-symbols-outlined">home</span></div>
+                <p>Início</p>
+            </a>
+            <div class="linkPaginaNAV" id="biblioteca">
+                <div><span class="material-symbols-outlined">book_2</span></div>
+                <p>Bibliotecas</p>
+
+                <div id="navBibliotecas">
+                    <a href="stdio.html">stdio.h</a>
+                    <a href="stdlib.html">stdlib.h</a>
+                    <a href="string.html">string.h</a>
+                    <a href="math.html">math.h</a>
+                </div>
+
+            </div>
+
+            <a class="linkPaginaNAV" href="#">
+                <div><span class="material-symbols-outlined">data_object</span></div>
+                <p>Macros</p>
+            </a>
+
+            <a class="linkPaginaNAV" href="#">
+                <div><span class="material-symbols-outlined">code</span></div>
+                <p>Variáveis</p>
+            </a>
+
+        </div>
+        <div class="lista_down">
+            <a class="linkPaginaNAV paginaSelecionada" href="#">
+                <div><span class="material-symbols-outlined">feedback</span></div>
+                <p>Feedback</p>
+            </a>
+            <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+        </div>
+    </nav>
+
     <main>
-        <header>    </header>
-
-        <nav>
-            <div class="lista_up">
-                <a href="#">
-                    <div><span class="material-symbols-outlined">home</span></div>
-                    <p>Início</p>
-                </a>
-                <a href="#">
-                    <div><span class="material-symbols-outlined">book_2</span></div>
-                    <p>Bibliotecas</p>
-                </a>
+        <header>
+            <h1>Feedback</h1>
+            <div>
+                <p></p>
             </div>
-
-            <div class="lista_down">
-                <a href="#">
-                    <div><span class="material-symbols-outlined">feedback</span></div>
-                    <p>Feedback</p>
-                </a>
-            </div>
-        </nav>
-
+        </header>
         <section>
             <div>
                 <label for="nome"> Nome </label>
                 <input type="text" name="nome" id="nome" required>
             </div>
-
             <div>
                 <label for="email"> Email </label>
                 <input type="email" name="email" id="email" required>
             </div>
-
             <div>
                 <label for="feedback"> Descreva seu feedback </label>
                 <textarea name="feedback" id="feedback"></textarea>
             </div>
-
             <div>
                 <input type="checkbox" id="checkbox" name="checkbox" />
                 <label for="checkbox">Concordo em receber email sobre atualizações do meu feedback</label>
             </div>
-
             <div><input type="submit" value="ENVIAR"></div>
         </section>
-        <footer>
-            
-        </footer>
     </main>
 </body>
 </html>

@@ -1,103 +1,228 @@
 @import url(temas.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+/*reset dos elementos*/
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
+    color: var(--on-background);
 }
 
-body{
-    padding: 46px 28px 0 32px;
+body {
+    background: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    transition: background 200ms linear, color 200ms linear;
 }
 
-nav{
+.navPrincipal {
+    background: var(--surface-container);
+    height: 100%;
+    min-width: 88px;
+    text-align: center;
+    position: fixed;
     display: grid;
     grid-template-rows: 1fr 6fr 1fr;
-    background: var(--surface-container);
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 88px;
-    position: fixed;
-    overflow-x: hidden;
 }
 
-.lista_down{
+#navBibliotecas {
+    cursor: default; /*resetar o cursor dentro do menu*/
+    box-sizing: border-box; /*util para o height levar em consideração o padding*/
+    height: 100vh;
+    position: absolute;
+    top: -120vh;
+    left: 100%;
+    background: var(--surface-container);
+    border-left: 1px solid var(--outline);
+    padding: 20px 0 0 20px;
+    min-width: 150px;
+    text-align: left;
+    transition: 180ms linear, display 0ms linear;
+    border-radius: 0 25px 25px 0;
+}
+
+#navBibliotecas a {
+    display: block; /*para os links não ficarem um do lado do outro*/
+    width: 80%;
+    margin: 5px 0;
+    padding: .5em 0;
+    border-radius: 25px;
+    transition: all 200ms cubic-bezier(.22, .61, 0.36, 1);
+}
+
+#navBibliotecas a:hover {
+    padding-left: 1em;
+    background: var(--surface-container-highest);
+}
+
+#biblioteca:hover #navBibliotecas {
+    top: 0;
+}
+
+.linkPaginaNAV {
+    cursor: pointer; /*altera o icone do mouse, quando ele estiver em cima do elemento*/
+    display: block;
+    text-decoration: none;
+    color: var(--on-background);
+}
+
+.linkPaginaNAV div:first-child { /*seleciona a primeira div filha (o elemento parente do icone no nav)*/
+    padding: 3px 0;
+    display: grid;
+    justify-content: center;
+    border-radius: 25px;
+    width: 66%;
+    margin: 0 auto;
+}
+
+.linkPaginaNAV > div, #btnTema:hover {
+    transition: 200ms cubic-bezier(.22, .61, 0.36, 1);
+}
+
+.linkPaginaNAV:hover div:first-child, #btnTema:hover {
+    background: var(--surface-container-highest);
+}
+
+.paginaSelecionada div:first-child {
+    background: var(--primary-container) !important; /*!important é necessário para sobrescrever background do :hover*/
+}
+
+.navPrincipal p {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 8px 10px;
+}
+
+.lista_up .linkPaginaNAV {
+    margin-top: 25px;
+}
+
+.lista_down {
     grid-row: 3;
 }
 
-header{
+.lista_down .linkPaginaNAV, #btnTema {
+    margin-bottom: 25px;
+}
+
+#btnTema {
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 50%; /*transforma em um circulo*/
+    border: 3px solid var(--outline);
+}
+
+main {
+    grid-column: 2;
+    padding: 45px 30px 0 30px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    column-gap: 90px;
+    row-gap: 35px;
+}
+
+header {
+    grid-column: span 2; /*faz o elemento expandir n colunas (no caso, n = 2)*/
     padding: 40px 50px;
     background-color: var(--primary-container);
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-main{
-    padding: 37px 70px 544px 61px;
-    display: grid;
-    grid-template-columns: 9fr 1fr;
+section {
+    margin-bottom: 70px;
+    padding: 35px 0 0 35px;
 }
 
-main > div {
-    margin-right: 30px;
-}
-
-section{
-    padding: 37px 60px 10px 37px;
-}
-
-h1{
+h1 {
     font-size: 70px;
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-size: 60px;
     font-weight: 400;
 }
 
-h3{
-    font-size: 23px;
-    font-weight: 600;
+h3 {
+    font-size: 25px;
 }
 
-h4{
+h4 {
     font-size: 20px;
-    font-weight: 600;
 }
 
-section p{
+section p {
     margin: 10px 20px 30px 20px;
 }
 
-header p{
+header p {
     margin: 10px;
 }
 
-aside {
+.navIndice {
     /*Para position sticky funcionar, eh necessario fornecer a altura*/
     height: fit-content;
     position: sticky;
-    top: 20%;
+    top: 20%; /*faz o elemento mudar para position:fixed; quando o elemento estiver em 20% do topo da pagina*/
 }
 
-li{
+#barraPesquisa {
+    border: 0;
+    border-radius: 25px;
+    outline: none; /*borda*/
+    margin-bottom: 16px;
+    padding: 6px 10px 6px;
+    background-color: var(--surface-container);
+}
+
+#barraPesquisa:focus {
+    outline: 2px solid var(--outline);
+}
+
+#indice {
+    max-height: 45vh; /*limita a altura em 45% da altura da tela*/
+    overflow-y: auto; /*coloca a barra de rolagem*/
+}
+
+.esconder {
+    display: none; /*remove o elemento visualmente*/
+}
+
+li, li a {
+    text-decoration: none;
     list-style: none;
     padding: 5px 10px;
     margin: 5px 0;
+    border-radius: 25px;
 }
 
-li:not(.visivel-indice) {
-    display: none;
-}
-
-#selecionado {
+#selecionado a {
     color: var(--primary);
     border-radius: 25px;
     border: 1px var(--outline) solid;
+}
+
+
+/*barra de rolagem*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/*fundo da barra de rolagem*/
+::-webkit-scrollbar-track {
+    border-radius: 25px;
+    background: var(--background);
+}
+
+/*o negocio que move dentro da barra de rolagem*/
+::-webkit-scrollbar-thumb {
+    background: var(--surface-container-highest);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--on-surface-variant);
 }

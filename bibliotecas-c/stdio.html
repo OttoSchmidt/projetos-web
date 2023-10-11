@@ -3,143 +3,729 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="icon" href="img/favicon.ico">
     <title>stdio.h</title>
 </head>
 <body>
-<header>
-    <h1>< stdio.h ></h1>
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
-            urna ut mi lacinia congue. Lorem ipsum dolor.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec semper
-            urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+<nav class="navPrincipal">
+    <div class="lista_up">
+        <a class="linkPaginaNAV" href="index.html">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
+            <div id="navBibliotecas">
+                <a href="#">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="string.html">string.h</a>
+                <a href="math.html">math.h</a>
+            </div>
+        </div>
+
+        <a class="linkPaginaNAV" href="#">
+            <div><span class="material-symbols-outlined">data_object</span></div>
+            <p>Macros</p>
+        </a>
+
+        <a class="linkPaginaNAV" href="#">
+            <div><span class="material-symbols-outlined">code</span></div>
+            <p>Variáveis</p>
+        </a>
     </div>
-</header>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
 <main>
+    <header>
+        <h1>&lt;stdio.h&gt;</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper
+                urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
+                semper
+                urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+        </div>
+    </header>
     <div>
-        <h2 id="clearerr">clearerr</h2>
+        <h2 id="fclose">fclose</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>int fclose(FILE *stream);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <ul>
+                <li>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</li>
+            </ul>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
         </section>
         <h2 id="clearerr">clearerr</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Limpa o EOF e indicadores de erros da stream recebida.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>void clearerr(FILE *stream);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Se detectar que o argumento não é uma stream válida, retorna -1 e atribui errno para EBADF.</p>
         </section>
-        <h2 id="clearerr">clearerr</h2>
+        <h2 id="feof">feof</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Testa o indicador EOF da stream recebida.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>int feof(FILE *stream);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna um valor diferente de zero quando EOF for valido, caso contrário, retorna zero.</p>
         </section>
-        <h2 id="clearerr">clearerr</h2>
+        <h2 id="ferror">ferror</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Testa o indicador de erro da stream recebida.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>int ferror(FILE *stream);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna um valor diferente de zero caso o indicador de erro esteja relacionado com a stream, caso
+                contrário, retorna zero.</p>
         </section>
-        <h2 id="clearerr">clearerr</h2>
+        <h2 id="fflush">fflush</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Libera o buffer de saída da stream.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>int fflush(FILE *stream);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>stream: ponteiro para um objeto FILE.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna zero em caso de sucesso. Se não, retorna EOF.</p>
         </section>
-        <h2 id="clearerr">clearerr</h2>
+        <h2 id="fgetpos">fgetpos</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Copia a posição atual do arquivo em stream e armazena em pos.</p>
 
             <h3>Declaração</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <code class='language-clike'>int fgetpos(FILE *stream, fpos_t *pos);</code>
 
             <h3>Parametros</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>- stream: ponteiro para um objeto FILE.</p>
+            <p>- pos: ponteiro para um objeto fpos_t.</p>
 
             <h3>Valor de retorno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tempus urna, sed aliquam mi. Donec
-                semper urna ut mi lacinia congue. Lorem ipsum dolor.</p>
+            <p>Retorna zero em sucesso, caso contrário, retorna um número diferente de zero.</p>
+        </section>
+        <h2 id="fopen">fopen</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Abre o arquivo que filename esta apontando para, utilizando o modo dado.</p>
+
+            <h3>Declaração</h3>
+            <code class='language-clike'>FILE *fopen(const char *filename, const char *mode);</code>
+
+            <h3>Parametros</h3>
+            <p>- filename: contém o nome do arquivo para ser aberto.</p>
+            <p>- mode: contém o modo de acesso.</p>
+
+            <table>
+                <tr>
+                    <td>r (read)</td>
+                    <td>Leitura (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w (write)</td>
+                    <td>Inicia um arquivo limpo, caso já exista, o conteúdo do arquivo é apagado</td>
+                </tr>
+                <tr>
+                    <td>a (append)</td>
+                    <td>Acrescenta dados no fim de um arquivo</td>
+                </tr>
+                <tr>
+                    <td>r+</td>
+                    <td>Ler e escrever (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w+</td>
+                    <td>Criar um arquivo vazio para ler e escrever</td>
+                </tr>
+                <tr>
+                    <td>a+</td>
+                    <td>Abre um arquivo para ler e acrescentar</td>
+                </tr>
+            </table>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna um ponteiro para uma stream FILE. Se a operação não for bem sucedida, retorna NULL e a variável
+                errno indica erro.</p>
+        </section>
+        <h2 id="fread">fread</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Copia os dados de uma stream para um vetor indicado por um ponteiro (ptr).</p>
+
+            <h3>Declaração</h3>
+            <code class='language-clike'>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);</code>
+
+            <h3>Parametros</h3>
+            <p>- ptr: ponteiro para um bloco de memória com tamanho mínimo de *nmemb bytes</p>
+            <p>- size – tamanho em bytes de cada elemento a ser lido.</p>
+            <p>- nmemb – número de elementos, cada um possui tamanho size bytes</p>
+            <p>- stream – ponteiro para um objeto FILE</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna a quantidade de elementos lidos com sucesso. Se esse número for diferente em relação ao parâmetro
+                nmemb, então ocorreu um erro ou EOF foi alcançado.</p>
+        </section>
+        <h2 id="freopen">freopen</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Associa uma stream aberta a um novo filename e, ao mesmo tempo, fecha o arquivo antigo na stream.</p>
+
+            <h3>Declaração</h3>
+            <code class='language-clike'>FILE *freopen(const char *filename, const char *mode, FILE *stream);</code>
+
+            <h3>Parametros</h3>
+            <p>- filename: contém o nome do arquivo para ser aberto</p>
+            <p>- mode: contém o modo de acesso</p>
+
+            <table>
+                <tr>
+                    <td>r (read)</td>
+                    <td>Leitura (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w (write)</td>
+                    <td>Inicia um arquivo limpo, caso já exista, o conteúdo do arquivo é apagado</td>
+                </tr>
+                <tr>
+                    <td>a (append)</td>
+                    <td>Acrescenta dados no fim de um arquivo</td>
+                </tr>
+                <tr>
+                    <td>r+</td>
+                    <td>Ler e escrever (arquivo deve existir)</td>
+                </tr>
+                <tr>
+                    <td>w+</td>
+                    <td>Criar um arquivo vazio para ler e escrever</td>
+                </tr>
+                <tr>
+                    <td>a+</td>
+                    <td>Abre um arquivo para ler e acrescentar</td>
+                </tr>
+            </table>
+
+            <h3>Valor de retorno</h3>
+            <p>Caso o arquivo tenha sido aberto com sucesso, a função retorna um ponteiro para a nova stream, caso
+                contrário, é retornado NULL.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fclose (FILE *stream);</code>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+
+        <h2 id='fsetpos'>fsetpos</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Define a posição do arquivo de uma determinada stream para a posição especificada. O argumento pos é uma posição dada pela função fgetpos.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fsetpos(FILE *stream, const fpos_t *pos)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+                <li>pos - Este é o ponteiro para um objeto fpos_t contendo uma posição obtida anteriormente com fgetpos.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o valor zero se for bem-sucedida, ou então retorna um valor diferente de zero e define a variável global errno como um valor positivo, que pode ser interpretado com perror.</p>
+        </section>
+        <h2 id='ftell'>ftell</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Retorna a posição atual do arquivo da stream fornecida.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>long int ftell(FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o valor atual do indicador de posição. Se ocorrer um erro, -1L será retornado e a variável global errno será definida com um valor positivo.</p>
+        </section>
+        <h2 id='fwrite'>fwrite</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava dados do array apontado, por ptr, na stream fornecida.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>ptr - Este é o ponteiro para o array de elementos a serem escritos.</li>
+                <li>size - Este é o tamanho em bytes de cada elemento a ser escrito.</li>
+                <li>nmemb - Este é o número de elementos, cada um com um tamanho de size bytes.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que especifica um fluxo de saída.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o número total de elementos retornados com sucesso como um objeto size_t, que é um tipo de dados integral. Se este número for diferente do parâmetro nmemb, será exibido um erro.</p>
+        </section>
+        <h2 id='remove'>remove</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Exclui o filename fornecido para que ele não fique mais acessível.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int remove(const char *filename)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>filename - Esta é a string C que contém o nome do arquivo a ser excluído.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Em caso de sucesso, zero é retornado. Em caso de erro, -1 é retornado e errno é definido apropriadamente.</p>
+        </section>
+        <h2 id='rename'>rename</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Faz com que o nome do arquivo referido por old_filename seja alterado para new_filename.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int rename(const char *old_filename, const char *new_filename)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>old_filename - Esta é a string C que contém o nome do arquivo a ser renomeado e/ou movido.</li>
+                <li>new_filename - Esta é a string C que contém o novo nome do arquivo.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Em caso de sucesso, zero é retornado. Em caso de erro, -1 é retornado e errno é definido apropriadamente.</p>
+        </section>
+        <h2 id='rewind'>rewind</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Define a posição do arquivo para o início do arquivo da stream fornecida.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>void rewind(FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função não retorna nenhum valor.</p>
+        </section>
+        <h2 id='setbuf'>setbuf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Define como um fluxo deve ser armazenado em buffer. Esta função deve ser chamada assim que o arquivo associado à stream já tiver sido aberto, mas antes de qualquer operação de entrada ou saída ocorrer.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>void setbuf(FILE *stream, char *buffer)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica um fluxo aberto.</li>
+                <li>buffer - Este é o buffer alocado pelo usuário. Deve ter um comprimento de pelo menos bytes BUFSIZ, que é uma constante de macro a ser usada como comprimento deste array.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função não retorna nenhum valor.</p>
+        </section>
+        <h2 id="fclose"> fclose </h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fclose (FILE *stream);</code>
+
+            <h3>Parametros</h3>
+            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+
+            <h3>Valor de retorno</h3>
+            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+        </section>
+        <h2 id='tmpfile'>tmpfile</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Cria um arquivo temporário no modo de atualização binária (wb+). o arquivo temporário criado é excluído automaticamente quando o fluxo é fechado (fclose) ou quando o programa termina.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>FILE *tmpfile(void)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>N/A</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem-sucedida, a função retornará um ponteiro de fluxo para o arquivo temporário criado. Se o arquivo não puder ser criado, será retornado NULL.</p>
+        </section>
+        <h2 id='tmpnam'>tmpnam</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Gera e retorna um nome de arquivo temporário válido que não existe. se str for nulo, ele simplesmente retornará o nome do arquivo tmp.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>char *tmpnam(char *str)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é o ponteiro para uma matriz de caracteres onde o nome temporário proposto será armazenado como uma string C.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>O valor de retorno é um ponteiro para a string C que contém o nome proposto para um arquivo temporário. Se str fosse um ponteiro nulo, aponta para um buffer interno que será sobrescrito na próxima vez que esta função for chamada.
+                Se str não for um ponteiro nulo, str será retornado. Se a função não conseguir criar um nome de arquivo adequado, ela retornará um ponteiro nulo.</p>
+        </section>
+        <h2 id='fprintf'>fprintf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia saída formatada para uma stream.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fprintf(FILE *stream, const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+                <li>format - Esta é a string C que contém o texto a ser gravado no fluxo. Opcionalmente, ele pode conter tags de formato incorporadas que são substituídas pelos valores especificados em argumentos adicionais subsequentes e formatadas conforme solicitado. O protótipo das tags de formato é o especificador %[flags][width][.precision][length], que é explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem sucedido, o número total de caracteres escritos será retornado, caso contrário, um número negativo será retornado.</p>
+        </section>
+        <h2 id='printf'>printf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia a saída formatada para stdout.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int printf(const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>format - Esta é a string que contém o texto a ser gravado no stdout. Opcionalmente, ele pode conter tags de formato incorporadas que são substituídas pelos valores especificados em argumentos adicionais subsequentes e formatadas conforme solicitado. O protótipo das tags de formato é o especificador %[flags][width][.precision][length], que é explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem-sucedido, o número total de caracteres gravados será retornado. Em caso de falha, um número negativo é retornado.</p>
+        </section>
+        <h2 id='sprintf'>sprintf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia a saída formatada para uma string apontada por str.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int sprintf(char *str, const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é o ponteiro para uma matriz de elementos char onde a string C resultante é armazenada.</li>
+                <li>format - Esta é a String que contém o texto a ser gravado no buffer. Opcionalmente, ele pode conter tags de formato incorporadas que são substituídas pelos valores especificados em argumentos adicionais subsequentes e formatadas conforme solicitado. Protótipo de tags de formato: especificador %[flags][width][.precision][length], conforme explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem-sucedido, o número total de caracteres gravados será retornado, excluindo o caractere nulo anexado no final da string, caso contrário, um número negativo será retornado em caso de falha.</p>
+        </section>
+        <h2 id='vfprintf'>vfprintf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia a saída formatada para uma string usando uma lista de argumentos passada para ele.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int vfprintf(FILE *stream, const char *format, va_list arg)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+                <li>format - Esta é a string C que contém o texto a ser gravado no fluxo. Opcionalmente, ele pode conter tags de formato incorporadas que são substituídas pelos valores especificados em argumentos adicionais subsequentes e formatadas conforme solicitado. Protótipo de tags de formato: especificador %[flags][width][.precision][length], conforme explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem sucedido, o número total de caracteres escritos será retornado, caso contrário, um número negativo será retornado.</p>
+        </section>
+        <h2 id='vsprintf'>vsprintf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia a saída formatada para uma string usando uma lista de argumentos passada para ela.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int vsprintf(char *str, const char *format, va_list arg)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é o array de elementos char onde a string resultante deve ser armazenada.</li>
+                <li>format - Esta é a string C que contém o texto a ser escrito na str. Opcionalmente, ele pode conter tags de formato incorporadas que são substituídas pelos valores especificados em argumentos adicionais subsequentes e são formatadas conforme solicitado. Protótipo de tags de formato - %[flags][width][.precision][length]especificador, conforme explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem sucedido, o número total de caracteres escritos será retornado, caso contrário, um número negativo será retornado.</p>
+        </section>
+        <h2 id='fscanf'>fscanf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Lê a entrada formatada de uma stream.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fscanf(FILE *stream, const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo.</li>
+                <li>format - Esta é a string C que contém um ou mais dos seguintes itens - Caractere de espaço em branco, Caractere não-espaço em branco e Especificadores de formato. Um especificador de formato será [=%[*][width][modifiers]type=], que é explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o número de itens de entrada correspondidos e atribuídos com sucesso, que pode ser menor do que o previsto ou até mesmo zero no caso de uma falha na correspondência antecipada.</p>
+        </section>
+        <h2 id='scanf'>scanf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Lê a entrada formatada do stdin.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int scanf(const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>format - Esta é a string C que contém um ou mais dos seguintes itens -
+                    Caractere de espaço em branco, caractere sem espaço em branco e especificadores de formato. Um especificador de formato será como [=%[*][width][modifiers]type=] conforme explicado abaixo -</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Em caso de sucesso, a função retorna o número de itens da lista de argumentos lidos com sucesso. Se ocorrer um erro de leitura ou o fim do arquivo for atingido durante a leitura, o indicador adequado é definido (feof ou ferror) e, se isso acontecer antes que qualquer dado possa ser lido com sucesso, o EOF será retornado.</p>
+        </section>
+        <h2 id='sscanf'>sscanf</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Lê a entrada formatada de uma string.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int sscanf(const char *str, const char *format, ...)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string C que a função processa como fonte para recuperar os dados.</li>
+                <li>format - Esta é a string C que contém um ou mais dos seguintes itens: caractere de espaço em branco, caractere não-espaço em branco e especificadores de formato
+                    Um especificador de formato segue este protótipo: [=%[*][width][modifiers]type=]</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Em caso de sucesso, a função retorna o número de variáveis ​​preenchidas. No caso de uma falha de entrada antes que qualquer dado possa ser lido com sucesso, o EOF é retornado.</p>
+        </section>
+        <h2 id='fgetc'>fgetc</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Obtém o próximo caractere (um caractere não assinado) da stream especificado e avança o indicador de posição do fluxo.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fgetc(FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo no qual a operação será executada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o caractere lido como um caractere não assinado convertido em um int ou EOF no final do arquivo ou erro.</p>
+        </section>
+        <h2 id='fgets'>fgets</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Lê uma linha do fluxo especificado e a armazena na string apontada por str. Ele para quando (n-1) caracteres são lidos, o caractere de nova linha é lido ou o final do arquivo é alcançado, o que ocorrer primeiro.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>char *fgets(char *str, int n, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é o ponteiro para um array de caracteres onde a string lida está armazenada.</li>
+                <li>n - Este é o número máximo de caracteres a serem lidos (incluindo o caractere nulo final). Normalmente, o comprimento do array passado como str é usado.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo de onde os caracteres são lidos.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Em caso de sucesso, a função retorna o mesmo parâmetro str. Se o fim do arquivo for encontrado e nenhum caractere tiver sido lido, o conteúdo de str permanecerá inalterado e um ponteiro nulo será retornado.</p>
+        </section>
+        <h2 id='fputc'>fputc</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava um caractere (um caractere não assinado) especificado pelo argumento char na stream especificado e avança o indicador de posição do fluxo.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fputc(int char, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>char - Este é o caractere a ser escrito. Isso é passado como sua promoção interna.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo onde o caractere deve ser escrito.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se não houver erros, será retornado o mesmo caractere que foi escrito. Se ocorrer um erro, o EOF será retornado e o indicador de erro será definido.</p>
+        </section>
+        <h2 id='fputs'>fputs</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava uma string na stream especificada até, mas não incluindo, o caractere nulo.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int fputs(const char *str, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é um array contendo a sequência de caracteres terminada em nulo a ser escrita.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo onde a string deve ser escrita.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna um valor não negativo, caso contrário, em caso de erro, retorna EOF.</p>
+        </section>
+        <h2 id='getc'>getc</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Obtém o próximo caractere (um caractere não assinado) da stream especificada e avança o indicador de posição do fluxo.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int getc(FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo no qual a operação será executada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o caractere lido como um caractere não assinado convertido em um int ou EOF no final do arquivo ou erro.</p>
+        </section>
+        <h2 id='getchar'>getchar</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Obtém um caractere (um caractere não assinado) de stdin. isso é equivalente a getc com stdin como argumento.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int getchar(void)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>N/A</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o caractere lido como um caractere não assinado convertido em um int ou EOF no final do arquivo ou erro.</p>
+        </section>
+        <h2 id='gets'>gets</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Lê uma linha de stdin e a armazena na string apontada por str. ele para quando o caractere de nova linha é lido ou quando o final do arquivo é alcançado, o que ocorrer primeiro.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>char *gets(char *str)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Este é o ponteiro para uma matriz de caracteres onde a string C está armazenada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna str em caso de sucesso e NULL em caso de erro ou quando ocorre o fim do arquivo, enquanto nenhum caractere foi lido.</p>
+        </section>
+        <h2 id='putc'>putc</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava um caractere (um caractere não assinado) especificado pelo argumento char no fluxo especificado e avança o indicador de posição do fluxo.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int putc(int char, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>char - Este é o caractere a ser escrito. O personagem é passado como sua promoção interna.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica o fluxo onde o caractere deve ser escrito.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o caractere escrito como um caractere não assinado convertido em um int ou EOF em caso de erro.</p>
+        </section>
+        <h2 id='putchar'>putchar</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava um caractere (um caractere não assinado) especificado pelo argumento char em stdout.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int putchar(int char)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>char - Este é o caractere a ser escrito. Isso é passado como sua promoção interna.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função retorna o caractere escrito como um caractere não assinado convertido em um int ou EOF em caso de erro.</p>
+        </section>
+        <h2 id='puts'>puts</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Grava uma string em stdout até, mas não incluindo, o caractere nulo. um caractere de nova linha é anexado à saída.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int puts(const char *str)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string C a ser escrita.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem-sucedido, um valor não negativo será retornado. Em caso de erro, a função retorna EOF.</p>
+        </section>
+        <h2 id='ungetc'>ungetc</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Envia o caractere char (um caractere não assinado) para a stream especificada para que this esteja disponível para a próxima operação de leitura.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>int ungetc(int char, FILE *stream)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>char - Este é o personagem a ser colocado de volta. Isso é passado como sua promoção interna.</li>
+                <li>stream - Este é o ponteiro para um objeto FILE que identifica um fluxo de entrada.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Se for bem-sucedido, ele retornará o caractere que foi empurrado, caso contrário, EOF será retornado e o fluxo permanecerá inalterado.</p>
+        </section>
+        <h2 id='perror'>perror</h2>
+        <section>
+            <h3>Descrição</h3>
+            <p>Imprime uma mensagem de erro descritiva para stderr. Primeiro a string str é impressa, seguida por dois pontos e depois um espaço.</p>
+            <h3>Declaração</h3>
+            <code class='language-clike'>void perror(const char *str)</code>
+            <h3>Argumentos</h3>
+            <ul>
+                <li>str - Esta é a string C que contém uma mensagem personalizada a ser impressa antes da própria mensagem de erro.</li>
+            </ul>
+            <h3>Valor de retorno</h3>
+            <p>Esta função não retorna nenhum valor.</p>
         </section>
     </div>
 
-    <aside>
+    <nav class="navIndice">
+        <input id="barraPesquisa" type="text" placeholder="Procurar função" oninput="procurar();">
         <h4>stdio.h</h4>
         <ul id="indice">
-            <li class="visivel-indice" id="selecionado">clearerr</li>
-            <li class="visivel-indice">fclose</li>
-            <li class="visivel-indice">feof</li>
-            <li class="visivel-indice">ferror</li>
-            <li class="visivel-indice">fflush</li>
-            <li>teste</li>
+            <li id="selecionado"><a href='#fclose'>fclose</a></li>
+            <li><a href='#clearerr'>clearerr</a></li>
+            <li><a href='#feof'>feof</a></li>
+            <li><a href='#ferror'>ferror</a></li>
+            <li><a href='#fflush'>fflush</a></li>
+            <li><a href='#fgetpos'>fgetpos</a></li>
+            <li><a href='#fopen'>fopen</a></li>
+            <li><a href='#fread'>fread</a></li>
+            <li><a href='#freopen'>freopen</a></li>
+            <li><a href='#fseek'>fseek</a></li>
+            <li><a href='#fsetpos'>fsetpos</a></li>
+            <li><a href='#ftell'>ftell</a></li>
+            <li><a href='#fwrite'>fwrite</a></li>
+            <li><a href='#remove'>remove</a></li>
+            <li><a href='#rename'>rename</a></li>
+            <li><a href='#rewind'>rewind</a></li>
+            <li><a href='#setbuf'>setbuf</a></li>
+            <li><a href='#setvbuf'>setvbuf</a></li>
+            <li><a href='#tmpfile'>tmpfile</a></li>
+            <li><a href='#tmpnam'>tmpnam</a></li>
+            <li><a href='#fprintf'>fprintf</a></li>
+            <li><a href='#printf'>printf</a></li>
+            <li><a href='#sprintf'>sprintf</a></li>
+            <li><a href='#vfprintf'>vfprintf</a></li>
+            <li><a href='#vsprintf'>vsprintf</a></li>
+            <li><a href='#fscanf'>fscanf</a></li>
+            <li><a href='#scanf'>scanf</a></li>
+            <li><a href='#sscanf'>sscanf</a></li>
+            <li><a href='#fgetc'>fgetc</a></li>
+            <li><a href='#fgets'>fgets</a></li>
+            <li><a href='#fputc'>fputc</a></li>
+            <li><a href='#fputs'>fputs</a></li>
+            <li><a href='#getc'>getc</a></li>
+            <li><a href='#getchar'>getchar</a></li>
+            <li><a href='#gets'>gets</a></li>
+            <li><a href='#putc'>putc</a></li>
+            <li><a href='#putchar'>putchar</a></li>
+            <li><a href='#puts'>puts</a></li>
+            <li><a href='#ungetc'>ungetc</a></li>
+            <li><a href='#perror'>perror</a></li>
         </ul>
-    </aside>
+    </nav>
 </main>
 </body>
 <script src="js/indice.js"></script>
+<script src="js/prism.js"></script> <!--NECESSARIO PARA O HIGHLIGHT DO CODIGO C-->
 </html>
