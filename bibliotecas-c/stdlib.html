@@ -60,7 +60,7 @@
             <h3>Descrição</h3>
             <p>Converte o argumento de string str em um número de ponto flutuante (tipo double).</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double atof(const char *str)</p>
+            <code class="language-clike">double atof(const char *str)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string que tem a representação de um número de ponto flutuante.</li>
@@ -73,7 +73,7 @@
             <h3>Descrição</h3>
             <p>Converte o argumento de string str em um número inteiro (tipo int).</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int atoi(const char *str)</p>
+            <code class="language-clike">int atoi(const char *str)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a representação em string de um número inteiro.</li>
@@ -86,7 +86,7 @@
             <h3>Descrição</h3>
             <p>Converte o argumento de string str em um inteiro longo (tipo long int).</p>
             <h3>Declaração</h3>
-            <p class='codigo'>long int atol(const char *str)</p>
+            <code class="language-clike">long int atol(const char *str)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string que contém a representação de um número inteiro.</li>
@@ -99,7 +99,7 @@
             <h3>Descrição</h3>
             <p>Converte a string apontada pelo argumento str em um número de ponto flutuante (tipo double). se endptr não for nulo, um ponteiro para o caractere após o último caractere usado na conversão será armazenado no local referenciado por endptr.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>double strtod(const char *str, char **endptr)</p>
+            <code class="language-clike">double strtod(const char *str, char **endptr)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é o valor a ser convertido em uma string.</li>
@@ -113,7 +113,7 @@
             <h3>Descrição</h3>
             <p>Converte a parte inicial da string em str em um valor int longo de acordo com a base fornecida, que deve estar entre 2 e 36 inclusive, ou ser o valor especial 0.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>long int strtol(const char *str, char **endptr, int base)</p>
+            <code class="language-clike">long int strtol(const char *str, char **endptr, int base)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string que contém a representação de um número inteiro.</li>
@@ -128,7 +128,7 @@
             <h3>Descrição</h3>
             <p>A função converte a parte inicial da string em str em um valor unsigned long int de acordo com a base fornecida, que deve estar entre 2 e 36 inclusive, ou ser o valor especial 0.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>unsigned long int strtoul(const char *str, char **endptr, int base)</p>
+            <code class="language-clike">unsigned long int strtoul(const char *str, char **endptr, int base)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Esta é a string que contém a representação de um número integral sem sinal.</li>
@@ -143,7 +143,7 @@
             <h3>Descrição</h3>
             <p>Aloca a memória solicitada e retorna um ponteiro para ela. A diferença entre malloc e calloc é que malloc não define a memória como zero, enquanto calloc define a memória alocada como zero.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *calloc(size_t nitems, size_t size)</p>
+            <code class="language-clike">void *calloc(size_t nitems, size_t size)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>nitems - Este é o número de elementos a serem alocados.</li>
@@ -157,7 +157,7 @@
             <h3>Descrição</h3>
             <p>Desaloca a memória alocada anteriormente por uma chamada para calloc, malloc ou realloc.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void free(void *ptr)</p>
+            <code class="language-clike">void free(void *ptr)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>ptr - Este é o ponteiro para um bloco de memória previamente alocado com malloc, calloc ou realloc para ser desalocado. Se um ponteiro nulo for passado como argumento, nenhuma ação ocorrerá.</li>
@@ -170,7 +170,7 @@
             <h3>Descrição</h3>
             <p>Aloca a memória solicitada e retorna um ponteiro para ela.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *malloc(size_t size)</p>
+            <code class="language-clike">void *malloc(size_t size)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>size - Este é o tamanho do bloco de memória, em bytes.</li>
@@ -183,10 +183,10 @@
             <h3>Descrição</h3>
             <p>Aborta a execução do programa e sai diretamente do local da chamada.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void abort(void)</p>
+            <code class="language-clike">void abort(void)</code>
             <h3>Argumentos</h3>
             <ul>
-                <li>N / D</li>
+                <li>N/A</li>
             </ul>
             <h3>Valor de retorno</h3>
             <p>Esta função não retorna nenhum valor.</p>
@@ -196,7 +196,7 @@
             <h3>Descrição</h3>
             <p>Faz com que a função especificada func seja chamada quando o programa termina. você pode registrar sua função de encerramento em qualquer lugar que desejar, mas ela será chamada no momento do encerramento do programa.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int atexit(void (*func)(void))</p>
+            <code class="language-clike">int atexit(void (*func)(void))</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>func - Esta é a função a ser chamada ao final do programa.</li>
@@ -209,7 +209,7 @@
             <h3>Descrição</h3>
             <p>Encerra o processo de chamada imediatamente. quaisquer descritores de arquivo abertos pertencentes ao processo são fechados e todos os filhos do processo são herdados pelo processo 1, init, e o pai do processo recebe um sinal sigchld.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void exit(int status)</p>
+            <code class="language-clike">void exit(int status)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>status - Este é o valor do status retornado ao processo pai.</li>
@@ -220,9 +220,9 @@
         <h2 id='getenv'>getenv</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Procura a string de ambiente apontada pelo nome e retorna o valor associado à string.</p>
+            <p>Procura a string de ambiente apontada por name e retorna o valor associado à string.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>char *getenv(const char *name)</p>
+            <code class="language-clike">char *getenv(const char *name)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>name - Esta é a string C que contém o nome da variável solicitada.</li>
@@ -233,9 +233,9 @@
         <h2 id='system'>system</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Passa o nome do comando ou nome do programa especificado pelo comando para o ambiente host para ser executado pelo processador de comando e retorna após a conclusão do comando.</p>
+            <p>Passa o nome do comando ou nome do programa especificado pelo command para o ambiente host para ser executado pelo processador de command e retorna após a conclusão do comando.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int system(const char *command)</p>
+            <code class="language-clike">int system(const char *command)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>command - Esta é a string C que contém o nome da variável solicitada.</li>
@@ -246,32 +246,32 @@
         <h2 id='bsearch'>bsearch</h2>
         <section>
             <h3>Descrição</h3>
-            <p>A função pesquisa uma matriz de objetos n items, cujo membro inicial é apontado por base, por um membro que corresponda ao objeto apontado, por chave. O tamanho de cada membro da matriz é especificado por size.</p>
+            <p>A função pesquisa um vetor com nitems objetos, cujo membro inicial é apontado por base, por um membro que corresponda ao objeto apontado, por key. O tamanho de cada membro do vetor é especificado por size.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void *bsearch(const void *key, const void *base, size_t nitems, size_t size, int (*compar)(const void *, const void *))</p>
+            <code class="language-clike">void *bsearch(const void *key, const void *base, size_t nitems, size_t size, int (*compar)(const void *, const void *))</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>key - Este é o ponteiro para o objeto que serve como chave para a pesquisa, convertido em tipo como void*.</li>
-                <li>base - Este é o ponteiro para o primeiro objeto do array onde a pesquisa é realizada, convertido em tipo como void*.</li>
-                <li>nitems - Este é o número de elementos do array apontado pela base.</li>
+                <li>base - Este é o ponteiro para o primeiro objeto do vetor onde a pesquisa é realizada, convertido em tipo como void*.</li>
+                <li>nitems - Este é o número de elementos do vetor apontado pela base.</li>
                 <li>size - Este é o tamanho em bytes de cada elemento do array.</li>
                 <li>compare - Esta é a função que compara dois elementos.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna um ponteiro para uma entrada no array que corresponde à chave de pesquisa. Se a chave não for encontrada, um ponteiro NULL será retornado.</p>
+            <p>Esta função retorna um ponteiro para uma entrada no vetor que corresponde à chave de pesquisa. Se a chave não for encontrada, um ponteiro NULL será retornado.</p>
         </section>
         <h2 id='qsort'>qsort</h2>
         <section>
             <h3>Descrição</h3>
             <p>Organiza um vetor.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))</p>
+            <code class="language-clike">void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))</code>
             <h3>Argumentos</h3>
             <ul>
-                <li>base - Este é o ponteiro para o primeiro elemento do array a ser classificado.</li>
-                <li>nitems - Este é o número de elementos do array apontado pela base.</li>
+                <li>base - Este é o ponteiro para o primeiro elemento do vetor a ser organizados.</li>
+                <li>nitems - Este é o número de elementos do vetor apontado pela base.</li>
                 <li>size - Este é o tamanho em bytes de cada elemento do array.</li>
-                <li>comparar - Esta é a função que compara dois elementos.</li>
+                <li>compar - Esta é a função que compara dois elementos.</li>
             </ul>
             <h3>Valor de retorno</h3>
             <p>Esta função não retorna nenhum valor.</p>
@@ -281,7 +281,7 @@
             <h3>Descrição</h3>
             <p>Retorna o valor absoluto de int x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int abs(int x)</p>
+            <code class="language-clike">int abs(int x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor integral.</li>
@@ -292,23 +292,23 @@
         <h2 id='div'>div</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Divide número (numerador) por denominador (denominador).</p>
+            <p>Divide numer (numerador) por denom (denominador).</p>
             <h3>Declaração</h3>
-            <p class='codigo'>div_t div(int numer, int denom)</p>
+            <code class="language-clike">div_t div(int numer, int denom)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>numer - Este é o numerador.</li>
                 <li>denom - Este é o denominador.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o valor em uma estrutura definida em cstdlib, que possui dois membros. Para div_t:int quot; interno rem;</p>
+            <p>Esta função retorna o valor em uma estrutura definida em 'cstdlib', que possui dois membros. Para div_t:int quot; interno rem;</p>
         </section>
         <h2 id='labs'>labs</h2>
         <section>
             <h3>Descrição</h3>
             <p>Retorna o valor absoluto de x.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>long int labs(long int x)</p>
+            <code class="language-clike">long int labs(long int x)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor integral.</li>
@@ -319,26 +319,26 @@
         <h2 id='ldiv'>ldiv</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Divide número (numerador) por denominador (denominador).</p>
+            <p>Divide numer (numerador) por denom (denominador).</p>
             <h3>Declaração</h3>
-            <p class='codigo'>div_t div(long int numer, long int denom)</p>
+            <code class="language-clike">div_t div(long int numer, long int denom)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>numer - Este é o numerador.</li>
                 <li>denom - Este é o denominador.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o valor em uma estrutura definida em cstdlib, que possui dois membros. Para ldiv_t:long quot; longa duração;</p>
+            <p>Esta função retorna o valor em uma estrutura definida em 'cstdlib', que possui dois membros. Para ldiv_t:long quot; longa duração;</p>
         </section>
         <h2 id='rand'>rand</h2>
         <section>
             <h3>Descrição</h3>
             <p>Retorna um número pseudoaleatório no intervalo de 0 a rand_max.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int rand(void)</p>
+            <code class="language-clike">int rand(void)</code>
             <h3>Argumentos</h3>
             <ul>
-                <li>N / D</li>
+                <li>N/A</li>
             </ul>
             <h3>Valor de retorno</h3>
             <p>Esta função retorna um valor inteiro entre 0 e RAND_MAX.</p>
@@ -346,9 +346,9 @@
         <h2 id='srand'>srand</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Semeia o gerador de números aleatórios usado pela função Rand.</p>
+            <p>Inicia o gerador de números aleatórios usado pela função Rand utilizando a seed.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>void srand(unsigned int seed)</p>
+            <code class="language-clike">void srand(unsigned int seed)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>seed - Este é um valor inteiro a ser usado como semente pelo algoritmo gerador de números pseudo-aleatórios.</li>
@@ -361,7 +361,7 @@
             <h3>Descrição</h3>
             <p>Retorna o comprimento de um caractere multibyte apontado pelo argumento str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int mblen(const char *str, size_t n)</p>
+            <code class="language-clike">int mblen(const char *str, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é o ponteiro para o primeiro byte de um caractere multibyte.</li>
@@ -373,9 +373,9 @@
         <h2 id='mbstowcs'>mbstowcs</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Converte a string de caracteres multibyte apontados pelo argumento str para o array apontado por pwcs.</p>
+            <p>Converte a string de caracteres multibyte apontados pelo argumento str para o vetor apontado por pwcs.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t mbstowcs(schar_t *pwcs, const char *str, size_t n)</p>
+            <code class="language-clike">size_t mbstowcs(schar_t *pwcs, const char *str, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>pwcs - Este é o ponteiro para uma matriz de elementos wchar_t que é longa o suficiente para armazenar uma string larga com no máximo caracteres.</li>
@@ -390,7 +390,7 @@
             <h3>Descrição</h3>
             <p>Converte uma sequência multibyte em um caractere largo.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int mbtowc(whcar_t *pwc, const char *str, size_t n)</p>
+            <code class="language-clike">int mbtowc(whcar_t *pwc, const char *str, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>pwc - Este é o ponteiro para um objeto do tipo wchar_t.</li>
@@ -406,7 +406,7 @@
             <h3>Descrição</h3>
             <p>Converte a string de caracteres largos pwcs em uma string multibyte começando em str. no máximo n bytes são gravados em str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>size_t wcstombs(char *str, const wchar_t *pwcs, size_t n)</p>
+            <code class="language-clike">size_t wcstombs(char *str, const wchar_t *pwcs, size_t n)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é o ponteiro para uma matriz de elementos char com pelo menos n bytes de comprimento.</li>
@@ -421,10 +421,10 @@
             <h3>Descrição</h3>
             <p>A função converte o caractere largo wchar em sua representação multibyte e o armazena no início da matriz de caracteres apontada por str.</p>
             <h3>Declaração</h3>
-            <p class='codigo'>int wctomb(char *str, wchar_t wchar)</p>
+            <code class="language-clike">int wctomb(char *str, wchar_t wchar)</code>
             <h3>Argumentos</h3>
             <ul>
-                <li>str - Este é o ponteiro para um array grande o suficiente para conter um caractere multibyte,</li>
+                <li>str - Este é o ponteiro para um vetor grande o suficiente para conter um caractere multibyte,</li>
                 <li>wchar - Este é o caractere largo do tipo wchar_t.</li>
             </ul>
             <h3>Valor de retorno</h3>

@@ -190,7 +190,7 @@
         <h2 id='frexp'>frexp</h2>
         <section>
             <h3>Descrição</h3>
-            <p>O valor de retorno é a mantissa e o número inteiro apontado pelo expoente é o expoente. O valor resultante é x = mantissa * 2 ^ expoente.</p>
+            <p>O valor de retorno é a mantissa e o número inteiro apontado pelo exponent é o expoente. o valor resultante é x = mantissa * 2 ^ expoente.</p>
             <h3>Declaração</h3>
             <code class="language-clike">double frexp(double x, int *exponent)</code>
             <h3>Argumentos</h3>
@@ -204,13 +204,13 @@
         <h2 id='ldexp'>ldexp</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Retorna x multiplicado por 2 elevado à potência do expoente.</p>
+            <p>Retorna x multiplicado por 2 elevado à potência do exponent.</p>
             <h3>Declaração</h3>
             <code class="language-clike">double ldexp(double x, int exponent)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor de ponto flutuante que representa o significando.</li>
-                <li>expoente - Este é o valor do expoente.</li>
+                <li>exponent - Este é o valor do expoente.</li>
             </ul>
             <h3>Valor de retorno</h3>
             <p>Esta função retorna x * 2 exp</p>
@@ -244,13 +244,13 @@
         <h2 id='modf'>modf</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Retorna o componente fracionário (parte após o decimal) e define inteiro como o componente inteiro.</p>
+            <p>Retorna o componente fracionário (parte após o decimal) e define integer como o componente inteiro.</p>
             <h3>Declaração</h3>
             <code class="language-clike">double modf(double x, double *integer)</code>
             <h3>Argumentos</h3>
             <ul>
                 <li>x - Este é o valor do ponto flutuante.</li>
-                <li>inteiro - Este é o ponteiro para um objeto onde a parte integral deve ser armazenada.</li>
+                <li>integer - Este é o ponteiro para um objeto onde a parte integral deve ser armazenada.</li>
             </ul>
             <h3>Valor de retorno</h3>
             <p>Esta função retorna a parte fracionária de x, com o mesmo sinal.</p>
@@ -258,7 +258,7 @@
         <h2 id='pow'>pow</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Retorna x elevado à potência de y, ou seja, xy.</p>
+            <p>Retorna x elevado à potência de y, ou seja, x^y.</p>
             <h3>Declaração</h3>
             <code class="language-clike">double pow(double x, double y)</code>
             <h3>Argumentos</h3>
