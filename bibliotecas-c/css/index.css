@@ -20,6 +20,22 @@
     grid-template-rows: 1fr 6fr 1fr;
 }
 
+#navBibliotecas {
+    cursor: default; /*resetar o cursor dentro do menu*/
+    box-sizing: border-box; /*util para o height levar em consideração o padding*/
+    height: 100vh;
+    position: absolute;
+    top: -120vh;
+    left: 100%;
+    background: var(--surface-container);
+    border-left: 1px solid var(--outline);
+    padding: 20px 0 0 20px;
+    min-width: 150px;
+    text-align: left;
+    transition: 180ms linear, display 0ms linear;
+    border-radius: 0 25px 25px 0;
+}
+
 header{
     grid-column: span 2;
     padding: 50px 25px 1px 25px;
