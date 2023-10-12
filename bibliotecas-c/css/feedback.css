@@ -74,3 +74,13 @@ textarea{
 .container_checkbox label {
     font-size: 12px;
 }
+
+.btEnviar{
+    border-radius: 100px;
+    color: #ffffff;
+    background-color: var(--md-ref-palette-primary40);
+    width: 134px;
+    height: 60px;
+    margin-left: 100%;
+    margin-top: 10%;
+}
