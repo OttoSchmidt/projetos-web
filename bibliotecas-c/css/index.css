@@ -17,7 +17,7 @@
     text-align: center;
     position: fixed;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
 }
 
 #navBibliotecas {
@@ -43,7 +43,7 @@
     border-radius: 25px;
     margin-bottom: 25px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     gap: 10px;
 
