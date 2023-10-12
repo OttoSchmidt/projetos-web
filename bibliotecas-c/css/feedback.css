@@ -7,6 +7,7 @@ main {
 section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
     justify-items: center;
     padding: 0;
     width: 80%;
@@ -76,11 +77,12 @@ textarea{
 }
 
 .btEnviar{
+    margin: 0 auto;
+    grid-column: span 2; /*o elemento irá expandir as duas colunas do grid, para poder centralizá-lo*/
     border-radius: 100px;
-    color: #ffffff;
-    background-color: var(--md-ref-palette-primary40);
-    width: 134px;
+    color: var(--on-primary);
+    background-color: var(--primary);
+    width: 135px;
     height: 60px;
-    margin-left: 100%;
-    margin-top: 10%;
+    font-weight: 600;
 }
