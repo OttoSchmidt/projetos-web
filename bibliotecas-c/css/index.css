@@ -38,7 +38,7 @@
 
 .index_header{
     grid-column: span 2;
-    padding: 50px 25px 1px 25px;
+    padding: 50px 35px 1px 35px;
     background-color: var(--primary-container);
     border-radius: 25px;
     display: grid;
@@ -54,28 +54,24 @@ h1{
     font-weight: 700;
 }
 
-h2{
+h2 {
     padding-top: 2%;
     padding-left: 10%;
     text-align: left;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 700;
 }
 
-.button{
+.button {
     background-color: var(--primary);
     border-radius: 100px;
     color: var(--on-primary);
-
     display: block;
-
-    padding: 25px 35px;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
-
-    margin: 50px auto;
-
+    font-size: 15px;
+    margin: 40px auto;
 }
 
 /*-------------------------------------------------------------*/
@@ -90,10 +86,10 @@ h2{
     
 }
 
-.table_titulo{
-    padding: 5px 5px 40px 5px;
+.table_titulo {
+    padding: 2px 2px 40px 2px;
     background-color: var(--surface-container);
-    margin-bottom: 25px;
+    margin-bottom: 0;
     border-radius: 25px;
     text-align: center;
 }
@@ -112,6 +108,7 @@ h2{
 
 section{
     padding: 20px 20px 20px 20px;
+    margin-bottom: 0;
 }
 
 table{
@@ -123,16 +120,15 @@ table{
 
 th{
     text-align: start;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .biblioteca{
-    text-align: center;
+    text-align: start;
     font-size: 11px;
 }
 
 .esplicacao{
-    text-align: center;
+    text-align: start;
     font-size: 12px;
 }
-
