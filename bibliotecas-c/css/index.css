@@ -56,7 +56,7 @@ h1{
 }
 
 .button{
-    background-color: var(--primary);
+    background-color: var(--on-primary);
     border-radius: 100px;
     color: white;
 
