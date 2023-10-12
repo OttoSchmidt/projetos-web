@@ -1,5 +1,4 @@
-@import url(temas.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(base.css);
 
 *{
     margin: 0;
