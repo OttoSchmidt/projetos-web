@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
 @import url(cores_base.css);
 
-code[class*=language-], pre[class*=language-] {
+code[class*=language-] {
     display: block;
     color: var(--on-background);
     background: var(--surface-container-highest);
@@ -23,7 +23,7 @@ code::selection, code ::selection { /*texto selecionado, respectivamente, do cod
 }
 
 .token.punctuation {
-    color: #999
+    color: var(--outline);
 }
 
 .token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag {
@@ -36,7 +36,6 @@ code::selection, code ::selection { /*texto selecionado, respectivamente, do cod
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
     color: #9a6e3a;
-    background: hsla(0, 0%, 100%, .5)
 }
 
 .token.atrule, .token.attr-value, .token.keyword {
@@ -44,7 +43,7 @@ code::selection, code ::selection { /*texto selecionado, respectivamente, do cod
 }
 
 .token.class-name, .token.function {
-    color: #dd4a68
+    color: var(--surface-tint);
 }
 
 .token.important, .token.regex, .token.variable {
