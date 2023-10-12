@@ -7,6 +7,7 @@
     border: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--on-background);
+    box-sizing: border-box;
 }
 
 
@@ -17,7 +18,7 @@
     text-align: center;
     position: fixed;
     display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #navBibliotecas {
@@ -36,18 +37,18 @@
     border-radius: 0 25px 25px 0;
 }
 
-header{
+.index_header{
     grid-column: span 2;
     padding: 50px 25px 1px 25px;
     background-color: var(--primary-container);
     border-radius: 25px;
     margin-bottom: 25px;
-}
-
-main{
-    column-gap: 45px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    grid-row: 1;
 }
 
 h1{
@@ -56,10 +57,40 @@ h1{
     font-weight: 700;
 }
 
-section{
+.button{
+    background-color: var(--primary);
+    border-radius: 100px;
+    color: white;
+
+    display: block;
+
+    padding: 25px 35px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+
+    margin: 50px auto;
+
+}
+
+.index_html{
+    column-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.table_cima{
     padding: 20px 20px 20px 50px;
     background-color: var(--secondary-container);
+    margin-bottom: 25px;
     border-radius: 25px;
+}
+
+.table_titulo{
+    padding: 20px 20px 20px 50px;
+    background-color: var(--secondary-container);
     margin-bottom: 25px;
 }
 
@@ -70,34 +101,16 @@ table{
 th{
     text-align: start;
     font-size: 25px;
+    border-radius: 25px;
 }
 
 .biblioteca{
-    text-align: start;
+    text-align: center;
     font-size: 15px;
 }
 
 .esplicacao{
-    text-align: right;
-    font-size: 20px;
-}
-
-.titulo{
-    border-bottom: 25px;
-}
-
-.button{
-    background-color: var(--primary);
-    border-radius: 25px;
-    color: white;
-
-    display: block;
-
-    padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
-
-    margin: 50px auto;
-
+    font-size: 20px;
 }
 
