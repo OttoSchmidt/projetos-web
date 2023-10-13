@@ -73,6 +73,8 @@ textarea{
     user-select: none;
 }
 
+/*CHECKBOX PERSONALIZADO*/
+
 .container_checkbox input{ /*Esconde o checkbox padrão do navegador*/
     opacity: 0; /*Ele ficara escondido atras do novo checkbox*/
     cursor: pointer;
