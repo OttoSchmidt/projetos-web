@@ -249,19 +249,36 @@
             <p>Caso o arquivo tenha sido aberto com sucesso, a função retorna um ponteiro para a nova stream, caso
                 contrário, é retornado NULL.</p>
         </section>
-        <h2 id="fclose"> fclose </h2>
+        <h2 id="fseek">fseek</h2>
         <section>
             <h3>Descrição</h3>
-            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+            <p>Modifica a posição do arquivo na stream de acordo com o offset</p>
 
             <h3>Declaração</h3>
-            <code class='language-clike'>int fclose (FILE *stream);</code>
+            <code class='language-clike'>int fseek(FILE *stream, long int offset, int whence)</code>
 
             <h3>Parametros</h3>
-            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
-
+            <ul>
+                <li>stream: ponteiro para o objeto FILE</li>
+                <li>offset: numero de bytes a ser deslocado</li>
+                <li>whence: posição na qual o offset é adicionado</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>SEEK_SET</td>
+                    <td>Começo do arquivo</td>
+                </tr>
+                <tr>
+                    <td>SEEK_CUR</td>
+                    <td>Posição do ponteiro do arquivo</td>
+                </tr>
+                <tr>
+                    <td>SEEK_END</td>
+                    <td>Final do arquivo</td>
+                </tr>
+            </table>
             <h3>Valor de retorno</h3>
-            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+            <p>Retorna zero se a operação for bem sucedida, caso contrário, retorna um valor diferente de zero</p>
         </section>
 
         <h2 id='fsetpos'>fsetpos</h2>
@@ -361,19 +378,38 @@
             <h3>Valor de retorno</h3>
             <p>Esta função não retorna nenhum valor.</p>
         </section>
-        <h2 id="fclose"> fclose </h2>
+        <h2 id="setvbuf">setvbuf</h2>
         <section>
             <h3>Descrição</h3>
-            <p>A função fecha a stream do arquivo. Todos os buffers são esvaziados.</p>
+            <p>Define como a stream deve ser alocada</p>
 
             <h3>Declaração</h3>
-            <code class='language-clike'>int fclose (FILE *stream);</code>
+            <code class='language-clike'>int setvbuf(FILE *stream, char *buffer, int mode, size_t size)</code>
 
             <h3>Parametros</h3>
-            <p>stream: ponteiro para um objeto FILE que especifica qual stream deve ser fechada.</p>
+            <ul>
+                <li>stream: ponteiro para um objeto FILE</li>
+                <li>buffer: alocamento do buffer</li>
+                <li>size: tamanho do buffer</li>
+                <li>mode:</li>
+            </ul>
+            <table>
+                <tr>
+                    <td>_IOFBF (full buffering)</td>
+                    <td>Na saída, os dados são escritos quando o buffer estiver cheio. Na entrada, o buffer é preenchido quando uma operação de entrada for solicitada e depois o buffer é esvaziado</td>
+                </tr>
+                <tr>
+                    <td>_IOLBF (line buffering)</td>
+                    <td>Na saída, os dados são escritos quando um caractere ‘\0’ for encontrado ou quando o buffer encher. Na estrada, o buffer é preenchido até o próximo caractere de nova linha e depois o buffer é esvaziado</td>
+                </tr>
+                <tr>
+                    <td>_IONBF (no buffering)</td>
+                    <td>Qualquer operação é realizada o mais antes possível. Os parâmetros buffer e size são ignorados</td>
+                </tr>
+            </table>
 
             <h3>Valor de retorno</h3>
-            <p>Retorna zero caso a stream tenha sido fechada. Em caso de falha, retorna EOF.</p>
+            <p>Se for sucesso, é retornado zero, caso contrário, diferente de zero</p>
         </section>
         <h2 id='tmpfile'>tmpfile</h2>
         <section>
