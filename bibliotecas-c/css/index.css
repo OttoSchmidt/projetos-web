@@ -129,6 +129,6 @@ th{
 
 .linha{
     padding: 10px;
-    border-bottom: 1px black;
+    border-bottom: 2px var(--on-background);
     border-style: solid;
 }
