@@ -27,7 +27,7 @@ body {
     z-index: 5;
 }
 
-.btn_menu {
+.btn_menu, .btn_search {
     display: none;
 }
 
