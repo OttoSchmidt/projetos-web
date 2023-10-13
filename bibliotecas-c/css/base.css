@@ -24,6 +24,11 @@ body {
     position: fixed;
     display: grid;
     grid-template-rows: 1fr 6fr 1fr;
+    z-index: 5;
+}
+
+.btn_menu, .btn_search {
+    display: none;
 }
 
 #navBibliotecas {
@@ -56,7 +61,7 @@ body {
     background: var(--surface-container-highest);
 }
 
-#biblioteca:hover #navBibliotecas {
+#biblioteca:hover #navBibliotecas, #navBibliotecas.ativo {
     top: 0;
 }
 
@@ -132,9 +137,23 @@ header {
     align-items: center;
 }
 
+html[data-tema="dark"] header ::selection {
+    background: var(--secondary-container)
+}
+
 section {
-    margin-bottom: 70px;
-    padding: 35px 0 0 35px;
+    margin: 0 0 70px 30px;
+    padding-bottom: 35px;
+}
+
+section > ul {
+    margin: .5rem 2.5rem 0 2.5rem;
+    width: 70%;
+}
+
+section > ul li {
+    background: var(--secondary-container);
+    padding: .75rem 1.5rem;
 }
 
 h1 {
@@ -148,6 +167,7 @@ h2 {
 }
 
 h3 {
+    margin: 30px 0 10px 0;
     font-size: 25px;
 }
 
@@ -156,11 +176,16 @@ h4 {
 }
 
 section p {
-    margin: 10px 20px 30px 20px;
+    margin-left: 20px;
 }
 
 header p {
     margin: 10px;
+}
+
+code {
+    margin-left: 2.5rem;
+    width: fit-content;
 }
 
 .navIndice {

@@ -12,7 +12,6 @@ main{
 header{
     grid-column: span 2;
     padding: 50px 35px 0 35px;
-    background-color: var(--primary-container);
     background-image: url(../img/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,6 +21,7 @@ header{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     margin-bottom: 25px;
+    opacity: 0.9;
 }
 
 h1{
@@ -38,7 +38,7 @@ h2 {
     font-weight: 700;
 }
 
-header button {
+button {
     background-color: var(--primary);
     border-radius: 100px;
     color: var(--on-primary);
@@ -47,6 +47,23 @@ header button {
     text-align: center;
     font-size: 15px;
     margin: 40px auto;
+    transition-duration: 0.4s;
+    font-weight: 600;
+}
+
+.button1:hover {
+    background-color: var(--on-primary); 
+    color: var(--primary);
+  }
+
+#removerMenu {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /*-------------------------------------------------------------*/
@@ -70,6 +87,7 @@ main > div > a {
     margin-bottom: 0;
     border-radius: 25px;
     text-align: center;
+    
 }
 
 .table_titulo > h2 {
@@ -78,25 +96,39 @@ main > div > a {
 
 table {
     width: 100%;
-    padding: 20px 0 20px 20px;
+    padding: 20px;
     background-color: var(--secondary-container);
     border-radius: 25px;
+    
 }
 
 
 /*-------------------------------------------------------------*/
+tr{
+    padding: 100px;
+    margin-top: 100px;
+}
 
 th{
+    padding: 20px 0px 0px 0px;
     text-align: start;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .biblioteca{
     text-align: start;
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .esplicacao{
+    padding: 20px 0px 0px 0px;
     text-align: start;
-    font-size: 12px;
+    font-size: 18px;
+    
+}
+
+.linha{
+    padding: 10px;
+    border-bottom: 2px var(--on-background);
+    border-style: solid;
 }
