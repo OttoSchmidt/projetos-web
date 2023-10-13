@@ -27,6 +27,10 @@ body {
     z-index: 5;
 }
 
+.btn_menu {
+    display: none;
+}
+
 #navBibliotecas {
     cursor: default; /*resetar o cursor dentro do menu*/
     box-sizing: border-box; /*util para o height levar em consideração o padding*/

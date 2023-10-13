@@ -4,18 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
+    <script src="js/menu.js"></script>
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="icon" href="img/favicon.ico">
     <title>stdio.h</title>
+    <style>
+        @media screen and (max-width: 900px) {
+            .navPrincipal {
+                left: 0;
+                right: 0;
+                height: 50px;
+                text-align: left;
+                padding: 5px 10px;
+            }
+
+            .navPrincipal.ativo {
+                background: var(--surface-container);
+                height: 100svh;
+                right: 0;
+                grid-template-rows: 15fr 5fr;
+            }
+
+            .navPrincipal.ativo ~ main {
+                overflow-y: hidden;
+            }
+
+            .navPrincipal.ativo > * { /*seleciona lista_up e lista_down*/
+                display: block;
+            }
+
+            .navPrincipal.ativo .lista_up {
+                margin-top: 50px;
+            }
+
+            .navPrincipal.ativo .lista_down {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                justify-content: end;
+            }
+
+            #navBibliotecas.ativo {
+                position: inherit;
+                display: block;
+                height: fit-content;
+                grid-column: span 2;
+            }
+
+            .navPrincipal.ativo .linkPaginaNAV {
+                display: grid;
+                grid-template-columns: 1fr 8fr;
+            }
+
+            .navPrincipal.ativo .linkPaginaNAV div:first-child {
+                width: 40px;
+                padding: 5px 8px;
+            }
+
+            .navPrincipal.ativo .linkPaginaNAV p {
+                font-size: 18px;
+            }
+
+            .btn_menu, .btn_search {
+                display: block;
+                position: absolute;
+                font-size: 50px;
+                height: min-content;
+                top: 5px;
+            }
+
+            .btn_menu {
+                left: 5px;
+            }
+
+            .btn_search {
+                right: 5px;
+            }
+
+            main, body {
+                display: block;
+            }
+
+            main {
+                padding-top: 80px;
+            }
+
+            header {
+                grid-template-columns: 1fr;
+                padding: 40px 10%;
+            }
+
+            main > div {
+                margin: 50px 0;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .lista_up, .lista_down {
+                display: none;
+            }
+
+            #indice {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <nav class="navPrincipal">
+    <span class="btn_menu material-symbols-outlined" onclick="abrirMenuMobile()">menu</span>
+    <span class="btn_search material-symbols-outlined" onclick="abrirMenuSearch()">search</span>
     <div class="lista_up">
         <a class="linkPaginaNAV" href="index.html">
             <div><span class="material-symbols-outlined">home</span></div>
             <p>Início</p>
         </a>
-        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca">
+        <div class="linkPaginaNAV paginaSelecionada" id="biblioteca" onclick="abrirMenu()">
             <div><span class="material-symbols-outlined">book_2</span></div>
             <p>Bibliotecas</p>
             <div id="navBibliotecas">

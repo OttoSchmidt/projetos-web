@@ -13,3 +13,17 @@ function abrirMenu() {
         document.getElementById("removerMenu").remove();
     }
 }
+
+function abrirMenuMobile () {
+    const nav = document.getElementsByClassName("navPrincipal")[0];
+    const menuBiblioteca = document.getElementById("navBibliotecas");
+    
+    nav.classList.toggle("ativo");
+    if (!nav.classList.contains("ativo")) {
+        menuBiblioteca.classList.remove("ativo");
+    }
+}
+
+function abrirMenuSearch () {
+
+}
