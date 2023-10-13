@@ -70,7 +70,58 @@ textarea{
     display: flex; /*necessário para seperar o input e label*/
     column-gap: 16px;
     width: 60%;
+    user-select: none;
 }
+
+.container_checkbox input{ /*Esconde o checkbox padrão do navegador*/
+    opacity: 0; /*Ele ficara escondido atras do novo checkbox*/
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    position: absolute; /*necessario para o checkbox do navegador ficar atras do customizado*/
+}
+
+.checkmark{
+    height: 25px;/*Aqui é o tamanho do checkbox, tentei fazer ele ter 25px por 25px mas ele sempre saia com o
+    tamanho errado*/
+    width: 20%;
+    border-radius: 5px;
+    background-color: var(--surface-container);
+}
+
+.container_checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+    /*A cor muda quando passar o mouse em cima, não sei se tem alguma variavel pra usar, no momento fica ruim
+    no dark mode*/
+  }
+
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+  /*Quando selecionado muda de cor, essa cor é horrivel mas não sei qual outra colocar*/
+}
+
+/*A partir daqui é para criar o "✓"*/
+.checkmark:after {
+    content: ""; /*Criar algum conteudo*/
+    position: absolute;
+    display: none;
+  }
+  
+  .container_checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+/*Cria o visual do "✓"*/
+  .container_checkbox .checkmark:after {
+    margin-left: 8px;
+    margin-top: 2px;/*Esses dois "margin" servem para centralizar o "✓" no quadrado, se tirar ele fica meio 
+    fora, não sei se tinha um forma melhor de fazer (provavelmente sim)*/
+    width: 7px;
+    height: 13px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
 
 .container_checkbox label {
     font-size: 12px;
