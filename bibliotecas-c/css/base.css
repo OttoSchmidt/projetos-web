@@ -24,6 +24,7 @@ body {
     position: fixed;
     display: grid;
     grid-template-rows: 1fr 6fr 1fr;
+    z-index: 5;
 }
 
 #navBibliotecas {
@@ -56,7 +57,7 @@ body {
     background: var(--surface-container-highest);
 }
 
-#biblioteca:hover #navBibliotecas {
+#biblioteca:hover #navBibliotecas, #navBibliotecas.ativo {
     top: 0;
 }
 
