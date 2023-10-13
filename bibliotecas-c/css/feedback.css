@@ -81,6 +81,7 @@ textarea{
     height: 30px;
     width: 30px;
     position: absolute; /*necessario para o checkbox do navegador ficar atras do customizado*/
+    z-index: 5;
 }
 
 .checkmark{
@@ -89,16 +90,18 @@ textarea{
     width: 20%;
     border-radius: 5px;
     background-color: var(--surface-container);
+    border: 1px solid var(--outline-variant);
 }
 
 .container_checkbox:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: var(--surface-container-highest);
     /*A cor muda quando passar o mouse em cima, não sei se tem alguma variavel pra usar, no momento fica ruim
     no dark mode*/
   }
 
 .container_checkbox input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: var(--primary-container);
+    border: 1px solid transparent;
   /*Quando selecionado muda de cor, essa cor é horrivel mas não sei qual outra colocar*/
 }
 
@@ -120,7 +123,7 @@ textarea{
     fora, não sei se tinha um forma melhor de fazer (provavelmente sim)*/
     width: 7px;
     height: 13px;
-    border: solid black;
+    border: solid var(--black);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }

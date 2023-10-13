@@ -132,6 +132,10 @@ header {
     align-items: center;
 }
 
+html[data-tema="dark"] header ::selection {
+    background: var(--secondary-container)
+}
+
 section {
     margin-bottom: 70px;
     padding: 35px 0 0 35px;
