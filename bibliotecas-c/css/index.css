@@ -78,11 +78,11 @@ main > div {
 main > div > a {
     text-decoration: none;
     width: 100%;
-    padding: 0 20px;
+    margin: 0 20px;
 }
 
 .table_titulo {
-    padding: 2px 2px 40px 2px;
+    padding-bottom: 40px;
     background-color: var(--surface-container);
     margin-bottom: 0;
     border-radius: 25px;
@@ -110,7 +110,7 @@ tr{
 }
 
 th{
-    padding: 20px 0px 0px 0px;
+    padding-top: 20px;
     text-align: start;
     font-size: 22px;
 }
@@ -121,10 +121,9 @@ th{
 }
 
 .esplicacao{
-    padding: 20px 0px 0px 0px;
+    padding-top: 20px;
     text-align: start;
     font-size: 18px;
-    
 }
 
 .linha{

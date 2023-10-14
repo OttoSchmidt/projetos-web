@@ -1,8 +1,19 @@
-function abrirMenu() {
-    const menu = document.getElementById("navBibliotecas");
-    menu.classList.toggle("ativo"); /*se o elemento já tem a classe ativo, ele remove, caso contrario, ele adiciona*/
+function removeOnclickRezise () {
+    console.log("a");
+    const biblioteca = document.getElementById("biblioteca");
+    if (window.innerWidth > 900) {
+        biblioteca.setAttribute("onclick", null);
+    } else {
+        biblioteca.setAttribute("onclick", "abrirMenu();");
+    }
+}
 
-    if (menu.classList.contains("ativo")) {
+window.addEventListener("DOMContentLoaded", removeOnclickRezise);
+
+window.addEventListener("resize", removeOnclickRezise);
+
+function removerMenuFundo (tipo) {
+    if (tipo) {
         //cria o fundo para remover o menu do nav
         const remover = document.createElement("div");
         remover.id = "removerMenu";
@@ -12,6 +23,12 @@ function abrirMenu() {
         //remove o fundo criado anteriormente
         document.getElementById("removerMenu").remove();
     }
+}
+
+function abrirMenu() {
+    const menu = document.getElementById("navBibliotecas");
+    menu.classList.toggle("ativo"); /*se o elemento já tem a classe ativo, ele remove, caso contrario, ele adiciona*/
+    removerMenuFundo(menu.classList.contains('ativo'));
 }
 
 function abrirMenuMobile () {
