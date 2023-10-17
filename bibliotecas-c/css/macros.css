@@ -1,0 +1,29 @@
+h1{
+    font-size: 44px;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+}
+
+section{
+    display: flex;
+    background-color: var(--secondary-container);
+    border-radius: 25px;
+    column-gap: 20px;
+    padding: 30px 70px;
+}
+
+tr:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: black;
+    width: 100%;
+}
