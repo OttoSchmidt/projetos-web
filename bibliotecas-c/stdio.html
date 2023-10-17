@@ -106,16 +106,42 @@
                 display: none;
             }
 
+            .navIndice {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: var(--surface-container);
+            }
+
+            .navIndice.ativo {
+                height: 100svh;
+                padding: 100px 50px;
+            }
+
+            .navIndice h4 {
+                display: none;
+            }
+
+            .navIndice input {
+                width: 100%;
+            }
+
             #indice {
                 display: none;
+            }
+
+            .ativo #indice {
+                display: block;
+                max-height: 70%;
             }
         }
     </style>
 </head>
 <body>
 <nav class="navPrincipal">
-    <span class="btn_menu material-symbols-outlined" onclick="abrirMenuMobile()">menu</span>
-    <span class="btn_search material-symbols-outlined" onclick="abrirMenuSearch()">search</span>
+    <span class="btn_menu material-symbols-outlined" onclick="abrirMenuMobile('principal')">menu</span>
+    <span class="btn_search material-symbols-outlined" onclick="abrirMenuMobile('pesquisa')">search</span>
     <div class="lista_up">
         <a class="linkPaginaNAV" href="index.html">
             <div><span class="material-symbols-outlined">home</span></div>

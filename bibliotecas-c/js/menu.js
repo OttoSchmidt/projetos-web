@@ -1,5 +1,4 @@
 function removeOnclickRezise () {
-    console.log("a");
     const biblioteca = document.getElementById("biblioteca");
     if (window.innerWidth > 900) {
         biblioteca.setAttribute("onclick", null);
@@ -9,7 +8,6 @@ function removeOnclickRezise () {
 }
 
 window.addEventListener("DOMContentLoaded", removeOnclickRezise);
-
 window.addEventListener("resize", removeOnclickRezise);
 
 function removerMenuFundo (tipo) {
@@ -31,16 +29,23 @@ function abrirMenu() {
     removerMenuFundo(menu.classList.contains('ativo'));
 }
 
-function abrirMenuMobile () {
-    const nav = document.getElementsByClassName("navPrincipal")[0];
+function abrirMenuMobile (tipo) {
+    const navPrin = document.getElementsByClassName("navPrincipal")[0];
+    const navIndice = document.getElementsByClassName("navIndice")[0];
     const menuBiblioteca = document.getElementById("navBibliotecas");
     
-    nav.classList.toggle("ativo");
-    if (!nav.classList.contains("ativo")) {
+    if (tipo === 'principal') {
+        navPrin.classList.toggle("ativo");
+        navIndice.classList.remove("ativo");
+    } else if (tipo === 'pesquisa') {
+        navIndice.classList.toggle("ativo");
+
+        navPrin.classList.remove("ativo");
         menuBiblioteca.classList.remove("ativo");
+        
+        const links = navIndice.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function () {abrirMenuMobile('pesquisa')}); //remover o nav quando clicar no link do indice
+        }
     }
-}
-
-function abrirMenuSearch () {
-
 }
