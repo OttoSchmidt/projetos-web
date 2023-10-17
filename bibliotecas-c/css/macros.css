@@ -18,12 +18,16 @@ section{
     padding: 30px 70px;
 }
 
+tr {
+    position: relative;
+}
+
 tr:not(:last-of-type)::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     height: 2px;
-    background: black;
+    background: var(--outline);
     width: 100%;
 }
