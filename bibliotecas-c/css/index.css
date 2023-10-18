@@ -146,6 +146,11 @@ tr:not(:last-of-type)::after {
         margin: 50px 10px 10px 10px;
     }
 
+    header div {
+        padding: 5px 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
     h1 {
         font-size: 40px; /* Reduza o tamanho da fonte do cabeçalho em telas menores */
     }
