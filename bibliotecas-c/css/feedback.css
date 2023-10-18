@@ -86,9 +86,10 @@ textarea{/*Mescla a "textarea" com a caixa*/
 }
 
 .checkmark{
+    display: block;
     height: 25px;/*Aqui é o tamanho do checkbox, tentei fazer ele ter 25px por 25px mas ele sempre saia com o
     tamanho errado*/
-    width: 20%;
+    aspect-ratio: 1;
     border-radius: 5px;
     background-color: var(--surface-container);
     border: 1px solid var(--outline-variant);
