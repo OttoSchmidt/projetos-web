@@ -15,18 +15,33 @@ header {
     position: relative;
     display: block;
     overflow: hidden;
-    padding: 75px 0;
 }
 
 header img{
     background: var(--primary-container);
     position: absolute;
-    filter: blur(3px);
     left: 0;
     top: 0;
     width: 100%;
     border-radius: 25px;
     z-index: -5;
+}
+
+header div {
+    padding: 75px 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+:root[data-tema="dark"] header div {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    color: #fff;
+}
+
+:root[data-tema="dark"] header h1 {
+    color: var(--md-sys-color-on-background-dark);
 }
 
 h1{
@@ -80,19 +95,6 @@ button {
     background: rgba(0, 0, 0, 0.2);
 }
 
-/* Modifique para telas menores */
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 40px; /* Reduza o tamanho da fonte do cabeçalho em telas menores */
-    }
-
-    button {
-        font-size: 12px; /* Reduza o tamanho do texto em botões para telas menores */
-    }
-}
-
-
-
 /*-------------------------------------------------------------*/
 
 section {
@@ -118,23 +120,6 @@ table {
     background: var(--secondary-container);
 }
 
-/* Modifique para telas menores */
-@media screen and (max-width: 600px) {
-        section {
-            flex-direction: column;
-            align-items: center;
-            padding: 0px 2px;
-            column-gap: 0;
-            margin: 0;
-        }
-    }
-
-    section a {
-        width: 100%; /* Utilize a largura total da tela em telas menores */
-        margin-bottom: 4%;
-
-    }
-
 table::after {
     display: none;
 }
@@ -153,4 +138,37 @@ td {
 
 tr:not(:last-of-type)::after {
     bottom: -5px;
+}
+
+/* Modifique para telas menores */
+@media screen and (max-width: 900px) {
+    header {
+        margin: 50px 10px 10px 10px;
+    }
+
+    h1 {
+        font-size: 40px; /* Reduza o tamanho da fonte do cabeçalho em telas menores */
+    }
+
+    button {
+        font-size: 12px; /* Reduza o tamanho do texto em botões para telas menores */
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2px;
+        column-gap: 0;
+        margin: 0 10px;
+    }
+
+    section a {
+        width: 100%; /* Utilize a largura total da tela em telas menores */
+        margin: 10px 20px;
+        padding-bottom: 15px;
+    }
+
+    td, th {
+        padding: 10px 0;
+    }
 }
