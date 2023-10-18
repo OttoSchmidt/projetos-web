@@ -57,36 +57,120 @@
         <table>
             <tr>
                 <th>
-                    <h2>EOF</h2>
-                    <p class="biblioteca">&lt;stdio.h&gt; &lt;stdlib.h&gt;</p>
+                    <h2>NULL</h2>
+                    <p class='biblioteca'>stdio, stdlib, string</p>
                 </th>
-                <td class="esplicacao ">This macro is the</td>
+                <td class='explicacao'>Possui um valor de um ponteiro vazio constante</td>
             </tr>
-
+            <tr>
+                <th>
+                    <h2>_IOFBF, _IOLBF, _IONBF</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>???????</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>BUFSIZ</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Representa o tamanho de um buffer utilizado na função setbuf</td>
+            </tr>
             <tr>
                 <th>
                     <h2>EOF</h2>
-                    <p class="biblioteca">&lt;stdio.h&gt; &lt;stdlib.h&gt;</p>
+                    <p class='biblioteca'>stdio</p>
                 </th>
-                <td class="esplicacao ">This macro is the</td>
+                <td class='explicacao'>Indica que o end-of-file (fim do arquivo) foi atingido e possui um valor negativo
+                    inteiro
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>FOPEN_MAX</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Representa o máximo de arquivos que o sistema pode garantir que estarão abertos
+                    simultaneamente
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>FILENAME_MAX</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Representa o tamanho de uma string para guardar o maior tamanho possível para um
+                    nome de arquivo. Se a implementação não possui limites, então esse valor deve ser utilizado como o
+                    máximo.
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>l_tmpnam</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Representa o tamanho da maior string utilizada para guardar o maior nome
+                    temporário de um arquivo criado pela função tmpnam
+                </td>
             </tr>
         </table>
-
         <table>
             <tr>
                 <th>
-                    <h2>EOF</h2>
-                    <p class="biblioteca">&lt;stdio.h&gt; &lt;stdlib.h&gt;</p>
+                    <h2>TMP_MAX</h2>
+                    <p class='biblioteca'>stdio</p>
                 </th>
-                <td class="esplicacao ">This macro is the</td>
+                <td class='explicacao'>Representa o número máximo de arquivos únicos que a função tmpnam pode criar</td>
             </tr>
-
             <tr>
                 <th>
-                    <h2>EOF</h2>
-                    <p class="biblioteca">&lt;stdio.h&gt; &lt;stdlib.h&gt;</p>
+                    <h2>stder, stdin e stdout</h2>
+                    <p class='biblioteca'>stdio</p>
                 </th>
-                <td class="esplicacao ">This macro is the</td>
+                <td class='explicacao'>Representa ponteiros para variáveis FILE que correspondem a ‘standard erro’ (erro
+                    padrão), ‘standard input’ (entrada padrão) e ‘standard output’ (saída padrão)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>EXIT_FAILURE</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Valor de retorno de função em caso de falha</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>EXIT_SUCCESS</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Valor de retorno de função em caso de sucesso</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>RAND_MAX</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Representa o valor máximo retornado pela função rand</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>MB_CUR_MAX</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Representa o número máximo de bytes de um caracter multi-byte. Ele não pode ser
+                    maior que MB_LEN_MAX
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>HUGE_VAL</h2>
+                    <p class='biblioteca'>math</p>
+                </th>
+                <td class='explicacao'>Utilizada quando o resultado de uma função não possa ser representado por um
+                    número de ponto flutuante. Se o valor de retorno for muito grande, a função define errno como ERANGE
+                    e retorna um valor gigante nomeado pela macro. Porém, se a magnitude for muito pequena, será
+                    retornado zero
+                </td>
             </tr>
         </table>
     </section>

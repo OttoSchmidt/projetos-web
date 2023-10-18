@@ -15,8 +15,7 @@ section{
     display: flex;
     background-color: var(--secondary-container);
     border-radius: 25px;
-    column-gap: 20px;
-    padding: 30px 70px 50px 70px;
+    padding: 30px 50px 50px 50px;
     margin-left: 5%;
 }
 
@@ -32,7 +31,6 @@ h2 {
 }
 
 table {
-    padding: 0 20px;
     width: 100%;
 }
 
@@ -45,14 +43,14 @@ tr:not(:last-of-type)::after { /*Seletor para todos os ::after de tr (menos o ul
     content: '';
     position: absolute;
     left: 10%;
-    bottom: -15px; /*centraliza verticalmente levando em consideração o padding*/
+    bottom: -20px; /*centraliza verticalmente levando em consideração o padding*/
     height: 2px;
     background: var(--outline);
-    width: 70%;
+    width: 80%;
 }
 
-th {
-    padding-top: 20px;
+th, td {
+    padding: 40px 10px 0 10px;
 }
 
 td { /*fixa a largura da explicação da biblioteca em 60%*/
