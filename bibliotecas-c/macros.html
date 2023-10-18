@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" type="text/css" href="css\index.css">
     <link rel="stylesheet" type="text/css" href="css\macros.css">
     <link rel="icon" href="img/favicon.ico">
     <title>Início</title>
 </head>
 <body>
 <nav class="navPrincipal">
+    <span class="btn_menu material-symbols-outlined" onclick="abrirMenuMobile('principal')">menu</span>
     <div class="lista_up">
         <a class="linkPaginaNAV" href="index.html">
             <div><span class="material-symbols-outlined">home</span></div>
@@ -30,7 +30,7 @@
 
         </div>
 
-        <a class="linkPaginaNAV" href="macros.html">
+        <a class="linkPaginaNAV paginaSelecionada" href="#">
             <div><span class="material-symbols-outlined">data_object</span></div>
             <p>Macros</p>
         </a>

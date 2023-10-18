@@ -1,6 +1,7 @@
-h1{
-    font-size: 44px;
-    text-align: left;
+@import url("base.css");
+
+main {
+    display: block;
 }
 
 header { /*remove o design de base.css*/
@@ -19,8 +20,20 @@ section{
     margin-left: 5%;
 }
 
+h1{
+    font-size: 44px;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
 table {
-    padding: 0;
+    padding: 0 20px;
+    width: 100%;
 }
 
 tr {
@@ -44,4 +57,10 @@ th {
 
 td { /*fixa a largura da explicação da biblioteca em 60%*/
     width: 60%;
+}
+
+.biblioteca {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
 }

@@ -251,3 +251,131 @@ li, li a {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--on-surface-variant);
 }
+
+@media screen and (max-width: 900px) {
+    .navPrincipal {
+        left: 0;
+        right: 0;
+        height: 50px;
+        text-align: left;
+        padding: 5px 10px;
+    }
+
+    .navPrincipal.ativo {
+        background: var(--surface-container);
+        height: 100svh;
+        right: 0;
+        grid-template-rows: 15fr 5fr;
+    }
+
+    .navPrincipal.ativo ~ main {
+        overflow-y: hidden;
+    }
+
+    .navPrincipal.ativo > * { /*seleciona lista_up e lista_down*/
+        display: block;
+    }
+
+    .navPrincipal.ativo .lista_up {
+        margin-top: 50px;
+    }
+
+    .navPrincipal.ativo .lista_down {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: end;
+    }
+
+    #navBibliotecas.ativo {
+        position: inherit;
+        display: block;
+        height: fit-content;
+        grid-column: span 2;
+    }
+
+    .navPrincipal.ativo .linkPaginaNAV {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+    }
+
+    .navPrincipal.ativo .linkPaginaNAV div:first-child {
+        width: 40px;
+        padding: 5px 8px;
+    }
+
+    .navPrincipal.ativo .linkPaginaNAV p {
+        font-size: 18px;
+    }
+
+    .btn_menu, .btn_search {
+        display: block;
+        position: absolute;
+        font-size: 50px;
+        height: min-content;
+        top: 5px;
+    }
+
+    .btn_menu {
+        left: 5px;
+    }
+
+    .btn_search {
+        right: 5px;
+    }
+
+    main, body {
+        display: block;
+    }
+
+    main {
+        padding-top: 80px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        padding: 40px 10%;
+    }
+
+    main > div {
+        margin: 50px 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .lista_up, .lista_down {
+        display: none;
+    }
+
+    .navIndice {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--surface-container);
+    }
+
+    .navIndice.ativo {
+        height: 100svh;
+        padding: 100px 50px;
+    }
+
+    .navIndice h4 {
+        display: none;
+    }
+
+    .navIndice input {
+        width: 100%;
+    }
+
+    #indice {
+        display: none;
+    }
+
+    .ativo #indice {
+        display: block;
+        max-height: 70%;
+    }
+}
