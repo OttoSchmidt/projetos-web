@@ -67,67 +67,82 @@ button {
 }
 
 /*-------------------------------------------------------------*/
-main > div {
+
+section {
     display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-
-}
-
-main > div > a {
-    text-decoration: none;
-    width: 100%;
-    margin: 0 20px;
-}
-
-.table_titulo {
-    padding-bottom: 40px;
-    background-color: var(--surface-container);
-    margin-bottom: 0;
     border-radius: 25px;
-    text-align: center;
-    
+    padding: 0px 30px 0px 30px;
+    margin: 0% 0% 5% 2%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
-.table_titulo > h2 {
-    margin-top: 25px;
+.macros{
+    background-color: var(--surface-container);
+    border-radius: 25px;
+    padding: 2px 2px 30px 2px;
+    margin: 0px 2% 0px 0px;
 }
+
+.variaveis{
+    background-color: var(--surface-container);
+    border-radius: 25px;
+    padding: 2px 2px 30px 2px;
+    margin: 0px 2% 0px 0px;
+}
+
+
 
 table {
     width: 100%;
-    padding: 20px;
     background-color: var(--secondary-container);
     border-radius: 25px;
-    
 }
 
-
-/*-------------------------------------------------------------*/
-tr{
-    padding: 100px;
-    margin-top: 100px;
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
-th{
-    padding-top: 20px;
-    text-align: start;
-    font-size: 22px;
+tr {
+    position: relative;
+    margin: 0;
 }
 
-.biblioteca{
-    text-align: start;
-    font-size: 15px;
+th, td {
+    padding: 40px 10px 0 10px;
 }
 
-.esplicacao{
-    padding-top: 20px;
-    text-align: start;
-    font-size: 18px;
+td {
+    width: 60%;
 }
 
-.linha{
-    padding: 10px;
-    border-bottom: 2px var(--on-background);
-    border-style: solid;
+tr:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: -20px;
+    height: 2px;
+    background: var(--outline);
+    width: 80%;
+}
+
+h2 {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.biblioteca {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.p{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-weight: 700;
 }
