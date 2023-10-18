@@ -10,98 +10,95 @@
     <title>Início</title>
 </head>
 <body>
-    <nav class="navPrincipal">
-        <div class="lista_up">
-            <a class="linkPaginaNAV paginaSelecionada" href="#">
-                <div><span class="material-symbols-outlined">home</span></div>
-                <p>Início</p>
-            </a>
-            <div class="linkPaginaNAV" id="biblioteca">
-                <div><span class="material-symbols-outlined">book_2</span></div>
-                <p>Bibliotecas</p>
+<nav class="navPrincipal">
+    <div class="lista_up">
+        <a class="linkPaginaNAV paginaSelecionada" href="#">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
 
-                <div id="navBibliotecas">
-                    <a href="stdio.html">stdio.h</a>
-                    <a href="stdlib.html">stdlib.h</a>
-                    <a href="string.html">string.h</a>
-                    <a href="math.html">math.h</a>
-                </div>
-
+            <div id="navBibliotecas">
+                <a href="stdio.html">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="string.html">string.h</a>
+                <a href="math.html">math.h</a>
             </div>
 
-            <a class="linkPaginaNAV" href="macros.html">
-                <div><span class="material-symbols-outlined">data_object</span></div>
-                <p>Macros</p>
-            </a>
-
-            <a class="linkPaginaNAV" href="variaveis.html">
-                <div><span class="material-symbols-outlined">code</span></div>
-                <p>Variáveis</p>
-            </a>
-
         </div>
-        <div class="lista_down">
-            <a class="linkPaginaNAV" href="feedback.html">
-                <div><span class="material-symbols-outlined">feedback</span></div>
-                <p>Feedback</p>
-            </a>
-            <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+
+        <a class="linkPaginaNAV" href="macros.html">
+            <div><span class="material-symbols-outlined">data_object</span></div>
+            <p>Macros</p>
+        </a>
+
+        <a class="linkPaginaNAV" href="variaveis.html">
+            <div><span class="material-symbols-outlined">code</span></div>
+            <p>Variáveis</p>
+        </a>
+
+    </div>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
+
+<main>
+    <header>
+        <img src="img/fundo.png" alt="Fundo"/>
+        <div>
+            <h1>Principais Bibliotecas em C</h1>
+            <button class="button1" onclick="abrirMenu();">EXPLORAR</button>
         </div>
-    </nav>
-
-    <main>
-            <header class="test">
-                <img src="../img/fundo.png" alt="fundo">
-                <h1>Principais Bibliotecas em C</h1>
-                <button class="button1" onclick="abrirMenu();">EXPLORAR</button>
-            </header>
-            <div>
-                <section>
-                    <a class = "macros" href="macros.html">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <h2>NULL</h2>
-                                        <p class='biblioteca'>stdio, stdlib, string</p>
-                                    </th>
-                                    <td class='explicacao'>Possui um valor de um ponteiro vazio constante</td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <h2>_IOFBF, _IOLBF, _IONBF</h2>
-                                        <p class='biblioteca'>stdio</p>
-                                    </th>
-                                    <td class='explicacao'>???????</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    <p class="p">MACROS</p>
-                </a>
-                <a class = "variaveis" href="variaveis.html">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <h2>size_t</h2>
-                                    <p class='biblioteca'>stdio, stdlib, string</p>
-                                </th>
-                                <td class='explicacao'>Resultado da função sizeof e é tipo int unsignned</td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <h2>FILE</h2>
-                                    <p class='biblioteca'>stdio</p>
-                                </th>
-                                <td class='explicacao'>Objeto para guardar informações de arquivos</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="p">VARIAVEIS</p>
-                </a>
-                </section>
-            </div>
-    </main>
+    </header>
+    <section>
+        <a class="macros" href="macros.html">
+            <table>
+                <tr>
+                    <th>
+                        <h3>NULL</h3>
+                        <p class='biblioteca'>stdio, stdlib, string</p>
+                    </th>
+                    <td class='explicacao'>Possui um valor de um ponteiro vazio constante</td>
+                </tr>
+                <tr>
+                    <th>
+                        <h3>EOF</h3>
+                        <p class='biblioteca'>stdio</p>
+                    </th>
+                    <td class='explicacao'>Indica que o end-of-file (fim do arquivo) foi atingido e possui um valor negativo
+                        inteiro
+                    </td>
+                </tr>
+            </table>
+            <h2 class="tipo">Macros</h2>
+        </a>
+        <a class="variaveis" href="variaveis.html">
+            <table>
+                <tr>
+                    <th>
+                        <h3>size_t</h3>
+                        <p class='biblioteca'>stdio, stdlib, string</p>
+                    </th>
+                    <td class='explicacao'>Resultado da função sizeof e é tipo int unsignned</td>
+                </tr>
+                <tr>
+                    <th>
+                        <h3>FILE</h3>
+                        <p class='biblioteca'>stdio</p>
+                    </th>
+                    <td class='explicacao'>Objeto para guardar informações de arquivos</td>
+                </tr>
+            </table>
+            <h2 class="tipo">Variáveis</h2>
+        </a>
+    </section>
+</main>
 </body>
 </html>

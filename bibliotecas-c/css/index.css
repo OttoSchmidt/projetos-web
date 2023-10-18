@@ -1,4 +1,5 @@
 @import url(base.css);
+@import url(macros.css);
 
 *{
     box-sizing: border-box;
@@ -9,17 +10,22 @@ main{
     padding: 2% 2% 0 2%;
 }
 
-img{
-    grid-column: span 2;
-    padding: 50px 35px 0 35px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+header {
+    background: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 75px 0;
+}
+
+header img{
+    background: var(--primary-container);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     border-radius: 25px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    margin-bottom: 25px;
+    z-index: -5;
 }
 
 h1{
@@ -29,11 +35,19 @@ h1{
 }
 
 h2 {
-    padding-top: 2%;
-    padding-left: 10%;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0 0 0 20px;
     text-align: left;
     font-size: 28px;
     font-weight: 700;
+}
+
+main a {
+    text-decoration: none;
 }
 
 button {
@@ -44,15 +58,16 @@ button {
     padding: 20px;
     text-align: center;
     font-size: 15px;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
     transition-duration: 0.4s;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .button1:hover {
-    background-color: var(--on-primary); 
+    background-color: var(--on-primary);
     color: var(--primary);
-  }
+}
 
 #removerMenu {
     position: absolute;
@@ -68,79 +83,39 @@ button {
 
 section {
     display: flex;
-    border-radius: 25px;
-    padding: 0px 30px 0px 30px;
+    column-gap: 5%;
+    padding: 0px 30px;
     margin: 0% 0% 5% 2%;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    background: none;
+    border-radius: 25px;
 }
 
-.macros{
+section a {
     background-color: var(--surface-container);
     border-radius: 25px;
-    padding: 2px 2px 30px 2px;
-    margin: 0px 2% 0px 0px;
+    padding: 0 0 50px 0;
+    width: 50%;
 }
-
-.variaveis{
-    background-color: var(--surface-container);
-    border-radius: 25px;
-    padding: 2px 2px 30px 2px;
-    margin: 0px 2% 0px 0px;
-}
-
-
 
 table {
-    width: 100%;
-    background-color: var(--secondary-container);
+    padding: 25px;
+    height: 75%;
     border-radius: 25px;
-}
-
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-tr {
-    position: relative;
-    margin: 0;
+    background: var(--secondary-container);
 }
 
 th, td {
-    padding: 40px 10px 0 10px;
+    padding: 0;
 }
 
 td {
-    width: 60%;
+    width: 50%;
+}
+
+.tipo {
+    margin: 40px;
 }
 
 tr:not(:last-of-type)::after {
-    content: '';
-    position: absolute;
-    left: 10%;
-    bottom: -20px;
-    height: 2px;
-    background: var(--outline);
-    width: 80%;
-}
-
-h2 {
-    text-align: left;
-    font-size: 25px;
-    margin-left: 20px;
-}
-
-.biblioteca {
-    font-size: 12px;
-    font-weight: 400;
-    text-align: left;
-}
-
-.p{
-    font-size: 25px;
-    margin-top: 10px;
-    margin-left: 20px;
-    font-weight: 700;
+    bottom: -5px;
 }
