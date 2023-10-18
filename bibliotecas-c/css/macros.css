@@ -1,13 +1,13 @@
 h1{
     font-size: 44px;
+    text-align: left;
 }
 
-.titulo{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    width: 100%;
-    text-align: left;
-    padding: 30px;
+header { /*remove o design de base.css*/
+    display: block;
+    background: none;
+    margin: 20px 0 40px 20px;
+    padding: 0;
 }
 
 section{
@@ -15,19 +15,33 @@ section{
     background-color: var(--secondary-container);
     border-radius: 25px;
     column-gap: 20px;
-    padding: 30px 70px;
+    padding: 30px 70px 50px 70px;
+    margin-left: 5%;
+}
+
+table {
+    padding: 0;
 }
 
 tr {
     position: relative;
+    margin: 0;
 }
 
-tr:not(:last-of-type)::after {
+tr:not(:last-of-type)::after { /*Seletor para todos os ::after de tr (menos o ultimo)*/
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 10%;
+    bottom: -15px; /*centraliza verticalmente levando em consideração o padding*/
     height: 2px;
     background: var(--outline);
-    width: 100%;
+    width: 70%;
+}
+
+th {
+    padding-top: 20px;
+}
+
+td { /*fixa a largura da explicação da biblioteca em 60%*/
+    width: 60%;
 }
