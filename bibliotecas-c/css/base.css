@@ -15,7 +15,7 @@ body {
     grid-template-columns: 1fr 13fr;
     transition: background 200ms linear, color 200ms linear;
 }
-
+/*CSS BARRA DE MAVEGAÇÃO*/
 .navPrincipal {
     background: var(--surface-container);
     height: 100%;
