@@ -61,15 +61,15 @@
         <h2 id='atof'>atof</h2>
         <section>
             <h3>Descrição</h3>
-            <p>Converte o argumento de string str em um número de ponto flutuante (tipo double).</p>
+            <p>Converte o argumento de string str em um número com tipo double.</p>
             <h3>Declaração</h3>
             <code class="language-clike">double atof(const char *str)</code>
             <h3>Argumentos</h3>
             <ul>
-                <li>str - Esta é a string que tem a representação de um número de ponto flutuante.</li>
+                <li>str - Esta é a string que tem a representação de um float.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o número de ponto flutuante convertido como um valor duplo. Se nenhuma conversão válida puder ser realizada, ele retornará zero (0,0).</p>
+            <p>Esta função retorna o numero convertido. Se nenhuma conversão válida puder ser realizada, ele retornará zero (0,0).</p>
         </section>
         <h2 id='atoi'>atoi</h2>
         <section>
@@ -82,7 +82,7 @@
                 <li>str - Esta é a representação em string de um número inteiro.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o número integral convertido como um valor int. Se nenhuma conversão válida puder ser realizada, ele retornará zero.</p>
+            <p>Esta função retorna o número convertido como um valor int. Se nenhuma conversão válida puder ser realizada, ele retornará zero.</p>
         </section>
         <h2 id='atol'>atol</h2>
         <section>
@@ -95,7 +95,7 @@
                 <li>str - Esta é a string que contém a representação de um número inteiro.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o número integral convertido como um inteiro longo. Se nenhuma conversão válida puder ser realizada, ele retornará zero.</p>
+            <p>Esta função retorna o número convertido como um long int. Se nenhuma conversão válida puder ser realizada, ele retornará zero.</p>
         </section>
         <h2 id='strtod'>strtod</h2>
         <section>
@@ -106,10 +106,10 @@
             <h3>Argumentos</h3>
             <ul>
                 <li>str - Este é o valor a ser convertido em uma string.</li>
-                <li>endptr - Esta é a referência a um objeto já alocado do tipo char*, cujo valor é definido pela função para o próximo caractere em str após o valor numérico.</li>
+                <li>endptr - Esta é a referência a um objeto já alocado do tipo char*, cujo valor é definido pela função para o próximo caractere em str após o valor numérico convertido.</li>
             </ul>
             <h3>Valor de retorno</h3>
-            <p>Esta função retorna o número de ponto flutuante convertido como um valor duplo, caso contrário, o valor zero (0,0) é retornado.</p>
+            <p>Esta função retorna o número convertido como um double, caso contrário, o valor zero (0,0) é retornado.</p>
         </section>
         <h2 id='strtol'>strtol</h2>
         <section>
