@@ -104,6 +104,10 @@ table {
     background: var(--secondary-container);
 }
 
+table::after {
+    display: none;
+}
+
 th, td {
     padding: 0;
 }
