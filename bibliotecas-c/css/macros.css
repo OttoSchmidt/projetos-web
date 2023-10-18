@@ -62,3 +62,25 @@ td { /*fixa a largura da explicação da biblioteca em 60%*/
     font-weight: 400;
     text-align: left;
 }
+
+@media screen and (max-width: 900px) {
+    section {
+        display: block;
+        padding: 20px 20px 50px 20px;
+        margin: 0;
+    }
+
+    table {
+        position: relative;
+    }
+
+    table:first-of-type::after { /*Seletor para todo o after da primeira tabela*/
+        content: '';
+        position: absolute;
+        left: 10%;
+        bottom: -20px; /*centraliza verticalmente levando em consideração o padding*/
+        height: 2px;
+        background: var(--outline);
+        width: 80%;
+    }
+}
