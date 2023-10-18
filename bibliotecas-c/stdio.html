@@ -8,6 +8,43 @@
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="icon" href="img/favicon.ico">
     <title>stdio.h</title>
+    <style>
+        table {
+            box-sizing: border-box;
+            margin-left: 40px;
+            width: 90%;
+            background: var(--secondary-container);
+            border-radius: 25px;
+            padding: 20px 10px;
+        }
+
+        tr {
+            position: relative;
+            margin: 0;
+        }
+
+        tr:not(:last-of-type)::after { /*Seletor para todos os ::after de tr (menos o ultimo)*/
+            content: '';
+            position: absolute;
+            left: 10%;
+            bottom: -20px; /*centraliza verticalmente levando em consideração o padding*/
+            height: 2px;
+            background: var(--outline);
+            width: 80%;
+        }
+
+        tr:first-of-type td{
+            padding-top: 0;
+        }
+
+        tr td:first-of-type {
+            width: 30%;
+        }
+
+        td {
+            padding: 40px 10px 0 10px;
+        }
+    </style>
 </head>
 <body>
 <nav class="navPrincipal">
