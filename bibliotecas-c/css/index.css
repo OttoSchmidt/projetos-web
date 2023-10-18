@@ -21,6 +21,7 @@ header {
 header img{
     background: var(--primary-container);
     position: absolute;
+    filter: blur(3px);
     left: 0;
     top: 0;
     width: 100%;
