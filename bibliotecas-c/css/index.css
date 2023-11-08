@@ -28,7 +28,7 @@ header img{
 }
 
 header div {
-    padding: 75px 0;
+    padding: 75px 15px;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -147,7 +147,7 @@ tr:not(:last-of-type)::after {
     }
 
     header div {
-        padding: 5px 0;
+        padding: 15px;
         background: rgba(0, 0, 0, 0.4);
     }
 
@@ -156,6 +156,7 @@ tr:not(:last-of-type)::after {
     }
 
     button {
+        margin-top: 20px;
         font-size: 12px; /* Reduza o tamanho do texto em botões para telas menores */
     }
 

@@ -84,3 +84,9 @@ td { /*fixa a largura da explicação da biblioteca em 60%*/
         width: 80%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 20px;
+    }
+}
