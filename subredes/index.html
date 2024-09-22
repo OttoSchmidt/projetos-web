@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Calcular sub-redes</title>
+	<link href="css/subrede.css" rel="stylesheet" type="text/css" />
+	<script src="tool.js"></script>
+</head>
+
+<body id="dark">
+	<main>
+		<div id="modo" onclick="alterarModo();">
+			<svg id="raios" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="sun"><g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" transform="translate(1 1)"><path d="M11 0v2M11 20v2M3.22 3.22l1.42 1.42M17.36 17.36l1.42 1.42M0 11h2M20 11h2M3.22 18.78l1.42-1.42M17.36 4.64l1.42-1.42"/></g></svg>
+			<div id="circulo-externo"></div>
+		</div>
+		<div id="formulario">
+			<div id="tipo-div" onclick="atualizar();" data-selecionado="0">
+				<p>Máscara</p>
+				<p>Hosts</p>
+			</div>
+			
+			<div class="inputs selecionado" id="mascara">
+				<input type="text" id="ip-mascara" name="num" placeholder="IP"/>
+				<input type="text" name="num" id="mascara-valor" placeholder="/">
+			</div>
+			
+			<div class="inputs" id="host">
+				<input type="text" id="ip-host" name="num" placeholder="IP"/>
+				<input type="text" name="num" id="host-valor" placeholder="Hosts">
+			</div>
+			
+			<div class="inputs" id="bits">
+				<input type="text" id="ip-bits" name="num" placeholder="IP da rede"/>
+				<input type="text" name="num" id="bits-valor" placeholder="Bits emprestados">
+			</div>
+			
+			<div id="botoes">
+				<button onclick="calc();">Calcular</button>
+				<button onclick="adicionar();">Adicionar</button>
+			</div>
+		</div>
+
+		<div id="resultado"></div>
+
+		<div id="imprimir"></div>
+	</main>
+</body>
+</html>

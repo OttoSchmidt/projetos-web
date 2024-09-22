@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@media print {
+    body, html, main {
+      background: white !important;
+    }
+    body * {
+      visibility: hidden;
+    }
+    #imprimir, #imprimir * {
+      visibility: visible !important;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #imprimir {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    input {
+      border: none;
+    }
+}
+
+#claro {
+  --cor-letra: #000;
+  --cor-destaque: #0F62FE;
+  --cor-background: #F2F2F2;
+  --cor-leve-destaque: #CFE0FF;
+  --cor-borda: #8E8E8E;
+}
+
+#dark {
+  --cor-letra: #fff;
+  --cor-background: #181818;
+  --cor-destaque: #143677;
+  --cor-leve-destaque: #334669;
+  --cor-borda: #8E8E8E;
+}
+
+html {
+  --fundo-botao-porcentagem: -53%;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  transition: 150ms;
+  background: var(--cor-background);
+  color: var(--cor-letra);
+}
+
+main {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#modo {
+  width: 30px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#raios {
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;;
+}
+
+#claro #raios {
+  width: 100%;
+}
+
+#dark #raios {
+  transform: rotateZ(45deg);
+  width: 0%;
+}
+
+#raios g {
+  stroke: var(--cor-borda);
+}
+
+#circulo-externo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-borda);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+#claro #circulo-externo {
+  width: 50%;
+}
+
+#dark #circulo-externo {
+  width: 70%;
+}
+
+#circulo-externo::before {
+  position: absolute;
+  display:inline-block;
+  content: '';
+  width: 25%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cor-background);
+  transition: width 100ms, background 100ms, margin 200ms;
+}
+
+#dark #circulo-externo::before {
+  margin-left: 50%;
+  width: 70%;
+}
+
+#formulario {
+  margin-top: 20px;
+}
+
+#tipo-div {
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid var(--cor-borda);
+  border-radius: 20px;
+  position: relative;
+}
+
+#tipo-div::before {
+  z-index: -10;
+  width: 95px;
+  height: 36px;
+  content: "";
+  background: var(--cor-leve-destaque);
+  position: absolute;
+  transition: 200ms;
+  transform: translateX(var(--fundo-botao-porcentagem));
+  border-radius: 17px;
+}
+
+#tipo-div:hover {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+label {
+  margin: 0 5px;
+}
+
+select {
+  padding: 0 5px;
+}
+
+.inputs, .tipo-div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  display: none;
+  margin: 0 auto;
+}
+
+.selecionado {
+  display: flex;
+}
+
+.inputs input {
+  margin: 0 5px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 9px;
+  height: 30px;
+  padding: 0 5px;
+  background: rgba(0, 0, 0, 0);
+  color: var(--cor-letra);
+}
+
+.inputs input:first-child {
+  width: 200px;
+}
+
+.inputs input:last-child {
+  width: 75px;
+}
+
+button {
+  display: block;
+  padding: 3px 10px;
+  border-radius: 13px;
+  background-color: var(--cor-destaque);
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#botoes {
+  width: fit-content;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+table {
+  margin: 15px auto;
+}
+
+table, td, tr, th {
+  border-collapse: collapse;
+  border: 1px solid var(--cor-letra);
+  text-align: center;
+}
+
+td, th {
+  padding: 2px 15px;
+}
+
+#resultado .destaque-verde {
+  background-color: var(--cor-leve-destaque);
+}
+
+#resultado .destaque-verde td:first-child::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transform: translateX(-75px);
+  content: "?";
+  background-color: var(--cor-leve-destaque);
+  border: 1px solid var(--cor-letra);
+  border-radius: 100%;
+}
+
+#resultado .destaque-verde:hover td:first-child::before {
+  content: "Subrede do IP";
+  width: fit-content;
+  text-align: justify;
+  border-radius: 10px;
+  transform: translateX(-175px);
+  padding: 0 5px;
+}
+
+#imprimir {
+  width: fit-content;
+  margin-top: 15px;
+}
+
+#imprimir input {
+  margin-top: 15px;
+  width: 50%;
+}
+
+#imprimir table {
+  width: 100%;
+}
+
+#btnImprimir {
+  margin: 20px auto;
+}
