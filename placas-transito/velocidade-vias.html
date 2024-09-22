@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/infracoes.css">
+    <script src="js/velocidade-vias.js"></script>
+    <title>Infrações</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="pagina">Teste de Placas</a>
+        <a href="infracoes.html" class="pagina">Teste de Infrações</a>
+        
+        <ul id="tentativas" class="hidden">
+            <p>Tentativas Anteriores:</p>
+        </ul>
+    </nav>
+    <main>
+        <h3>Preencha a tabela com a velocidade das vias urbanas:</h3>
+
+        <table>
+            <tbody id="tabela">
+                <tr>
+                    <th>Tipo de via</th>
+                    <th>Velocidade (km/h)</th>
+                </tr>
+            </tbody>
+        </table>
+    
+        <button id="iniciar" onclick="inicio();">Iniciar</button>
+        <button id="terminar" onclick="verificar();" class="hidden">Finalizar</button>
+    </main>
+</body>
+</html>
