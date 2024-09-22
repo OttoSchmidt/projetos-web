@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../tema.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/iframe.css">
+    <script src="../base.js"></script>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .seletores {
+            background: var(--superfice);
+        }
+
+        .semestres {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 14fr;
+            }
+
+            .selecionadorRadio {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: repeat(8, 1fr);
+                overflow-x: scroll;
+            }
+
+            .seletores {
+                width: max-content;
+                padding: 0 20px;
+            }
+
+            .semestres {
+                grid-template-columns: 1fr;
+            }
+
+            .detalhesSemestre {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body onload="gerarTabelaCurriculo();">
+    <div class="selecionadorRadio">
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem1" checked="checked">
+            <label for="sem1">1° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem2">
+            <label for="sem2">2° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem3">
+            <label for="sem3">3° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem4">
+            <label for="sem4">4° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem5">
+            <label for="sem5">5° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem6">
+            <label for="sem6">6° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem7">
+            <label for="sem7">7° semestre</label>
+        </div>
+        <div class="seletores">
+            <input type="radio" name="historico" class="radio" id="sem8">
+            <label for="sem8">8° semestre</label>
+        </div>
+    </div>
+    <div class="wrapperRadioConteudo">
+        <div id="sem1Tabela" class="semestres">
+            <div class="detalhesSemestre">
+                <p>Disciplinas: <span class="detalhe">6</span></p>
+                <p>Situação: <span class="detalhe">Concluido</span></p>
+            </div>
+            <div class="materias">
+                <p>Nome</p>
+                <div class="hidden">
+                    <table>
+                        <tr>
+                            <th>Código:</th>
+                            <td>24073</td>
+                        </tr>
+                        <tr>
+                            <th>CH:</th>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <th>Faltas:</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Média:</th>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <th>Situação:</th>
+                            <td class="aprovado">Aprovado</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="tema.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/documentos.css">
+    <script src="base.js"></script>
+    <title>Documentos</title>
+    <script>
+        function calcularProgresso () {
+            porcentagem = 100 * document.getElementById("horasRealizadas").textContent / document.getElementById("horasTotais").textContent;
+            document.getElementById("ratioComplemento").setAttribute("data-progresso", porcentagem);
+            atualizarBarras();
+        }
+
+        window.onload = calcularProgresso;
+    </script>
+</head>
+<body>
+    <svg display="none">
+        <symbol id="forma2" viewBox="0 0 42 42">
+            <path d="M39.073 20.5c3.23 6.02.79 11.471-5.44 13.133-1.662 6.23-7.112 8.67-13.133 5.44-6.021 3.23-11.472.79-13.133-5.44-6.23-1.662-8.67-7.112-5.44-13.133-3.23-6.021-.79-11.472 5.44-13.133 1.661-6.23 7.112-8.67 13.133-5.44 6.02-3.23 11.471-.79 13.133 5.44 6.23 1.661 8.67 7.112 5.44 13.133z"/>
+        </symbol>
+
+        <symbol id="forma1" viewBox="0 0 40 40">
+            <path d="M.887 14.467C-2.845 5.875 5.875-2.845 14.467.887l1.42.617a10.323 10.323 0 0 0 8.225 0l1.42-.617c8.593-3.732 17.313 4.988 13.581 13.58l-.617 1.42a10.323 10.323 0 0 0 0 8.225l.617 1.42c3.732 8.593-4.989 17.313-13.58 13.581l-1.42-.617a10.323 10.323 0 0 0-8.225 0l-1.42.617C5.874 42.845-2.846 34.125.886 25.533l.617-1.42a10.323 10.323 0 0 0 0-8.225l-.617-1.42Z"/>
+        </symbol>
+    </svg>
+    <nav>
+        <div class="logo">
+            <p>UP</p>
+        </div>
+        <div class="links">
+            <a class="navBotao" href="index.html">
+                <span class="material-symbols-outlined">
+                    school
+                </span>
+                <p>Acadêmico</p>
+            </a>
+            <a class="navBotao" href="financeiro.html">
+                <span class="material-symbols-outlined">
+                    monetization_on
+                </span>
+                <p>Financeiro</p>
+            </a>
+            <a class="navBotao selecionado" href="#">
+                <span class="material-symbols-outlined">
+                    article
+                </span>
+                <p>Documentos</p>
+            </a>
+            <a class="navBotao" href="caa.html">
+                <span class="material-symbols-outlined">
+                    support_agent
+                </span>
+                <p>CAA</p>
+            </a>
+            <a class="navBotao" href="rematricula.html">
+                <span class="material-symbols-outlined">
+                    source_notes
+                </span>
+                <p>Rematricula</p>
+            </a>
+        </div>
+        <div class="navBotao conta">
+            <span class="material-symbols-outlined">
+                account_circle
+            </span>
+            <p>Conta</p>
+            <div class="menuConta">
+                <a onclick="mudarCurso();">Mudar curso</a>
+                <a href="preferencias.html">Alterar preferências</a>
+                <a id="sair">Sair</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="fundoContexto" onclick="removerMenuUsuario();"></div>
+        <div class="menuContexto" id="mudarCurso">
+            <h2>Mudar curso</h2>
+            <p>Veja abaixo todos os cursos que você já fez na Cruzeiro. Selecione o curso que deseja ver informações sobre.</p>
+            <div class="selecionadorRadio">
+                <div class="seletores">
+                    <label for="cc">Ciência da Computação</label>
+                    <input type="radio" name="cursos" class="radio" id="cc" checked="checked">
+                </div>
+            </div>
+            <div class="opcoesContexto">
+                <p onclick="removerMenuUsuario();">Cancelar</p>
+                <p onclick="removerMenuUsuario();">Continuar</p>
+            </div>
+        </div>
+        <div class="painel">
+            <section id="pesquisa">
+                <img id="estela" src="icons/estela.png">
+                <input placeholder="Fale com a Estela">
+                <img src="icons/search.svg">
+                <div class="navBotao" id="conta-mobile">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                    <div class="menuConta">
+                        <a onclick="mudarCurso();">Mudar curso</a>
+                        <a href="preferencias.html">Alterar preferências</a>
+                        <a id="sair">Sair</a>
+                    </div>
+                </div>
+            </section>
+            <section id="curso">
+                <h2>Ciência da Computação</h2>
+                <div class="circuloProgresso">50%</div>
+            </section>
+            <section id="complementos" class="maisDetalhes">
+                <div class="nomeSection">
+                    <h2>Horas complementares</h2>
+                    <a>
+                        <img src="icons/nav/arrow_forward.svg">
+                    </a>
+                </div>
+                <div id="horas">
+                    <p><span id="horasRealizadas">40</span>/<span id="horasTotais">80</span> horas</p>
+                    <div class="barraProgresso">
+                        <div class="progresso" id="ratioComplemento" data-progresso="25"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="pendencias">
+                <div class="nomeSection">
+                    <h2>Pendencias</h2>
+                    <a>
+                        <img src="icons/nav/arrow_forward.svg">
+                    </a>
+                </div>
+                <div id="num" class="giroFigura">
+                    <svg>
+                        <use xlink:href="#forma2" href="#forma2"></use>
+                    </svg>
+                    <p>0</p>
+                </div>
+            </section>
+            <section id="outros">
+                <div class="nomeSection">
+                    <h2>Outros documentos</h2>
+                    <a>
+                        <img src="icons/nav/arrow_forward.svg">
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="funcoes">
+            <div id="tabs" data-selecionado="0">
+                <div class="tab selecionado" onclick="alterarTab(0);"><p>Declarações Acadêmicas</p></div>
+                <div class="tab" onclick="alterarTab(1);"><p>Declarações Financeiras</p></div>
+                <div class="tab" onclick="alterarTab(2);"><p>Plano de ensino</p></div>
+            </div>
+            <section class="conteudo">
+                <iframe scrolling="no" src="documentos/academicos.html" id="mostrar" data-diretorio="documentos/"></iframe>
+            </section>
+        </div>
+    </main>
+    
+</body>
+</html>

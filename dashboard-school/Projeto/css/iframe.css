@@ -1,0 +1,140 @@
+@import url(base.css);
+
+* {
+    color: var(--na-superfice);
+    overflow:initial;
+}
+
+html, body {
+    height: 100%;
+}
+
+.aviso {
+    color: var(--aviso);
+    text-align: center;
+}
+
+.superfice {
+    background: var(--superfice);
+    border-radius: 22px;
+    padding: 20px 0 5px 20px;
+}
+
+.vazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: transparent;
+    gap: 20px;
+    width: 100vw;
+}
+
+ul {
+    margin-top: 10px; 
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    color: var(--primario);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wrapperRadioConteudo {
+    background: var(--superfice);
+    border-radius: 12px;
+    width: 95%;
+}
+
+.seletores:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.seletores:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+.semestres {
+    padding: 15px 10px;
+}
+
+.materias {
+    margin-bottom: 20px;
+}
+
+.materias table {
+    table-layout: fixed;
+}
+
+.detalhesSemestre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-column: 1 / 3;
+    border-bottom: 1px solid var(--na-superfice);
+    padding-bottom: 10px;
+}
+
+.detalhe {
+    display: block;
+}
+
+.materias p {
+    text-align: center;
+    font-weight: 600;
+}
+
+.aprovado {
+    color: var(--primario);
+}
+
+.reprovado {
+    color: var(--aviso);
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: fit-content;
+    padding-top: 15px;
+    gap: 20px;
+    height: min-content;
+}
+
+.card {
+    background: var(--superfice);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    border-radius: 25px;
+    transition: 150ms;
+    padding: 10px;
+    width: 90%;
+    height: 100px;
+    text-align: center;
+}
+
+.card:hover {
+    cursor: pointer;
+    position: relative;
+}
+
+@media screen and (max-width: 550px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 80px;
+    }
+}

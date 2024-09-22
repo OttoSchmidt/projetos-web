@@ -1,0 +1,104 @@
+@import url(base.css);
+
+main {
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+}
+
+.posicao {
+    margin-top: 33px;
+}
+
+.posicao h1 {
+    font-size: 26px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 5px;
+    margin: 15px 5px 0 15px;
+    align-items: center;
+    padding: 12px 0 12px 20px;
+}
+
+.resumo.vendo {
+    border: 2px var(--preto) solid;
+    border-radius: 40px;
+    color: var(--no-container-primario);
+}
+
+.resumo.vendo span {
+    color: var(--primario);
+}
+
+.resumo span {
+    width: fit-content;
+}
+
+#config {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 26px 26px 70px;
+}
+
+#config > div {
+    width: max-content;
+}
+
+.selecionadorRadio {
+    margin: 15px 0 5px 0;
+}
+
+.seletores {
+    padding: 10px 10px 10px 25px;
+}
+
+#cores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 15px 30px;
+}
+
+.cor {
+    aspect-ratio: 1;
+    width: 64px;
+    border-radius: 18px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.cor:hover {
+    border-radius: 50px;
+}
+
+#cor1 {
+    background: #255FA6;
+}
+
+#cor2 {
+    background: #006d42;
+}
+
+#cor3 {
+    background: #b4017f;
+}
+
+#cor4 {
+    background: #785a00;
+}
+
+#cor5 {
+    background: #00696b;
+}
+
+#cor6 {
+    background: #a9371b;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}

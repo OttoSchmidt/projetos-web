@@ -1,0 +1,56 @@
+@import url(base.css);
+
+.primario {
+    background: var(--container-primario);
+    fill: var(--no-container-primario);
+}
+
+.primario p {
+    color: var(--no-container-primario);
+}
+
+.terciario {
+    background: var(--container-terciario);
+    fill: var(--no-container-terciario);
+}
+
+.terciario p {
+    color: var(--no-container-terciario);
+}
+
+@media screen and (min-width: 410px) and (max-width: 900px) {
+    .painel {
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        gap: 0;
+    }
+
+    #botoes {
+        grid-row: 2 / 4;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botao {
+        grid-column: 1;
+    }
+
+    #agendar {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #pagSolicitacao {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 500px) {
+    .painel {
+        grid-template-columns: 4fr 3fr;
+    }
+}
