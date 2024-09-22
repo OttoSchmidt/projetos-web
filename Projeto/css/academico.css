@@ -1,0 +1,84 @@
+@import url(base.css);
+
+#presenca {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+#faltas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+#forma1 {
+    fill: var(--container-secundario);
+}
+
+#forma2 {
+    fill: var(--primario);
+}
+
+#faltas svg{
+    width: 70px;
+    height: 70px;
+}
+
+#faltas p {
+    color: var(--no-primario);
+    font-size: 24px;
+}
+
+#preview {
+    padding: 20px 0;
+    margin-left: 15px;
+}
+
+.materia {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.materia h3 {
+    font-size: 14px;
+    width: 80%;
+}
+
+.nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nota svg {
+    width: 50px;
+    height: 50px;
+}
+
+.nota p {
+    color: var(--no-container-secundario);
+}
+
+#faltas p, .nota p {
+    position: absolute;
+    z-index: 5;
+}
+
+@media screen and (max-width: 409px) {
+    #notas {
+        grid-column: 1 / 2;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 900px) {
+    #notas {
+        grid-column: 1 / 3;
+    }
+
+    #preview {
+        margin: 10px 5vw;
+    }
+}

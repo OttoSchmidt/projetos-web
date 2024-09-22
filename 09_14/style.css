@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: #efefef url(img/pexels.jpg);
+}
+
+main {
+    width: 1100px;
+    height: auto;
+    margin: 20px auto 0 auto;
+    position: relative;
+}
+
+header {
+    background: #4f83fa;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+nav {
+    background: #4f83fa;
+    padding: 18px;
+    border-radius: 10px 10px 0 0;
+}
+
+section {
+    background: #c2c2c2;
+    padding: 10px 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+a {
+    color: #fff;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#imagem {
+    text-align: center;
+    margin: 20px 0;
+    width: 980px;
+    height: 300px;
+}
+
+.imagem_regular {
+    width: 100%;
+    height: 100%;
+}
+
+.centralizar {
+    text-align: center;
+}
+
+p {
+    text-indent: 2rem;
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.fonte {
+    font-size:xx-small;
+    vertical-align: top;
+}
+
+footer {
+    margin: 20px 0 10px 0;
+    font-size: .9rem;
+}
+
+/* abaixo iniciamos elementos de formlário */
+form {
+    font-family: Verdana;
+    font-size: 15px;
+    background-color: #4F83FA;
+    max-width: 500px;
+    padding: 5px;
+    margin: 15px auto 0 auto;/* margem e posicionamento atuam juntos, centalizando a estrutura form*/
+}
+
+#inputs div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 20px;
+    margin: 5px 0;
+}
+
+input, textarea { /* seletores separados por vírgula deixam claro que as propriedades serão atribuídas a ambos */
+    width: 200px;
+    color: black;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+input:hover, textarea:hover {
+    border-color: #000066;
+    background-color: #66FFFF;
+    color: black;
+    font-weight: bold;
+}
+
+textarea {
+    width: 350px;
+    height: 150px;
+}
+
+label {
+    margin: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#fim {
+    text-align: center;
+}
+
+#fim input {
+    padding: 5px 10px;
+    margin: 0 10px;
+}
