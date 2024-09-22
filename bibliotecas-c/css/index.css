@@ -1,0 +1,180 @@
+@import url(base.css);
+@import url(macros.css);
+
+*{
+    box-sizing: border-box;
+}
+
+main{
+    display: block;
+    padding: 2% 2% 0 2%;
+}
+
+header {
+    background: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+header img{
+    background: var(--primary-container);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 25px;
+    z-index: -5;
+}
+
+header div {
+    padding: 75px 15px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+:root[data-tema="dark"] header div {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    color: #fff;
+}
+
+:root[data-tema="dark"] header h1 {
+    color: var(--md-sys-color-on-background-dark);
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0 0 0 20px;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+main a {
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--primary);
+    border-radius: 100px;
+    color: var(--on-primary);
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    margin: 40px auto 0 auto;
+    transition-duration: 0.4s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: var(--on-primary);
+    color: var(--primary);
+}
+
+#removerMenu {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------------------------------------------------*/
+
+section {
+    display: flex;
+    column-gap: 5%;
+    padding: 0px 30px;
+    margin: 0% 0% 5% 2%;
+    background: none;
+    border-radius: 25px;
+}
+
+section a {
+    background-color: var(--surface-container);
+    border-radius: 25px;
+    padding: 0 0 50px 0;
+    width: 50%;
+}
+
+table {
+    padding: 25px;
+    height: 75%;
+    border-radius: 25px;
+    background: var(--secondary-container);
+}
+
+table::after {
+    display: none;
+}
+
+th, td {
+    padding: 0;
+}
+
+td {
+    width: 50%;
+}
+
+.tipo {
+    margin: 40px;
+}
+
+tr:not(:last-of-type)::after {
+    bottom: -5px;
+}
+
+/* Modifique para telas menores */
+@media screen and (max-width: 900px) {
+    header {
+        margin: 50px 10px 10px 10px;
+    }
+
+    header div {
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+        font-size: 40px; /* Reduza o tamanho da fonte do cabeçalho em telas menores */
+    }
+
+    button {
+        margin-top: 20px;
+        font-size: 12px; /* Reduza o tamanho do texto em botões para telas menores */
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2px;
+        column-gap: 0;
+        margin: 0 10px;
+    }
+
+    section a {
+        width: 100%; /* Utilize a largura total da tela em telas menores */
+        margin: 10px 20px;
+        padding-bottom: 15px;
+    }
+
+    td, th {
+        padding: 10px 0;
+    }
+}

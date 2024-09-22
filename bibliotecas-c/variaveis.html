@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tema.js"></script><!--ESSE SCRIPT DEVE FICAR EM CIMA DO CSS, PARA A PAGINA NAO PISCAR-->
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css\macros.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Variáveis</title>
+</head>
+<body>
+<nav class="navPrincipal">
+    <span class="btn_menu material-symbols-outlined" onclick="abrirMenuMobile('principal')">menu</span>
+    <div class="lista_up">
+        <a class="linkPaginaNAV" href="index.html">
+            <div><span class="material-symbols-outlined">home</span></div>
+            <p>Início</p>
+        </a>
+        <div class="linkPaginaNAV" id="biblioteca">
+            <div><span class="material-symbols-outlined">book_2</span></div>
+            <p>Bibliotecas</p>
+
+            <div id="navBibliotecas">
+                <a href="stdio.html">stdio.h</a>
+                <a href="stdlib.html">stdlib.h</a>
+                <a href="string.html">string.h</a>
+                <a href="math.html">math.h</a>
+            </div>
+        </div>
+
+        <a class="linkPaginaNAV" href="macros.html">
+            <div><span class="material-symbols-outlined">data_object</span></div>
+            <p>Macros</p>
+        </a>
+
+        <a class="linkPaginaNAV paginaSelecionada" href="variaveis.html">
+            <div><span class="material-symbols-outlined">code</span></div>
+            <p>Variáveis</p>
+        </a>
+
+    </div>
+    <div class="lista_down">
+        <a class="linkPaginaNAV" href="feedback.html">
+            <div><span class="material-symbols-outlined">feedback</span></div>
+            <p>Feedback</p>
+        </a>
+        <span id="btnTema" class="material-symbols-outlined" onclick="alterarTema();">dark_mode</span>
+    </div>
+</nav>
+<main>
+    <header class="titulo">
+        <h1>VARIÁVEIS</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>
+                    <h2>size_t</h2>
+                    <p class='biblioteca'>stdio, stdlib, string</p>
+                </th>
+                <td class='explicacao'>Resultado da função sizeof e é tipo int unsignned</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>FILE</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Objeto para guardar informações de arquivos</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>fpos_t</h2>
+                    <p class='biblioteca'>stdio</p>
+                </th>
+                <td class='explicacao'>Objeto para guardar posição no arquivo</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <h2>wchat_t</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Tipo de inteiro com o tamanho de um caractere largo</td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>div_t e ldiv_t</h2>
+                    <p class='biblioteca'>stdlib</p>
+                </th>
+                <td class='explicacao'>Respectivamente, estrutura retornada pela função div e função ldiv</td>
+            </tr>
+        </table>
+    </section>
+</main>
+</body>
+</html>

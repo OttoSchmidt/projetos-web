@@ -1,0 +1,168 @@
+@import url(base.css);
+
+main {
+    display: block; /*remove o grid do main*/
+}
+
+section{
+    display: grid;/*Display em grid section que contem o conteudo do feedback*/
+    grid-template-columns: 1fr 1fr;/*divide o grid em dois com 30px entre cada "porção"*/
+    row-gap: 30px;
+    justify-items: center;
+    padding: 0;
+    width: 80%;
+    margin: 60px auto 0; /*margin auto na lateral para centralizar o elemento*/
+}
+
+section > div { /*seleciona div que seja filho direto de section*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%;
+}
+
+/*Cria uma "caixa" , onde dentro ficara o input e o label */
+.caixa {/*Estiliza o padrão das caixas de texto*/
+    box-sizing: border-box; /*a largura levera em conta padding e margin*/
+    background-color: var(--surface-container);
+    width: 100%;
+    border-radius: 25px;
+}
+
+.cPequena{/*Estiliza especificamente as caixas de texto menores*/
+    display: grid; /*necessário para manter a msm separação entre label e input em vários elementos, para ficar alinhado*/
+    grid-template-columns: 1fr 4fr;/*1 fração da caixa para o label e o resto livre para o input*/
+    padding: 0 20px;
+}
+
+.cPequena label {
+    margin: auto;
+}
+
+input{
+    border: none;/*Deixa o input "invisivel" para mesclar com a caixa*/
+    outline: none;
+    background-color: var(--surface-container);
+    padding: 14px;
+}
+
+.cGrande{/*Estiliza a caixa de texto maior*/
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 80%;
+    min-height: 230px;
+    padding: 10px 40px;
+}
+
+.cGrande label{
+    text-align: center;
+}
+
+textarea{/*Mescla a "textarea" com a caixa*/
+    margin: 5px auto;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 80%;
+    height: 90%;
+}
+
+.container_checkbox{/*Cria um container para envolver o chekcbox e seu label*/
+    grid-column: 1;
+    margin: 0 auto;
+    display: grid; /*necessário para seperar o input e label*/
+    grid-template-columns: 30px auto;
+    column-gap: 16px;
+    width: 60%;
+    user-select: none;
+}
+
+/*CHECKBOX PERSONALIZADO*/
+
+.container_checkbox input{ /*Esconde o checkbox padrão do navegador*/
+    opacity: 0; /*Ele ficara escondido atras do novo checkbox*/
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    position: absolute; /*necessario para o checkbox do navegador ficar atras do customizado*/
+    z-index: 5;
+}
+
+.checkmark{
+    display: block;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: var(--surface-container);
+    border: 1px solid var(--outline-variant);
+}
+
+.container_checkbox:hover input ~ .checkmark {
+    background-color: var(--surface-container-highest);
+    /*A cor muda quando passar o mouse em cima, não sei se tem alguma variavel pra usar, no momento fica ruim
+    no dark mode*/
+  }
+
+.container_checkbox input:checked ~ .checkmark {
+  background-color: var(--primary-container);
+    border: 1px solid transparent;
+  /*Quando selecionado muda de cor, essa cor é horrivel mas não sei qual outra colocar*/
+}
+
+/*A partir daqui é para criar o "✓"*/
+.checkmark:after {
+    content: ""; /*Criar algum conteudo*/
+    position: absolute;
+    display: none;
+  }
+  
+  .container_checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+/*Cria o visual do "✓"*/
+  .container_checkbox .checkmark:after {
+    margin-left: 8px;
+    margin-top: 2px;/*Esses dois "margin" servem para centralizar o "✓" no quadrado, se tirar ele fica meio 
+    fora, não sei se tinha um forma melhor de fazer (provavelmente sim)*/
+    width: 7px;
+    height: 13px;
+    border: solid var(--black);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+.container_checkbox label {
+    font-size: 12px;
+}
+
+.btnEnviar{/*Estiliza e posiciona o botão de enviar*/
+    margin: 0 auto;
+    grid-column: span 2; /*o elemento irá expandir as duas colunas do grid, para poder centralizá-lo*/
+    border-radius: 100px;
+    color: var(--on-primary);
+    background-color: var(--primary);
+    width: 135px;
+    height: 60px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+     section {
+        grid-template-columns: 1fr;
+    }
+
+    section div:first-of-type, .cGrande {
+        width: 100%;
+    }
+
+    .cGrande {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .btnEnviar {
+        grid-column: 1;
+    }
+}

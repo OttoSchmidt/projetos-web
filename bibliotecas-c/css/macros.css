@@ -1,0 +1,92 @@
+@import url("base.css");
+
+main {
+    display: block;
+}
+
+header { /*remove o design de base.css*/
+    display: block;
+    background: none;
+    margin: 20px 0 40px 20px;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    background-color: var(--secondary-container);
+    border-radius: 25px;
+    padding: 30px 50px 50px 50px;
+    margin-left: 5%;
+}
+
+h1{
+    font-size: 44px;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    position: relative;
+    margin: 0;
+}
+
+tr:not(:last-of-type)::after { /*Seletor para todos os ::after de tr (menos o ultimo)*/
+    content: '';
+    position: absolute;
+    left: 10%;
+    bottom: -20px; /*centraliza verticalmente levando em consideração o padding*/
+    height: 2px;
+    background: var(--outline);
+    width: 80%;
+}
+
+th, td {
+    padding: 40px 10px 0 10px;
+}
+
+td { /*fixa a largura da explicação da biblioteca em 60%*/
+    width: 60%;
+}
+
+.biblioteca {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        display: block;
+        padding: 20px 20px 50px 20px;
+        margin: 0;
+    }
+
+    table {
+        position: relative;
+    }
+
+    table:first-of-type::after { /*Seletor para todo o after da primeira tabela*/
+        content: '';
+        position: absolute;
+        left: 10%;
+        bottom: -20px; /*centraliza verticalmente levando em consideração o padding*/
+        height: 2px;
+        background: var(--outline);
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 20px;
+    }
+}
